@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "text": "Evidence Lab\n\nAPI test generation\n\nOVERVIEW\n\nDashboard\n\nPIPELINE\n\nSpecification\nOperations\nTest cases\n\nEVIDENCE\n\nResults & reports\nSettings\n\nLocal-first \u00b7 no data leaves host\n\nBackend online\nv1.1.0\n\nPIPELINE \u00b7 STEP 1\n\nImport an OpenAPI specification\n\nEverything is processed by your local backend. Paste the document or load a file, validate the structure, then parse it into operations.\n\nUpload file\nParse specification\nSpecification document\nJSON or YAML\n\nLIVE VALIDATION\n\nValidation runs as you type \u2014 required version and paths fields are checked before the backend parses the document.\n\nSUPPORTED INPUTS\n\nOpenAPI 3.0 / 3.1 (JSON or YAML)\nSwagger 2.0 documents\nFiles up to a few megabytes",
+  "inputs": [
+    {
+      "tag": "INPUT",
+      "type": "file",
+      "placeholder": "",
+      "id": ""
+    },
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "placeholder": "{\n  \"openapi\": \"3.0.3\",\n  \"info\": { \"title\": \"Billing API\" },\n  \"paths\": { }\n}",
+      "id": "spec"
+    }
+  ],
+  "buttons": [
+    "Upload file",
+    "Parse specification"
+  ]
+}

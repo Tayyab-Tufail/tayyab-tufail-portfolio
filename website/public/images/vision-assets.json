@@ -1,0 +1,122 @@
+﻿[
+    {
+        "project":  "brain-mri",
+        "path":  "assets/images/brain-mri-dataset-samples.png",
+        "width":  1600,
+        "height":  1200,
+        "caption":  "MRI dataset samples across glioma, meningioma, no tumor, and pituitary classes.",
+        "kind":  "dataset visualization",
+        "source":  "brain tumor detection/outputs/figures/primary_sample_grid.png",
+        "bytes":  1137831
+    },
+    {
+        "project":  "brain-mri",
+        "path":  "assets/images/brain-mri-confusion-matrix.png",
+        "width":  800,
+        "height":  600,
+        "caption":  "TumorDetNet test confusion matrix for the four MRI classes.",
+        "kind":  "evaluation output",
+        "source":  "brain tumor detection/outputs/figures/tumordetnet_confusion_matrix.png",
+        "bytes":  31172
+    },
+    {
+        "project":  "brain-mri",
+        "path":  "assets/images/brain-mri-model-comparison.png",
+        "width":  800,
+        "height":  500,
+        "caption":  "Saved test accuracy comparison: baseline CNN and TumorDetNet.",
+        "kind":  "evaluation output",
+        "source":  "brain tumor detection/outputs/figures/test_accuracy_comparison.png",
+        "bytes":  16386
+    },
+    {
+        "project":  "fire-smoke",
+        "path":  "assets/images/fire-smoke-inference-output.jpg",
+        "width":  640,
+        "height":  360,
+        "caption":  "Annotated image saved by the local Gradio inference app, showing a smoke prediction.",
+        "kind":  "application output",
+        "source":  "fire_smoke_detection_gui_delivery/delivery/results/ui/image_b85b1433913840f796b6c183d1cf1355.jpg",
+        "bytes":  70572
+    },
+    {
+        "project":  "fire-smoke",
+        "path":  "assets/images/fire-smoke-test-predictions.jpg",
+        "width":  1920,
+        "height":  916,
+        "caption":  "YOLOv8s predictions on a held-out test image batch, including fire, smoke, and background scenes.",
+        "kind":  "model prediction output",
+        "source":  "fire_smoke_detection_gui_delivery/delivery/results/training/yolov8s_test_metrics/val_batch0_pred.jpg",
+        "bytes":  309886
+    },
+    {
+        "project":  "fire-smoke",
+        "path":  "assets/images/fire-smoke-class-performance.png",
+        "width":  2015,
+        "height":  1292,
+        "caption":  "Precision, recall, and F1 for fire and smoke in the saved YOLOv8s test evaluation.",
+        "kind":  "evaluation output",
+        "source":  "fire_smoke_detection_gui_delivery/delivery/graphs/results_test_class_performance.png",
+        "bytes":  73270
+    },
+    {
+        "project":  "grocery",
+        "path":  "assets/images/grocery-dataset-samples.png",
+        "width":  2306,
+        "height":  2356,
+        "caption":  "Grocery dataset samples illustrating produce and packaged-product categories.",
+        "kind":  "dataset visualization",
+        "source":  "grocery_items_client_delivery/client_delivery/graphs/sample_images.png",
+        "bytes":  6019171
+    },
+    {
+        "project":  "grocery",
+        "path":  "assets/images/grocery-prediction-error-analysis.png",
+        "width":  2269,
+        "height":  3140,
+        "caption":  "Misclassified grocery examples: T is the true label and P is the model prediction.",
+        "kind":  "error-analysis output",
+        "source":  "grocery_items_client_delivery/client_delivery/graphs/prediction_examples.png",
+        "bytes":  7077186
+    },
+    {
+        "project":  "grocery",
+        "path":  "assets/images/grocery-training-results.png",
+        "width":  1967,
+        "height":  969,
+        "caption":  "EfficientNet-B0 training loss and validation macro F1 over five epochs.",
+        "kind":  "training output",
+        "source":  "grocery_items_client_delivery/client_delivery/graphs/efficientnet_b0_learning_curve.png",
+        "bytes":  75041
+    },
+    {
+        "project":  "weapon-detection",
+        "path":  "assets/images/weapon-detection-predictions.jpg",
+        "width":  1920,
+        "height":  1100,
+        "caption":  "YOLOv8n validation predictions with pistol and knife labels and confidence scores.",
+        "kind":  "model prediction output",
+        "source":  "weaponsDetection_client_deliverable (1)/crime_prevention_client_deliverable/runs/detect/artifacts/models/granada_only/val_batch0_pred.jpg",
+        "bytes":  345647
+    },
+    {
+        "project":  "weapon-detection",
+        "path":  "assets/images/weapon-detection-knife-predictions.jpg",
+        "width":  1920,
+        "height":  1100,
+        "caption":  "Knife detections from a saved Granada validation batch.",
+        "kind":  "model prediction output",
+        "source":  "weaponsDetection_client_deliverable (1)/crime_prevention_client_deliverable/runs/detect/artifacts/models/granada_only/val_batch2_pred.jpg",
+        "bytes":  459309
+    },
+    {
+        "project":  "weapon-detection",
+        "path":  "assets/images/weapon-detection-confusion-matrix.png",
+        "width":  3000,
+        "height":  2250,
+        "caption":  "Normalized confusion matrix from the saved YOLOv8n training run.",
+        "kind":  "evaluation output",
+        "source":  "weaponsDetection_client_deliverable (1)/crime_prevention_client_deliverable/runs/detect/artifacts/models/granada_only/confusion_matrix_normalized.png",
+        "bytes":  109053
+    }
+]

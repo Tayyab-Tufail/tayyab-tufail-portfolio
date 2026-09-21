@@ -1,0 +1,9 @@
+{
+  "name": "tayyab-tufail-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "cd website && npm run dev",
+    "build": "cd website && npm install && npm run build",
+    "start": "cd website && npm run start"
+  }
+}

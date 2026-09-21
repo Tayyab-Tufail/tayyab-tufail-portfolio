@@ -1,0 +1,37 @@
+{
+  "name": "weapon",
+  "text": "CRIME PREVENTION\nDETECTION CONSOLE\n\nOperational dashboard for image and video weapon detection, model review, and evaluation reporting.\n\nModel: best.pt\nDevice: cpu\nRecommended conf: 0.35\nImage Inference\nUpload a single image and get annotated detections.\nVideo Inference\nUpload a video, process it server-side, and return an annotated MP4.\nPerformance Metrics\nReview evaluation, threshold, and latency artifacts from the notebook pipeline.\nDataset & System\nInspect dataset summaries, readiness, and current system configuration.\nInference Controls\n\nUse the same model parameters for image and video processing.\n\nConfidence\n0.25\nIoU\n0.50\nInput Size\n320px\n416px\n512px\n640px\n768px\nUSE RECOMMENDED CONFIDENCE (0.35)\nImage Inference\n\nUpload a JPG, PNG, BMP, or WebP image.\n\nRUN IMAGE DETECTION",
+  "inputs": [
+    {
+      "tag": "INPUT",
+      "type": "range",
+      "placeholder": "",
+      "id": "conf"
+    },
+    {
+      "tag": "INPUT",
+      "type": "range",
+      "placeholder": "",
+      "id": "iou"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "imgsz"
+    },
+    {
+      "tag": "INPUT",
+      "type": "file",
+      "placeholder": "",
+      "id": ""
+    }
+  ],
+  "buttons": [
+    "Image InferenceUpload a single image and get annotated detections.",
+    "Video InferenceUpload a video, process it server-side, and return an annotated MP4.",
+    "Performance MetricsReview evaluation, threshold, and latency artifacts from the notebook pipeline.",
+    "Dataset & SystemInspect dataset summaries, readiness, and current system configuration.",
+    "Use recommended confidence (0.35)",
+    "Run image detection"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "fire",
+  "text": "Fire and Smoke Detection\n\nUpload an image or video to run the selected YOLOv8s model locally. Annotated files are saved in results/ui/.\n\nConfidence threshold\n\u21ba\n0.05\n0.95\nInference image size\nImage\nVideo\nImage\nVideo\nUpload image\nDrop Image Here\n- or -\nClick to Upload\nAnnotated image\nDetect fire and smoke\n\nDetections\n\nDetections\nclass\n\t\nconfidence\n\t\nx1\n\t\ny1\n\t\nx2\n\t\ny2\nStatus\nUse via API\n\u00b7\nBuilt with Gradio\n\u00b7\nSettings",
+  "inputs": [
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "placeholder": "",
+      "id": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "range",
+      "placeholder": "",
+      "id": "range_id_0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "placeholder": "",
+      "id": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "file",
+      "placeholder": "",
+      "id": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "file",
+      "placeholder": "",
+      "id": ""
+    },
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "placeholder": "",
+      "id": ""
+    }
+  ],
+  "buttons": [
+    "\u21ba",
+    "Image",
+    "Video",
+    "Image",
+    "Video",
+    "Drop Image Here - or - Click to Upload",
+    "Detect fire and smoke",
+    "Detections   class   \u22ee  confidence   \u22ee  x1   \u22ee  y1   \u22ee  x2   \u22ee  y2   \u22ee",
+    "\u22ee",
+    "\u22ee",
+    "\u22ee",
+    "\u22ee",
+    "\u22ee",
+    "\u22ee",
+    "Use via API",
+    "Stop Recording",
+    "Settings"
+  ]
+}

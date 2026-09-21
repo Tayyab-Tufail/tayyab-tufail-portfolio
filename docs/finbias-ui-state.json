@@ -1,0 +1,31 @@
+{
+  "name": "finbias",
+  "text": "FINANCIAL LANGUAGE INTELLIGENCE\nFinBias Sentiment Studio\nAnalyze financial statements with the locally fine-tuned FinBERT model. Your text remains on this machine.\nModel revision validation-s \u00b7 CPU \u00b7 loads locally\nFinancial text\nPaste a sentence, headline, filing excerpt, or short paragraph.\nText to analyze\nText to analyze\nTry a thesis dataset-style example:\nPositive Neutral Negative\nAnalyze sentiment Clear\nMODEL RESULT\nAwaiting analysis\n\u2014\nEnter financial text and select Analyze sentiment.\nLATENCY\n\u2014\nINPUT SIZE\n\u2014\nClass probabilities\n0%\n20%\n40%\n60%\n80%\n100%\nnegative\nneutral\npositive\nProbability\nSentiment\n\t\nProbability\n\n\nNegative\n\t\n\u2014\n\t\n\nNeutral\n\t\n\u2014\n\n\nPositive\n\t\n\u2014\n\t\nSession history\nThe latest 20 predictions are kept only in this browser session and are not written to disk.\nTime\n\t\nInput preview\n\t\nPrediction\n\t\nConfidence\n\t\nLatency\n\nRows per page:\n\n5\n\n0\u20130 of 0\n\nResponsible interpretation\nFinBias predicts negative, neutral, or positive financial sentiment. The output is a model-generated framing signal\u2014not proof of author intent, manipulation, bias, or factual inaccuracy. Always review the source context.\nTaipy inside",
+  "inputs": [
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "placeholder": "",
+      "id": ":r2:"
+    },
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "placeholder": "",
+      "id": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "placeholder": "",
+      "id": ""
+    }
+  ],
+  "buttons": [
+    "Positive",
+    "Neutral",
+    "Negative",
+    "Analyze sentiment",
+    "Clear"
+  ]
+}

@@ -1,0 +1,5 @@
+2026/09/15-02:39:06.722 4d40 Creating DB C:\Users\Laptop\Desktop\Porfolio\tayyab-tufail-portfolio\.capture-api\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/09/15-02:39:06.806 4d40 Reusing MANIFEST C:\Users\Laptop\Desktop\Porfolio\tayyab-tufail-portfolio\.capture-api\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/09/15-02:39:21.551 5194 Level-0 table #5: started
+2026/09/15-02:39:21.559 5194 Level-0 table #5: 683273 bytes OK
+2026/09/15-02:39:21.564 5194 Delete type=0 #3

@@ -1,0 +1,375 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/components/project-card.tsx");const _jsxDEV = __vite__cjsImport2_react_jsxDevRuntime["jsxDEV"];"use client";
+import { ArrowUpRight, Maximize2, Check } from "/node_modules/.vite/deps/lucide-react.js?v=e207aa87";
+import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "/components/ui/dialog.tsx";
+var _jsxFileName = "C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/components/project-card.tsx";
+import __vite__cjsImport2_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=e207aa87";
+const videos = {
+	medbot: {
+		file: "medbot-demo.mp4",
+		caption: "Recorded multi-task mission in the simulated hospital."
+	},
+	"gesture-robot": {
+		file: "gesture-robot-demo.mp4",
+		caption: "Recorded gesture-controlled demonstration. The participant’s face is blurred in the original presentation copy."
+	},
+	"autonomous-robot": {
+		file: "autonomous-robot-demo.mp4",
+		caption: "Recorded demonstration in the retained proposal validation world."
+	}
+};
+export function ProjectCard({ project: p, index }) {
+	return /* @__PURE__ */ _jsxDEV("article", {
+		className: "project-card",
+		id: "project-" + p.id,
+		children: [/* @__PURE__ */ _jsxDEV("div", {
+			className: "project-visual",
+			children: [/* @__PURE__ */ _jsxDEV("img", {
+				src: "/images/" + p.images[0].file,
+				alt: p.images[0].caption,
+				loading: "lazy",
+				decoding: "async"
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 13,
+				columnNumber: 37
+			}, this), /* @__PURE__ */ _jsxDEV("span", {
+				className: "project-number",
+				children: String(index + 1).padStart(2, "0")
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 13,
+				columnNumber: 135
+			}, this)]
+		}, void 0, true, {
+			fileName: _jsxFileName,
+			lineNumber: 13,
+			columnNumber: 5
+		}, this), /* @__PURE__ */ _jsxDEV("div", {
+			className: "project-body",
+			children: [
+				/* @__PURE__ */ _jsxDEV("p", {
+					className: "eyebrow",
+					children: p.category
+				}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 14,
+					columnNumber: 35
+				}, this),
+				/* @__PURE__ */ _jsxDEV("h3", { children: p.title }, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 14,
+					columnNumber: 74
+				}, this),
+				/* @__PURE__ */ _jsxDEV("p", { children: p.description }, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 14,
+					columnNumber: 92
+				}, this),
+				/* @__PURE__ */ _jsxDEV("div", {
+					className: "tech-tags",
+					children: p.tags.slice(0, 3).map((tag) => /* @__PURE__ */ _jsxDEV("span", { children: tag }, tag, false, {
+						fileName: _jsxFileName,
+						lineNumber: 14,
+						columnNumber: 169
+					}, this))
+				}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 14,
+					columnNumber: 114
+				}, this),
+				/* @__PURE__ */ _jsxDEV(Dialog, { children: [/* @__PURE__ */ _jsxDEV(DialogTrigger, {
+					className: "case-study-trigger",
+					children: [
+						"View project ",
+						/* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 18 }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 15,
+							columnNumber: 74
+						}, this),
+						/* @__PURE__ */ _jsxDEV("span", {
+							className: "sr-only",
+							children: [": ", p.title]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 15,
+							columnNumber: 99
+						}, this)
+					]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 15,
+					columnNumber: 15
+				}, this), /* @__PURE__ */ _jsxDEV(DialogContent, {
+					className: "project-dialog",
+					children: [
+						/* @__PURE__ */ _jsxDEV("p", {
+							className: "eyebrow",
+							children: p.category
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 17,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV(DialogTitle, {
+							className: "case-title",
+							children: p.title
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 17,
+							columnNumber: 50
+						}, this),
+						/* @__PURE__ */ _jsxDEV(DialogDescription, {
+							className: "case-description",
+							children: p.description
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 17,
+							columnNumber: 109
+						}, this),
+						/* @__PURE__ */ _jsxDEV("div", {
+							className: "case-tags",
+							children: p.tags.map((tag) => /* @__PURE__ */ _jsxDEV("span", { children: tag }, tag, false, {
+								fileName: _jsxFileName,
+								lineNumber: 18,
+								columnNumber: 55
+							}, this))
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 18,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("div", {
+							className: "case-overview",
+							children: [/* @__PURE__ */ _jsxDEV("div", { children: [
+								/* @__PURE__ */ _jsxDEV("h4", { children: "The project" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 47
+								}, this),
+								/* @__PURE__ */ _jsxDEV("p", { children: p.summary }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 67
+								}, this),
+								/* @__PURE__ */ _jsxDEV("h4", { children: "What it includes" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 85
+								}, this),
+								/* @__PURE__ */ _jsxDEV("ul", { children: p.features.map((f) => /* @__PURE__ */ _jsxDEV("li", { children: [/* @__PURE__ */ _jsxDEV(Check, { size: 16 }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 145
+								}, this), /* @__PURE__ */ _jsxDEV("span", { children: f }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 163
+								}, this)] }, f, true, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 133
+								}, this)) }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 110
+								}, this)
+							] }, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 42
+							}, this), /* @__PURE__ */ _jsxDEV("aside", { children: [
+								/* @__PURE__ */ _jsxDEV("p", {
+									className: "eyebrow",
+									children: "OUTCOME & EVIDENCE"
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 204
+								}, this),
+								/* @__PURE__ */ _jsxDEV("p", {
+									className: "result-copy",
+									children: p.result
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 249
+								}, this),
+								/* @__PURE__ */ _jsxDEV("p", {
+									className: "context-copy",
+									children: p.context
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 19,
+									columnNumber: 290
+								}, this)
+							] }, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 197
+							}, this)]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 19,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("div", {
+							className: "gallery-heading",
+							children: [/* @__PURE__ */ _jsxDEV("h4", { children: "Inside the project" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 20,
+								columnNumber: 44
+							}, this), /* @__PURE__ */ _jsxDEV("span", { children: [
+								p.images.length,
+								" ",
+								p.images.length === 1 ? "image" : "images",
+								" · Select an image to enlarge"
+							] }, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 20,
+								columnNumber: 71
+							}, this)]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 20,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("div", {
+							className: "output-gallery",
+							children: p.images.map((im) => /* @__PURE__ */ _jsxDEV("figure", { children: [/* @__PURE__ */ _jsxDEV("a", {
+								href: "/images/" + im.file,
+								target: "_blank",
+								rel: "noreferrer",
+								"aria-label": "Open full-size image: " + im.caption,
+								children: [/* @__PURE__ */ _jsxDEV("img", {
+									src: "/images/" + im.file,
+									alt: im.caption,
+									loading: "lazy",
+									decoding: "async"
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 21,
+									columnNumber: 194
+								}, this), /* @__PURE__ */ _jsxDEV("span", {
+									className: "expand-image",
+									children: /* @__PURE__ */ _jsxDEV(Maximize2, { size: 17 }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 21,
+										columnNumber: 305
+									}, this)
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 21,
+									columnNumber: 274
+								}, this)]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 21,
+								columnNumber: 83
+							}, this), /* @__PURE__ */ _jsxDEV("figcaption", { children: im.caption }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 21,
+								columnNumber: 338
+							}, this)] }, im.file, true, {
+								fileName: _jsxFileName,
+								lineNumber: 21,
+								columnNumber: 61
+							}, this))
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 21,
+							columnNumber: 11
+						}, this),
+						videos[p.id] && /* @__PURE__ */ _jsxDEV("figure", {
+							className: "project-video",
+							children: [
+								/* @__PURE__ */ _jsxDEV("h4", { children: "Watch the demonstration" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 22,
+									columnNumber: 60
+								}, this),
+								/* @__PURE__ */ _jsxDEV("video", {
+									controls: true,
+									preload: "none",
+									poster: "/images/" + p.images[0].file,
+									"aria-label": p.title + " recorded demonstration",
+									children: [/* @__PURE__ */ _jsxDEV("source", {
+										src: "/videos/" + videos[p.id].file,
+										type: "video/mp4"
+									}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 22,
+										columnNumber: 207
+									}, this), "Your browser does not support video playback."]
+								}, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 22,
+									columnNumber: 92
+								}, this),
+								/* @__PURE__ */ _jsxDEV("figcaption", { children: videos[p.id].caption }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 22,
+									columnNumber: 321
+								}, this)
+							]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 26
+						}, this),
+						/* @__PURE__ */ _jsxDEV("p", {
+							className: "evidence-note",
+							children: "Screenshots and results shown here come from the project’s original artifacts or its local interface. Reported evaluations are saved experiment results."
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 11
+						}, this)
+					]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 16,
+					columnNumber: 9
+				}, this)] }, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 15,
+					columnNumber: 7
+				}, this)
+			]
+		}, void 0, true, {
+			fileName: _jsxFileName,
+			lineNumber: 14,
+			columnNumber: 5
+		}, this)]
+	}, void 0, true, {
+		fileName: _jsxFileName,
+		lineNumber: 12,
+		columnNumber: 10
+	}, this);
+}
+_c = ProjectCard;
+var _c;
+$RefreshReg$(_c, "ProjectCard");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+import * as __vite_react_currentExports from "/components/project-card.tsx";
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+
+  const currentExports = __vite_react_currentExports;
+  queueMicrotask(() => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/components/project-card.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/components/project-card.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/components/project-card.tsx" + ' ' + id); }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,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LnRzeCJdLCJ2ZXJzaW9uIjozLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIGNsaWVudCc7XG5pbXBvcnQgeyBBcnJvd1VwUmlnaHQsIE1heGltaXplMiwgQ2hlY2sgfSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuaW1wb3J0IHsgRGlhbG9nLCBEaWFsb2dDb250ZW50LCBEaWFsb2dUaXRsZSwgRGlhbG9nRGVzY3JpcHRpb24sIERpYWxvZ1RyaWdnZXIgfSBmcm9tICdAL2NvbXBvbmVudHMvdWkvZGlhbG9nJztcbmltcG9ydCB0eXBlIHsgUHJvamVjdCB9IGZyb20gJ0AvbGliL3Byb2plY3RzJztcbmNvbnN0IHZpZGVvczogUmVjb3JkPHN0cmluZyx7ZmlsZTpzdHJpbmc7Y2FwdGlvbjpzdHJpbmd9PiA9IHtcbiAgbWVkYm90OntmaWxlOidtZWRib3QtZGVtby5tcDQnLGNhcHRpb246J1JlY29yZGVkIG11bHRpLXRhc2sgbWlzc2lvbiBpbiB0aGUgc2ltdWxhdGVkIGhvc3BpdGFsLid9LFxuICAnZ2VzdHVyZS1yb2JvdCc6e2ZpbGU6J2dlc3R1cmUtcm9ib3QtZGVtby5tcDQnLGNhcHRpb246J1JlY29yZGVkIGdlc3R1cmUtY29udHJvbGxlZCBkZW1vbnN0cmF0aW9uLiBUaGUgcGFydGljaXBhbnTigJlzIGZhY2UgaXMgYmx1cnJlZCBpbiB0aGUgb3JpZ2luYWwgcHJlc2VudGF0aW9uIGNvcHkuJ30sXG4gICdhdXRvbm9tb3VzLXJvYm90Jzp7ZmlsZTonYXV0b25vbW91cy1yb2JvdC1kZW1vLm1wNCcsY2FwdGlvbjonUmVjb3JkZWQgZGVtb25zdHJhdGlvbiBpbiB0aGUgcmV0YWluZWQgcHJvcG9zYWwgdmFsaWRhdGlvbiB3b3JsZC4nfSxcbn07XG5cbmV4cG9ydCBmdW5jdGlvbiBQcm9qZWN0Q2FyZCh7cHJvamVjdDpwLGluZGV4fTp7cHJvamVjdDpQcm9qZWN0O2luZGV4Om51bWJlcn0pIHtcbiAgcmV0dXJuIDxhcnRpY2xlIGNsYXNzTmFtZT1cInByb2plY3QtY2FyZFwiIGlkPXsncHJvamVjdC0nK3AuaWR9PlxuICAgIDxkaXYgY2xhc3NOYW1lPVwicHJvamVjdC12aXN1YWxcIj48aW1nIHNyYz17Jy9pbWFnZXMvJytwLmltYWdlc1swXS5maWxlfSBhbHQ9e3AuaW1hZ2VzWzBdLmNhcHRpb259IGxvYWRpbmc9XCJsYXp5XCIgZGVjb2Rpbmc9XCJhc3luY1wiLz48c3BhbiBjbGFzc05hbWU9XCJwcm9qZWN0LW51bWJlclwiPntTdHJpbmcoaW5kZXgrMSkucGFkU3RhcnQoMiwnMCcpfTwvc3Bhbj48L2Rpdj5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cInByb2plY3QtYm9keVwiPjxwIGNsYXNzTmFtZT1cImV5ZWJyb3dcIj57cC5jYXRlZ29yeX08L3A+PGgzPntwLnRpdGxlfTwvaDM+PHA+e3AuZGVzY3JpcHRpb259PC9wPjxkaXYgY2xhc3NOYW1lPVwidGVjaC10YWdzXCI+e3AudGFncy5zbGljZSgwLDMpLm1hcCh0YWc9PjxzcGFuIGtleT17dGFnfT57dGFnfTwvc3Bhbj4pfTwvZGl2PlxuICAgICAgPERpYWxvZz48RGlhbG9nVHJpZ2dlciBjbGFzc05hbWU9XCJjYXNlLXN0dWR5LXRyaWdnZXJcIj5WaWV3IHByb2plY3QgPEFycm93VXBSaWdodCBzaXplPXsxOH0vPjxzcGFuIGNsYXNzTmFtZT1cInNyLW9ubHlcIj46IHtwLnRpdGxlfTwvc3Bhbj48L0RpYWxvZ1RyaWdnZXI+XG4gICAgICAgIDxEaWFsb2dDb250ZW50IGNsYXNzTmFtZT1cInByb2plY3QtZGlhbG9nXCI+XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZXllYnJvd1wiPntwLmNhdGVnb3J5fTwvcD48RGlhbG9nVGl0bGUgY2xhc3NOYW1lPVwiY2FzZS10aXRsZVwiPntwLnRpdGxlfTwvRGlhbG9nVGl0bGU+PERpYWxvZ0Rlc2NyaXB0aW9uIGNsYXNzTmFtZT1cImNhc2UtZGVzY3JpcHRpb25cIj57cC5kZXNjcmlwdGlvbn08L0RpYWxvZ0Rlc2NyaXB0aW9uPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FzZS10YWdzXCI+e3AudGFncy5tYXAodGFnPT48c3BhbiBrZXk9e3RhZ30+e3RhZ308L3NwYW4+KX08L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNhc2Utb3ZlcnZpZXdcIj48ZGl2PjxoND5UaGUgcHJvamVjdDwvaDQ+PHA+e3Auc3VtbWFyeX08L3A+PGg0PldoYXQgaXQgaW5jbHVkZXM8L2g0Pjx1bD57cC5mZWF0dXJlcy5tYXAoZj0+PGxpIGtleT17Zn0+PENoZWNrIHNpemU9ezE2fS8+PHNwYW4+e2Z9PC9zcGFuPjwvbGk+KX08L3VsPjwvZGl2Pjxhc2lkZT48cCBjbGFzc05hbWU9XCJleWVicm93XCI+T1VUQ09NRSAmIEVWSURFTkNFPC9wPjxwIGNsYXNzTmFtZT1cInJlc3VsdC1jb3B5XCI+e3AucmVzdWx0fTwvcD48cCBjbGFzc05hbWU9XCJjb250ZXh0LWNvcHlcIj57cC5jb250ZXh0fTwvcD48L2FzaWRlPjwvZGl2PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ2FsbGVyeS1oZWFkaW5nXCI+PGg0Pkluc2lkZSB0aGUgcHJvamVjdDwvaDQ+PHNwYW4+e3AuaW1hZ2VzLmxlbmd0aH0ge3AuaW1hZ2VzLmxlbmd0aD09PTE/J2ltYWdlJzonaW1hZ2VzJ30gwrcgU2VsZWN0IGFuIGltYWdlIHRvIGVubGFyZ2U8L3NwYW4+PC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJvdXRwdXQtZ2FsbGVyeVwiPntwLmltYWdlcy5tYXAoaW09PjxmaWd1cmUga2V5PXtpbS5maWxlfT48YSBocmVmPXsnL2ltYWdlcy8nK2ltLmZpbGV9IHRhcmdldD1cIl9ibGFua1wiIHJlbD1cIm5vcmVmZXJyZXJcIiBhcmlhLWxhYmVsPXsnT3BlbiBmdWxsLXNpemUgaW1hZ2U6ICcraW0uY2FwdGlvbn0+PGltZyBzcmM9eycvaW1hZ2VzLycraW0uZmlsZX0gYWx0PXtpbS5jYXB0aW9ufSBsb2FkaW5nPVwibGF6eVwiIGRlY29kaW5nPVwiYXN5bmNcIi8+PHNwYW4gY2xhc3NOYW1lPVwiZXhwYW5kLWltYWdlXCI+PE1heGltaXplMiBzaXplPXsxN30vPjwvc3Bhbj48L2E+PGZpZ2NhcHRpb24+e2ltLmNhcHRpb259PC9maWdjYXB0aW9uPjwvZmlndXJlPil9PC9kaXY+XG4gICAgICAgICAge3ZpZGVvc1twLmlkXSYmPGZpZ3VyZSBjbGFzc05hbWU9XCJwcm9qZWN0LXZpZGVvXCI+PGg0PldhdGNoIHRoZSBkZW1vbnN0cmF0aW9uPC9oND48dmlkZW8gY29udHJvbHMgcHJlbG9hZD1cIm5vbmVcIiBwb3N0ZXI9eycvaW1hZ2VzLycrcC5pbWFnZXNbMF0uZmlsZX0gYXJpYS1sYWJlbD17cC50aXRsZSsnIHJlY29yZGVkIGRlbW9uc3RyYXRpb24nfT48c291cmNlIHNyYz17Jy92aWRlb3MvJyt2aWRlb3NbcC5pZF0uZmlsZX0gdHlwZT1cInZpZGVvL21wNFwiLz5Zb3VyIGJyb3dzZXIgZG9lcyBub3Qgc3VwcG9ydCB2aWRlbyBwbGF5YmFjay48L3ZpZGVvPjxmaWdjYXB0aW9uPnt2aWRlb3NbcC5pZF0uY2FwdGlvbn08L2ZpZ2NhcHRpb24+PC9maWd1cmU+fVxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImV2aWRlbmNlLW5vdGVcIj5TY3JlZW5zaG90cyBhbmQgcmVzdWx0cyBzaG93biBoZXJlIGNvbWUgZnJvbSB0aGUgcHJvamVjdOKAmXMgb3JpZ2luYWwgYXJ0aWZhY3RzIG9yIGl0cyBsb2NhbCBpbnRlcmZhY2UuIFJlcG9ydGVkIGV2YWx1YXRpb25zIGFyZSBzYXZlZCBleHBlcmltZW50IHJlc3VsdHMuPC9wPlxuICAgICAgICA8L0RpYWxvZ0NvbnRlbnQ+XG4gICAgICA8L0RpYWxvZz5cbiAgICA8L2Rpdj5cbiAgPC9hcnRpY2xlPjtcbn1cbiJdfQ==

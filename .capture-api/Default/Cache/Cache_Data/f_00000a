@@ -1,0 +1,506 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:\\Users\\Laptop\\Desktop\\Porfolio\\api-test-evidence-lab-clean-repo\\api-test-evidence-lab-frontend\\src\\routes\\operations.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3c3e2cd6"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import { createFileRoute, Link, useNavigate } from "/node_modules/.vite/deps/@tanstack_react-router.js?v=c76e05b6";
+import { ListTree, Search, X } from "/node_modules/.vite/deps/lucide-react.js?v=2321d1cf";
+import __vite__cjsImport5_react from "/node_modules/.vite/deps/react.js?v=3c3e2cd6"; const useMemo = __vite__cjsImport5_react["useMemo"]; const useState = __vite__cjsImport5_react["useState"];
+import { PageHeader } from "/src/components/app-shell.tsx";
+import { EmptyState, MethodBadge } from "/src/components/lab-ui.tsx";
+import { Badge } from "/src/components/ui/badge.tsx";
+import { Button } from "/src/components/ui/button.tsx";
+import { Checkbox } from "/src/components/ui/checkbox.tsx";
+import { Input } from "/src/components/ui/input.tsx";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "/src/components/ui/select.tsx";
+import { useLab } from "/src/lib/lab-store.tsx";
+export const Route = createFileRoute("/operations")({
+  head: () => ({
+    meta: [
+      { title: "API operations — API Test Evidence Lab" },
+      {
+        name: "description",
+        content: "Search, filter, and multi-select parsed API operations before generating test cases."
+      },
+      { property: "og:title", content: "API operations — API Test Evidence Lab" },
+      {
+        property: "og:description",
+        content: "Browse parsed OpenAPI operations with method, tag, and path filters."
+      }
+    ]
+  }),
+  component: OperationsPage
+});
+function OperationsPage() {
+  _s();
+  const navigate = useNavigate();
+  const { specification, selectedOperationIds, toggleOperation, setSelectedOperationIds, hydrated } = useLab();
+  const [search, setSearch] = useState("");
+  const [method, setMethod] = useState("all");
+  const [tag, setTag] = useState("all");
+  const operations = specification?.operations ?? [];
+  const methods = useMemo(
+    () => [...new Set(operations.map((op) => op.method?.toUpperCase()).filter(Boolean))].sort(),
+    [operations]
+  );
+  const tags = useMemo(
+    () => [...new Set(operations.flatMap((op) => op.tags ?? []))].sort(),
+    [operations]
+  );
+  const filtered = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    return operations.filter((op) => {
+      if (method !== "all" && op.method?.toUpperCase() !== method) return false;
+      if (tag !== "all" && !(op.tags ?? []).includes(tag)) return false;
+      if (!term) return true;
+      return [op.path, op.summary, op.operationId, ...op.tags ?? []].filter(Boolean).some((field) => String(field).toLowerCase().includes(term));
+    });
+  }, [operations, search, method, tag]);
+  const allFilteredSelected = filtered.length > 0 && filtered.every((op) => selectedOperationIds.includes(op.id));
+  if (hydrated && !specification) {
+    return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      /* @__PURE__ */ jsxDEV(PageHeader, { eyebrow: "Pipeline · Step 2", title: "API operations" }, void 0, false, {
+        fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+        lineNumber: 94,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(
+        EmptyState,
+        {
+          icon: /* @__PURE__ */ jsxDEV(ListTree, { className: "size-6" }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 96,
+            columnNumber: 17
+          }, this),
+          title: "No specification parsed yet",
+          description: "Import an OpenAPI document first — parsed operations will appear here for filtering and selection.",
+          action: /* @__PURE__ */ jsxDEV(Button, { asChild: true, size: "sm", children: /* @__PURE__ */ jsxDEV(Link, { to: "/specification", children: "Import specification" }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 101,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 100,
+            columnNumber: 11
+          }, this)
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 95,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+      lineNumber: 93,
+      columnNumber: 7
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV(
+      PageHeader,
+      {
+        eyebrow: "Pipeline · Step 2",
+        title: "API operations",
+        description: specification ? `${specification.title ?? "Specification"} · ${operations.length} operations discovered` : void 0,
+        actions: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          /* @__PURE__ */ jsxDEV(
+            Button,
+            {
+              variant: "outline",
+              disabled: selectedOperationIds.length === 0,
+              onClick: () => setSelectedOperationIds([]),
+              children: "Clear selection"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 121,
+              columnNumber: 13
+            },
+            this
+          ),
+          /* @__PURE__ */ jsxDEV(
+            Button,
+            {
+              disabled: selectedOperationIds.length === 0,
+              onClick: () => void navigate({ to: "/generate" }),
+              children: [
+                "Continue with ",
+                selectedOperationIds.length
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 128,
+              columnNumber: 13
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 120,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+        lineNumber: 111,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV("div", { className: "panel overflow-hidden", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "grid gap-3 border-b border-border p-4 lg:grid-cols-[minmax(0,1fr)_10rem_12rem]", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "relative min-w-0", children: [
+          /* @__PURE__ */ jsxDEV(Search, { className: "pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 141,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            Input,
+            {
+              value: search,
+              onChange: (event) => setSearch(event.target.value),
+              placeholder: "Search path, summary, or operationId",
+              className: "pl-9",
+              "aria-label": "Search operations"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 142,
+              columnNumber: 13
+            },
+            this
+          ),
+          search ? /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              "aria-label": "Clear search",
+              onClick: () => setSearch(""),
+              className: "absolute top-1/2 right-2 -translate-y-1/2 rounded p-1 text-muted-foreground hover:text-foreground",
+              children: /* @__PURE__ */ jsxDEV(X, { className: "size-3.5" }, void 0, false, {
+                fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                lineNumber: 155,
+                columnNumber: 17
+              }, this)
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 150,
+              columnNumber: 13
+            },
+            this
+          ) : null
+        ] }, void 0, true, {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 140,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(Select, { value: method, onValueChange: setMethod, children: [
+          /* @__PURE__ */ jsxDEV(SelectTrigger, { "aria-label": "Filter by method", children: /* @__PURE__ */ jsxDEV(SelectValue, { placeholder: "Method" }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 161,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 160,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(SelectContent, { children: [
+            /* @__PURE__ */ jsxDEV(SelectItem, { value: "all", children: "All methods" }, void 0, false, {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 164,
+              columnNumber: 15
+            }, this),
+            methods.map(
+              (value) => /* @__PURE__ */ jsxDEV(SelectItem, { value, children: value }, value, false, {
+                fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                lineNumber: 166,
+                columnNumber: 15
+              }, this)
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 163,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 159,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(Select, { value: tag, onValueChange: setTag, children: [
+          /* @__PURE__ */ jsxDEV(SelectTrigger, { "aria-label": "Filter by tag", children: /* @__PURE__ */ jsxDEV(SelectValue, { placeholder: "Tag" }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 174,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 173,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(SelectContent, { children: [
+            /* @__PURE__ */ jsxDEV(SelectItem, { value: "all", children: "All tags" }, void 0, false, {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 177,
+              columnNumber: 15
+            }, this),
+            tags.map(
+              (value) => /* @__PURE__ */ jsxDEV(SelectItem, { value, children: value }, value, false, {
+                fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                lineNumber: 179,
+                columnNumber: 15
+              }, this)
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 176,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 172,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+        lineNumber: 139,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between gap-4 border-b border-border bg-muted/30 px-4 py-2.5", children: [
+        /* @__PURE__ */ jsxDEV("label", { className: "flex min-w-0 items-center gap-2.5 text-xs font-medium", children: [
+          /* @__PURE__ */ jsxDEV(
+            Checkbox,
+            {
+              checked: allFilteredSelected,
+              onCheckedChange: (checked) => {
+                const ids = filtered.map((op) => op.id);
+                setSelectedOperationIds(
+                  checked ? [.../* @__PURE__ */ new Set([...selectedOperationIds, ...ids])] : selectedOperationIds.filter((id) => !ids.includes(id))
+                );
+              },
+              "aria-label": "Select all filtered operations"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+              lineNumber: 189,
+              columnNumber: 13
+            },
+            this
+          ),
+          /* @__PURE__ */ jsxDEV("span", { className: "truncate", children: [
+            filtered.length,
+            " shown · ",
+            selectedOperationIds.length,
+            " selected"
+          ] }, void 0, true, {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 201,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 188,
+          columnNumber: 11
+        }, this),
+        search || method !== "all" || tag !== "all" ? /* @__PURE__ */ jsxDEV(
+          Button,
+          {
+            variant: "ghost",
+            size: "sm",
+            onClick: () => {
+              setSearch("");
+              setMethod("all");
+              setTag("all");
+            },
+            children: "Reset filters"
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 206,
+            columnNumber: 11
+          },
+          this
+        ) : null
+      ] }, void 0, true, {
+        fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+        lineNumber: 187,
+        columnNumber: 9
+      }, this),
+      filtered.length === 0 ? /* @__PURE__ */ jsxDEV(
+        EmptyState,
+        {
+          title: "No operations match these filters",
+          description: "Try a broader search term or reset the method and tag filters."
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 221,
+          columnNumber: 9
+        },
+        this
+      ) : /* @__PURE__ */ jsxDEV("ul", { className: "divide-y divide-border", children: filtered.map((op) => {
+        const selected = selectedOperationIds.includes(op.id);
+        return /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+          "label",
+          {
+            className: "grid cursor-pointer grid-cols-[auto_minmax(0,1fr)] items-start gap-3 px-4 py-3 transition-colors hover:bg-accent/40 sm:grid-cols-[auto_auto_minmax(0,1fr)_auto] sm:items-center" + (selected ? " bg-accent/30" : ""),
+            children: [
+              /* @__PURE__ */ jsxDEV(
+                Checkbox,
+                {
+                  checked: selected,
+                  onCheckedChange: () => toggleOperation(op.id),
+                  "aria-label": `Select ${op.method} ${op.path}`,
+                  className: "mt-0.5 sm:mt-0"
+                },
+                void 0,
+                false,
+                {
+                  fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                  lineNumber: 237,
+                  columnNumber: 21
+                },
+                this
+              ),
+              /* @__PURE__ */ jsxDEV(MethodBadge, { method: op.method, className: "hidden sm:inline-flex" }, void 0, false, {
+                fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                lineNumber: 243,
+                columnNumber: 21
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "min-w-0", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex min-w-0 items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(MethodBadge, { method: op.method, className: "sm:hidden" }, void 0, false, {
+                    fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                    lineNumber: 246,
+                    columnNumber: 25
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { className: "truncate font-mono text-sm", children: op.path }, void 0, false, {
+                    fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                    lineNumber: 247,
+                    columnNumber: 25
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                  lineNumber: 245,
+                  columnNumber: 23
+                }, this),
+                op.summary ? /* @__PURE__ */ jsxDEV("p", { className: "mt-1 truncate text-xs text-muted-foreground", children: op.summary }, void 0, false, {
+                  fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                  lineNumber: 250,
+                  columnNumber: 21
+                }, this) : null
+              ] }, void 0, true, {
+                fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                lineNumber: 244,
+                columnNumber: 21
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "hidden shrink-0 gap-1.5 sm:flex", children: [
+                op.deprecated ? /* @__PURE__ */ jsxDEV(Badge, { variant: "destructive", children: "deprecated" }, void 0, false, {
+                  fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                  lineNumber: 254,
+                  columnNumber: 40
+                }, this) : null,
+                (op.tags ?? []).slice(0, 2).map(
+                  (value) => /* @__PURE__ */ jsxDEV(Badge, { variant: "secondary", children: value }, value, false, {
+                    fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                    lineNumber: 256,
+                    columnNumber: 21
+                  }, this)
+                )
+              ] }, void 0, true, {
+                fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+                lineNumber: 253,
+                columnNumber: 21
+              }, this)
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+            lineNumber: 231,
+            columnNumber: 19
+          },
+          this
+        ) }, op.id, false, {
+          fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+          lineNumber: 230,
+          columnNumber: 15
+        }, this);
+      }) }, void 0, false, {
+        fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+        lineNumber: 226,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+      lineNumber: 138,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx",
+    lineNumber: 110,
+    columnNumber: 5
+  }, this);
+}
+_s(OperationsPage, "QdbGOl8hTdgFzYCMFo4S4vvFFL0=", false, function() {
+  return [useNavigate, useLab];
+});
+_c = OperationsPage;
+var _c;
+$RefreshReg$(_c, "OperationsPage");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Laptop/Desktop/Porfolio/api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend/src/routes/operations.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBQUEsbUJBQUc4QixhQUFhLHVCQUFDLFNBQU0sU0FBUSxlQUFjLDBCQUE3QjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUF1QyxJQUFXO0FBQUEsaUJBQ2pFOUIsR0FBR0ssUUFBUSxJQUFJMEIsTUFBTSxHQUFHLENBQUMsRUFBRWhDO0FBQUFBLGtCQUFJLENBQUMyQixVQUNoQyx1QkFBQyxTQUFrQixTQUFRLGFBQ3hCQSxtQkFEU0EsT0FBWjtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQUVBO0FBQUEsZ0JBQ0Q7QUFBQSxtQkFOSDtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQU9BO0FBQUE7QUFBQTtBQUFBLFVBN0JGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxRQThCQSxLQS9CTzFCLEdBQUdxQixJQUFaO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFnQ0E7QUFBQSxNQUVKLENBQUMsS0F0Q0g7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQXVDQTtBQUFBLFNBL0hKO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FpSUE7QUFBQSxPQTdKRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBOEpBO0FBRUo7QUFBQ3RDLEdBck5RRCxnQkFBYztBQUFBLFVBQ0ozQixhQUVma0IsTUFBTTtBQUFBO0FBQUEsS0FIRFM7QUFBYyxJQUFBa0Q7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiY3JlYXRlRmlsZVJvdXRlIiwiTGluayIsInVzZU5hdmlnYXRlIiwiTGlzdFRyZWUiLCJTZWFyY2giLCJYIiwidXNlTWVtbyIsInVzZVN0YXRlIiwiUGFnZUhlYWRlciIsIkVtcHR5U3RhdGUiLCJNZXRob2RCYWRnZSIsIkJhZGdlIiwiQnV0dG9uIiwiQ2hlY2tib3giLCJJbnB1dCIsIlNlbGVjdCIsIlNlbGVjdENvbnRlbnQiLCJTZWxlY3RJdGVtIiwiU2VsZWN0VHJpZ2dlciIsIlNlbGVjdFZhbHVlIiwidXNlTGFiIiwiUm91dGUiLCJoZWFkIiwibWV0YSIsInRpdGxlIiwibmFtZSIsImNvbnRlbnQiLCJwcm9wZXJ0eSIsImNvbXBvbmVudCIsIk9wZXJhdGlvbnNQYWdlIiwiX3MiLCJuYXZpZ2F0ZSIsInNwZWNpZmljYXRpb24iLCJzZWxlY3RlZE9wZXJhdGlvbklkcyIsInRvZ2dsZU9wZXJhdGlvbiIsInNldFNlbGVjdGVkT3BlcmF0aW9uSWRzIiwiaHlkcmF0ZWQiLCJzZWFyY2giLCJzZXRTZWFyY2giLCJtZXRob2QiLCJzZXRNZXRob2QiLCJ0YWciLCJzZXRUYWciLCJvcGVyYXRpb25zIiwibWV0aG9kcyIsIlNldCIsIm1hcCIsIm9wIiwidG9VcHBlckNhc2UiLCJmaWx0ZXIiLCJCb29sZWFuIiwic29ydCIsInRhZ3MiLCJmbGF0TWFwIiwiZmlsdGVyZWQiLCJ0ZXJtIiwidHJpbSIsInRvTG93ZXJDYXNlIiwiaW5jbHVkZXMiLCJwYXRoIiwic3VtbWFyeSIsIm9wZXJhdGlvbklkIiwic29tZSIsImZpZWxkIiwiU3RyaW5nIiwiYWxsRmlsdGVyZWRTZWxlY3RlZCIsImxlbmd0aCIsImV2ZXJ5IiwiaWQiLCJ1bmRlZmluZWQiLCJ0byIsImV2ZW50IiwidGFyZ2V0IiwidmFsdWUiLCJjaGVja2VkIiwiaWRzIiwic2VsZWN0ZWQiLCJkZXByZWNhdGVkIiwic2xpY2UiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJvcGVyYXRpb25zLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjcmVhdGVGaWxlUm91dGUsIExpbmssIHVzZU5hdmlnYXRlIH0gZnJvbSBcIkB0YW5zdGFjay9yZWFjdC1yb3V0ZXJcIjtcbmltcG9ydCB7IExpc3RUcmVlLCBTZWFyY2gsIFggfSBmcm9tIFwibHVjaWRlLXJlYWN0XCI7XG5pbXBvcnQgeyB1c2VNZW1vLCB1c2VTdGF0ZSB9IGZyb20gXCJyZWFjdFwiO1xuXG5pbXBvcnQgeyBQYWdlSGVhZGVyIH0gZnJvbSBcIkAvY29tcG9uZW50cy9hcHAtc2hlbGxcIjtcbmltcG9ydCB7IEVtcHR5U3RhdGUsIE1ldGhvZEJhZGdlIH0gZnJvbSBcIkAvY29tcG9uZW50cy9sYWItdWlcIjtcbmltcG9ydCB7IEJhZGdlIH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9iYWRnZVwiO1xuaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9idXR0b25cIjtcbmltcG9ydCB7IENoZWNrYm94IH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9jaGVja2JveFwiO1xuaW1wb3J0IHsgSW5wdXQgfSBmcm9tIFwiQC9jb21wb25lbnRzL3VpL2lucHV0XCI7XG5pbXBvcnQge1xuICBTZWxlY3QsXG4gIFNlbGVjdENvbnRlbnQsXG4gIFNlbGVjdEl0ZW0sXG4gIFNlbGVjdFRyaWdnZXIsXG4gIFNlbGVjdFZhbHVlLFxufSBmcm9tIFwiQC9jb21wb25lbnRzL3VpL3NlbGVjdFwiO1xuaW1wb3J0IHsgdXNlTGFiIH0gZnJvbSBcIkAvbGliL2xhYi1zdG9yZVwiO1xuXG5leHBvcnQgY29uc3QgUm91dGUgPSBjcmVhdGVGaWxlUm91dGUoXCIvb3BlcmF0aW9uc1wiKSh7XG4gIGhlYWQ6ICgpID0+ICh7XG4gICAgbWV0YTogW1xuICAgICAgeyB0aXRsZTogXCJBUEkgb3BlcmF0aW9ucyDigJQgQVBJIFRlc3QgRXZpZGVuY2UgTGFiXCIgfSxcbiAgICAgIHtcbiAgICAgICAgbmFtZTogXCJkZXNjcmlwdGlvblwiLFxuICAgICAgICBjb250ZW50OiBcIlNlYXJjaCwgZmlsdGVyLCBhbmQgbXVsdGktc2VsZWN0IHBhcnNlZCBBUEkgb3BlcmF0aW9ucyBiZWZvcmUgZ2VuZXJhdGluZyB0ZXN0IGNhc2VzLlwiLFxuICAgICAgfSxcbiAgICAgIHsgcHJvcGVydHk6IFwib2c6dGl0bGVcIiwgY29udGVudDogXCJBUEkgb3BlcmF0aW9ucyDigJQgQVBJIFRlc3QgRXZpZGVuY2UgTGFiXCIgfSxcbiAgICAgIHtcbiAgICAgICAgcHJvcGVydHk6IFwib2c6ZGVzY3JpcHRpb25cIixcbiAgICAgICAgY29udGVudDogXCJCcm93c2UgcGFyc2VkIE9wZW5BUEkgb3BlcmF0aW9ucyB3aXRoIG1ldGhvZCwgdGFnLCBhbmQgcGF0aCBmaWx0ZXJzLlwiLFxuICAgICAgfSxcbiAgICBdLFxuICB9KSxcbiAgY29tcG9uZW50OiBPcGVyYXRpb25zUGFnZSxcbn0pO1xuXG5mdW5jdGlvbiBPcGVyYXRpb25zUGFnZSgpIHtcbiAgY29uc3QgbmF2aWdhdGUgPSB1c2VOYXZpZ2F0ZSgpO1xuICBjb25zdCB7IHNwZWNpZmljYXRpb24sIHNlbGVjdGVkT3BlcmF0aW9uSWRzLCB0b2dnbGVPcGVyYXRpb24sIHNldFNlbGVjdGVkT3BlcmF0aW9uSWRzLCBoeWRyYXRlZCB9ID1cbiAgICB1c2VMYWIoKTtcbiAgY29uc3QgW3NlYXJjaCwgc2V0U2VhcmNoXSA9IHVzZVN0YXRlKFwiXCIpO1xuICBjb25zdCBbbWV0aG9kLCBzZXRNZXRob2RdID0gdXNlU3RhdGUoXCJhbGxcIik7XG4gIGNvbnN0IFt0YWcsIHNldFRhZ10gPSB1c2VTdGF0ZShcImFsbFwiKTtcblxuICBjb25zdCBvcGVyYXRpb25zID0gc3BlY2lmaWNhdGlvbj8ub3BlcmF0aW9ucyA/PyBbXTtcblxuICBjb25zdCBtZXRob2RzID0gdXNlTWVtbyhcbiAgICAoKSA9PiBbLi4ubmV3IFNldChvcGVyYXRpb25zLm1hcCgob3ApID0+IG9wLm1ldGhvZD8udG9VcHBlckNhc2UoKSkuZmlsdGVyKEJvb2xlYW4pKV0uc29ydCgpLFxuICAgIFtvcGVyYXRpb25zXSxcbiAgKTtcbiAgY29uc3QgdGFncyA9IHVzZU1lbW8oXG4gICAgKCkgPT4gWy4uLm5ldyBTZXQob3BlcmF0aW9ucy5mbGF0TWFwKChvcCkgPT4gb3AudGFncyA/PyBbXSkpXS5zb3J0KCksXG4gICAgW29wZXJhdGlvbnNdLFxuICApO1xuXG4gIGNvbnN0IGZpbHRlcmVkID0gdXNlTWVtbygoKSA9PiB7XG4gICAgY29uc3QgdGVybSA9IHNlYXJjaC50cmltKCkudG9Mb3dlckNhc2UoKTtcbiAgICByZXR1cm4gb3BlcmF0aW9ucy5maWx0ZXIoKG9wKSA9PiB7XG4gICAgICBpZiAobWV0aG9kICE9PSBcImFsbFwiICYmIG9wLm1ldGhvZD8udG9VcHBlckNhc2UoKSAhPT0gbWV0aG9kKSByZXR1cm4gZmFsc2U7XG4gICAgICBpZiAodGFnICE9PSBcImFsbFwiICYmICEob3AudGFncyA/PyBbXSkuaW5jbHVkZXModGFnKSkgcmV0dXJuIGZhbHNlO1xuICAgICAgaWYgKCF0ZXJtKSByZXR1cm4gdHJ1ZTtcbiAgICAgIHJldHVybiBbb3AucGF0aCwgb3Auc3VtbWFyeSwgb3Aub3BlcmF0aW9uSWQsIC4uLihvcC50YWdzID8/IFtdKV1cbiAgICAgICAgLmZpbHRlcihCb29sZWFuKVxuICAgICAgICAuc29tZSgoZmllbGQpID0+IFN0cmluZyhmaWVsZCkudG9Mb3dlckNhc2UoKS5pbmNsdWRlcyh0ZXJtKSk7XG4gICAgfSk7XG4gIH0sIFtvcGVyYXRpb25zLCBzZWFyY2gsIG1ldGhvZCwgdGFnXSk7XG5cbiAgY29uc3QgYWxsRmlsdGVyZWRTZWxlY3RlZCA9XG4gICAgZmlsdGVyZWQubGVuZ3RoID4gMCAmJiBmaWx0ZXJlZC5ldmVyeSgob3ApID0+IHNlbGVjdGVkT3BlcmF0aW9uSWRzLmluY2x1ZGVzKG9wLmlkKSk7XG5cbiAgaWYgKGh5ZHJhdGVkICYmICFzcGVjaWZpY2F0aW9uKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDw+XG4gICAgICAgIDxQYWdlSGVhZGVyIGV5ZWJyb3c9XCJQaXBlbGluZSDCtyBTdGVwIDJcIiB0aXRsZT1cIkFQSSBvcGVyYXRpb25zXCIgLz5cbiAgICAgICAgPEVtcHR5U3RhdGVcbiAgICAgICAgICBpY29uPXs8TGlzdFRyZWUgY2xhc3NOYW1lPVwic2l6ZS02XCIgLz59XG4gICAgICAgICAgdGl0bGU9XCJObyBzcGVjaWZpY2F0aW9uIHBhcnNlZCB5ZXRcIlxuICAgICAgICAgIGRlc2NyaXB0aW9uPVwiSW1wb3J0IGFuIE9wZW5BUEkgZG9jdW1lbnQgZmlyc3Qg4oCUIHBhcnNlZCBvcGVyYXRpb25zIHdpbGwgYXBwZWFyIGhlcmUgZm9yIGZpbHRlcmluZyBhbmQgc2VsZWN0aW9uLlwiXG4gICAgICAgICAgYWN0aW9uPXtcbiAgICAgICAgICAgIDxCdXR0b24gYXNDaGlsZCBzaXplPVwic21cIj5cbiAgICAgICAgICAgICAgPExpbmsgdG89XCIvc3BlY2lmaWNhdGlvblwiPkltcG9ydCBzcGVjaWZpY2F0aW9uPC9MaW5rPlxuICAgICAgICAgICAgPC9CdXR0b24+XG4gICAgICAgICAgfVxuICAgICAgICAvPlxuICAgICAgPC8+XG4gICAgKTtcbiAgfVxuXG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxQYWdlSGVhZGVyXG4gICAgICAgIGV5ZWJyb3c9XCJQaXBlbGluZSDCtyBTdGVwIDJcIlxuICAgICAgICB0aXRsZT1cIkFQSSBvcGVyYXRpb25zXCJcbiAgICAgICAgZGVzY3JpcHRpb249e1xuICAgICAgICAgIHNwZWNpZmljYXRpb25cbiAgICAgICAgICAgID8gYCR7c3BlY2lmaWNhdGlvbi50aXRsZSA/PyBcIlNwZWNpZmljYXRpb25cIn0gwrcgJHtvcGVyYXRpb25zLmxlbmd0aH0gb3BlcmF0aW9ucyBkaXNjb3ZlcmVkYFxuICAgICAgICAgICAgOiB1bmRlZmluZWRcbiAgICAgICAgfVxuICAgICAgICBhY3Rpb25zPXtcbiAgICAgICAgICA8PlxuICAgICAgICAgICAgPEJ1dHRvblxuICAgICAgICAgICAgICB2YXJpYW50PVwib3V0bGluZVwiXG4gICAgICAgICAgICAgIGRpc2FibGVkPXtzZWxlY3RlZE9wZXJhdGlvbklkcy5sZW5ndGggPT09IDB9XG4gICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFNlbGVjdGVkT3BlcmF0aW9uSWRzKFtdKX1cbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgQ2xlYXIgc2VsZWN0aW9uXG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgICAgIDxCdXR0b25cbiAgICAgICAgICAgICAgZGlzYWJsZWQ9e3NlbGVjdGVkT3BlcmF0aW9uSWRzLmxlbmd0aCA9PT0gMH1cbiAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gdm9pZCBuYXZpZ2F0ZSh7IHRvOiBcIi9nZW5lcmF0ZVwiIH0pfVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICBDb250aW51ZSB3aXRoIHtzZWxlY3RlZE9wZXJhdGlvbklkcy5sZW5ndGh9XG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgICA8Lz5cbiAgICAgICAgfVxuICAgICAgLz5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJwYW5lbCBvdmVyZmxvdy1oaWRkZW5cIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdhcC0zIGJvcmRlci1iIGJvcmRlci1ib3JkZXIgcC00IGxnOmdyaWQtY29scy1bbWlubWF4KDAsMWZyKV8xMHJlbV8xMnJlbV1cIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlbGF0aXZlIG1pbi13LTBcIj5cbiAgICAgICAgICAgIDxTZWFyY2ggY2xhc3NOYW1lPVwicG9pbnRlci1ldmVudHMtbm9uZSBhYnNvbHV0ZSB0b3AtMS8yIGxlZnQtMyBzaXplLTQgLXRyYW5zbGF0ZS15LTEvMiB0ZXh0LW11dGVkLWZvcmVncm91bmRcIiAvPlxuICAgICAgICAgICAgPElucHV0XG4gICAgICAgICAgICAgIHZhbHVlPXtzZWFyY2h9XG4gICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZXZlbnQpID0+IHNldFNlYXJjaChldmVudC50YXJnZXQudmFsdWUpfVxuICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIlNlYXJjaCBwYXRoLCBzdW1tYXJ5LCBvciBvcGVyYXRpb25JZFwiXG4gICAgICAgICAgICAgIGNsYXNzTmFtZT1cInBsLTlcIlxuICAgICAgICAgICAgICBhcmlhLWxhYmVsPVwiU2VhcmNoIG9wZXJhdGlvbnNcIlxuICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIHtzZWFyY2ggPyAoXG4gICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICBhcmlhLWxhYmVsPVwiQ2xlYXIgc2VhcmNoXCJcbiAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRTZWFyY2goXCJcIil9XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTEvMiByaWdodC0yIC10cmFuc2xhdGUteS0xLzIgcm91bmRlZCBwLTEgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGhvdmVyOnRleHQtZm9yZWdyb3VuZFwiXG4gICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICA8WCBjbGFzc05hbWU9XCJzaXplLTMuNVwiIC8+XG4gICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgKSA6IG51bGx9XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPFNlbGVjdCB2YWx1ZT17bWV0aG9kfSBvblZhbHVlQ2hhbmdlPXtzZXRNZXRob2R9PlxuICAgICAgICAgICAgPFNlbGVjdFRyaWdnZXIgYXJpYS1sYWJlbD1cIkZpbHRlciBieSBtZXRob2RcIj5cbiAgICAgICAgICAgICAgPFNlbGVjdFZhbHVlIHBsYWNlaG9sZGVyPVwiTWV0aG9kXCIgLz5cbiAgICAgICAgICAgIDwvU2VsZWN0VHJpZ2dlcj5cbiAgICAgICAgICAgIDxTZWxlY3RDb250ZW50PlxuICAgICAgICAgICAgICA8U2VsZWN0SXRlbSB2YWx1ZT1cImFsbFwiPkFsbCBtZXRob2RzPC9TZWxlY3RJdGVtPlxuICAgICAgICAgICAgICB7bWV0aG9kcy5tYXAoKHZhbHVlKSA9PiAoXG4gICAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0ga2V5PXt2YWx1ZX0gdmFsdWU9e3ZhbHVlfT5cbiAgICAgICAgICAgICAgICAgIHt2YWx1ZX1cbiAgICAgICAgICAgICAgICA8L1NlbGVjdEl0ZW0+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC9TZWxlY3RDb250ZW50PlxuICAgICAgICAgIDwvU2VsZWN0PlxuICAgICAgICAgIDxTZWxlY3QgdmFsdWU9e3RhZ30gb25WYWx1ZUNoYW5nZT17c2V0VGFnfT5cbiAgICAgICAgICAgIDxTZWxlY3RUcmlnZ2VyIGFyaWEtbGFiZWw9XCJGaWx0ZXIgYnkgdGFnXCI+XG4gICAgICAgICAgICAgIDxTZWxlY3RWYWx1ZSBwbGFjZWhvbGRlcj1cIlRhZ1wiIC8+XG4gICAgICAgICAgICA8L1NlbGVjdFRyaWdnZXI+XG4gICAgICAgICAgICA8U2VsZWN0Q29udGVudD5cbiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9XCJhbGxcIj5BbGwgdGFnczwvU2VsZWN0SXRlbT5cbiAgICAgICAgICAgICAge3RhZ3MubWFwKCh2YWx1ZSkgPT4gKFxuICAgICAgICAgICAgICAgIDxTZWxlY3RJdGVtIGtleT17dmFsdWV9IHZhbHVlPXt2YWx1ZX0+XG4gICAgICAgICAgICAgICAgICB7dmFsdWV9XG4gICAgICAgICAgICAgICAgPC9TZWxlY3RJdGVtPlxuICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgIDwvU2VsZWN0Q29udGVudD5cbiAgICAgICAgICA8L1NlbGVjdD5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQgYm9yZGVyLWIgYm9yZGVyLWJvcmRlciBiZy1tdXRlZC8zMCBweC00IHB5LTIuNVwiPlxuICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJmbGV4IG1pbi13LTAgaXRlbXMtY2VudGVyIGdhcC0yLjUgdGV4dC14cyBmb250LW1lZGl1bVwiPlxuICAgICAgICAgICAgPENoZWNrYm94XG4gICAgICAgICAgICAgIGNoZWNrZWQ9e2FsbEZpbHRlcmVkU2VsZWN0ZWR9XG4gICAgICAgICAgICAgIG9uQ2hlY2tlZENoYW5nZT17KGNoZWNrZWQpID0+IHtcbiAgICAgICAgICAgICAgICBjb25zdCBpZHMgPSBmaWx0ZXJlZC5tYXAoKG9wKSA9PiBvcC5pZCk7XG4gICAgICAgICAgICAgICAgc2V0U2VsZWN0ZWRPcGVyYXRpb25JZHMoXG4gICAgICAgICAgICAgICAgICBjaGVja2VkXG4gICAgICAgICAgICAgICAgICAgID8gWy4uLm5ldyBTZXQoWy4uLnNlbGVjdGVkT3BlcmF0aW9uSWRzLCAuLi5pZHNdKV1cbiAgICAgICAgICAgICAgICAgICAgOiBzZWxlY3RlZE9wZXJhdGlvbklkcy5maWx0ZXIoKGlkKSA9PiAhaWRzLmluY2x1ZGVzKGlkKSksXG4gICAgICAgICAgICAgICAgKTtcbiAgICAgICAgICAgICAgfX1cbiAgICAgICAgICAgICAgYXJpYS1sYWJlbD1cIlNlbGVjdCBhbGwgZmlsdGVyZWQgb3BlcmF0aW9uc1wiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidHJ1bmNhdGVcIj5cbiAgICAgICAgICAgICAge2ZpbHRlcmVkLmxlbmd0aH0gc2hvd24gwrcge3NlbGVjdGVkT3BlcmF0aW9uSWRzLmxlbmd0aH0gc2VsZWN0ZWRcbiAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgIHtzZWFyY2ggfHwgbWV0aG9kICE9PSBcImFsbFwiIHx8IHRhZyAhPT0gXCJhbGxcIiA/IChcbiAgICAgICAgICAgIDxCdXR0b25cbiAgICAgICAgICAgICAgdmFyaWFudD1cImdob3N0XCJcbiAgICAgICAgICAgICAgc2l6ZT1cInNtXCJcbiAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4ge1xuICAgICAgICAgICAgICAgIHNldFNlYXJjaChcIlwiKTtcbiAgICAgICAgICAgICAgICBzZXRNZXRob2QoXCJhbGxcIik7XG4gICAgICAgICAgICAgICAgc2V0VGFnKFwiYWxsXCIpO1xuICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICBSZXNldCBmaWx0ZXJzXG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgICApIDogbnVsbH1cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAge2ZpbHRlcmVkLmxlbmd0aCA9PT0gMCA/IChcbiAgICAgICAgICA8RW1wdHlTdGF0ZVxuICAgICAgICAgICAgdGl0bGU9XCJObyBvcGVyYXRpb25zIG1hdGNoIHRoZXNlIGZpbHRlcnNcIlxuICAgICAgICAgICAgZGVzY3JpcHRpb249XCJUcnkgYSBicm9hZGVyIHNlYXJjaCB0ZXJtIG9yIHJlc2V0IHRoZSBtZXRob2QgYW5kIHRhZyBmaWx0ZXJzLlwiXG4gICAgICAgICAgLz5cbiAgICAgICAgKSA6IChcbiAgICAgICAgICA8dWwgY2xhc3NOYW1lPVwiZGl2aWRlLXkgZGl2aWRlLWJvcmRlclwiPlxuICAgICAgICAgICAge2ZpbHRlcmVkLm1hcCgob3ApID0+IHtcbiAgICAgICAgICAgICAgY29uc3Qgc2VsZWN0ZWQgPSBzZWxlY3RlZE9wZXJhdGlvbklkcy5pbmNsdWRlcyhvcC5pZCk7XG4gICAgICAgICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICAgICAgPGxpIGtleT17b3AuaWR9PlxuICAgICAgICAgICAgICAgICAgPGxhYmVsXG4gICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17XG4gICAgICAgICAgICAgICAgICAgICAgXCJncmlkIGN1cnNvci1wb2ludGVyIGdyaWQtY29scy1bYXV0b19taW5tYXgoMCwxZnIpXSBpdGVtcy1zdGFydCBnYXAtMyBweC00IHB5LTMgdHJhbnNpdGlvbi1jb2xvcnMgaG92ZXI6YmctYWNjZW50LzQwIHNtOmdyaWQtY29scy1bYXV0b19hdXRvX21pbm1heCgwLDFmcilfYXV0b10gc206aXRlbXMtY2VudGVyXCIgK1xuICAgICAgICAgICAgICAgICAgICAgIChzZWxlY3RlZCA/IFwiIGJnLWFjY2VudC8zMFwiIDogXCJcIilcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICA8Q2hlY2tib3hcbiAgICAgICAgICAgICAgICAgICAgICBjaGVja2VkPXtzZWxlY3RlZH1cbiAgICAgICAgICAgICAgICAgICAgICBvbkNoZWNrZWRDaGFuZ2U9eygpID0+IHRvZ2dsZU9wZXJhdGlvbihvcC5pZCl9XG4gICAgICAgICAgICAgICAgICAgICAgYXJpYS1sYWJlbD17YFNlbGVjdCAke29wLm1ldGhvZH0gJHtvcC5wYXRofWB9XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwibXQtMC41IHNtOm10LTBcIlxuICAgICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgICA8TWV0aG9kQmFkZ2UgbWV0aG9kPXtvcC5tZXRob2R9IGNsYXNzTmFtZT1cImhpZGRlbiBzbTppbmxpbmUtZmxleFwiIC8+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWluLXctMFwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBtaW4tdy0wIGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPE1ldGhvZEJhZGdlIG1ldGhvZD17b3AubWV0aG9kfSBjbGFzc05hbWU9XCJzbTpoaWRkZW5cIiAvPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidHJ1bmNhdGUgZm9udC1tb25vIHRleHQtc21cIj57b3AucGF0aH08L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAge29wLnN1bW1hcnkgPyAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJtdC0xIHRydW5jYXRlIHRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kXCI+e29wLnN1bW1hcnl9PC9wPlxuICAgICAgICAgICAgICAgICAgICAgICkgOiBudWxsfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoaWRkZW4gc2hyaW5rLTAgZ2FwLTEuNSBzbTpmbGV4XCI+XG4gICAgICAgICAgICAgICAgICAgICAge29wLmRlcHJlY2F0ZWQgPyA8QmFkZ2UgdmFyaWFudD1cImRlc3RydWN0aXZlXCI+ZGVwcmVjYXRlZDwvQmFkZ2U+IDogbnVsbH1cbiAgICAgICAgICAgICAgICAgICAgICB7KG9wLnRhZ3MgPz8gW10pLnNsaWNlKDAsIDIpLm1hcCgodmFsdWUpID0+IChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxCYWRnZSBrZXk9e3ZhbHVlfSB2YXJpYW50PVwic2Vjb25kYXJ5XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHt2YWx1ZX1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQmFkZ2U+XG4gICAgICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgfSl9XG4gICAgICAgICAgPC91bD5cbiAgICAgICAgKX1cbiAgICAgIDwvZGl2PlxuICAgIDwvPlxuICApO1xufVxuIl0sImZpbGUiOiJDOi9Vc2Vycy9MYXB0b3AvRGVza3RvcC9Qb3Jmb2xpby9hcGktdGVzdC1ldmlkZW5jZS1sYWItY2xlYW4tcmVwby9hcGktdGVzdC1ldmlkZW5jZS1sYWItZnJvbnRlbmQvc3JjL3JvdXRlcy9vcGVyYXRpb25zLnRzeCJ9

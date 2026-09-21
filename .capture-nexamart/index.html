@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, initial-scale=1.0">
+  <title>NexaMart: MERN Stack E-Commerce Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-slate: #f1f5f9;
+      --border: #e2e8f0;
+      --border-accent: #cbd5e1;
+      --accent-blue: #2563eb;
+      --accent-blue-light: #eff6ff;
+      --accent-emerald: #059669;
+      --accent-emerald-light: #ecfdf5;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
+    body { background-color: var(--bg-body); color: var(--text-main); width: 1280px; min-height: 800px; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    /* Top Navigation Bar */
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffffff; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .brand-logo { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--text-main); }
+    .brand-logo .icon { background: linear-gradient(135deg, #2563eb, #0284c7); color: #ffffff; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; font-size: 20px; font-weight: 900; box-shadow: 0 4px 12px rgba(37,99,235,0.25); }
+    .search-box { display: flex; align-items: center; background: var(--bg-slate); border: 1px solid var(--border); border-radius: 10px; padding: 10px 18px; width: 460px; gap: 12px; }
+    .search-box input { background: transparent; border: none; outline: none; color: var(--text-main); width: 100%; font-size: 14px; }
+    .nav-actions { display: flex; align-items: center; gap: 24px; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+    .badge-pill { background: var(--accent-blue); color: #ffffff; padding: 3px 9px; border-radius: 20px; font-weight: 800; font-size: 11px; }
+
+    /* Main Container */
+    .container { padding: 32px 40px; }
+
+    /* View Header Banner */
+    .view-banner { background: #ffffff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 28px; margin-bottom: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 6px; }
+    .view-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-blue-light); border: 1px solid #bfdbfe; color: var(--accent-blue); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; width: fit-content; }
+    .view-title { font-size: 24px; font-weight: 800; color: var(--text-main); letter-spacing: -0.5px; margin-top: 2px; }
+    .view-sub { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+
+    /* View Sections */
+    .view-section { display: none; }
+    .view-section.active { display: block; }
+
+    /* Buttons */
+    .btn-primary { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #ffffff; font-weight: 700; padding: 12px 26px; border-radius: 9px; border: none; cursor: pointer; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(37,99,235,0.25); }
+    .btn-emerald { background: linear-gradient(135deg, #059669, #047857); color: #ffffff; font-weight: 700; padding: 12px 26px; border-radius: 9px; border: none; cursor: pointer; font-size: 14px; box-shadow: 0 4px 14px rgba(5,150,105,0.25); }
+    .btn-secondary { background: var(--bg-slate); color: var(--text-main); border: 1px solid var(--border); font-weight: 600; padding: 12px 22px; border-radius: 9px; cursor: pointer; font-size: 14px; }
+
+    /* Product Cards & Grid */
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .product-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .product-img { background: var(--bg-slate); border-radius: 10px; height: 160px; display: grid; place-items: center; font-size: 56px; margin-bottom: 16px; border: 1px solid #f1f5f9; }
+    .product-cat { font-size: 11px; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; }
+    .product-name { font-size: 15px; font-weight: 700; color: var(--text-main); margin-bottom: 10px; line-height: 1.35; }
+    .price-val { font-size: 19px; font-weight: 800; color: var(--text-main); }
+    .rating-star { color: #f59e0b; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 4px; margin-bottom: 10px; }
+
+    /* Data Tables */
+    .data-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,0.03); }
+    .data-table th, .data-table td { padding: 16px 24px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .data-table th { background: #f8fafc; color: var(--text-muted); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
+
+    /* Status Badges */
+    .status { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; }
+    .status-success { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+    .status-warning { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+    .status-info { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+
+    /* Stats Grid */
+    .admin-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 28px; }
+    .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
+    .stat-val { font-size: 30px; font-weight: 800; color: var(--text-main); margin: 8px 0 4px; letter-spacing: -0.5px; }
+    .stat-change { font-size: 12px; font-weight: 700; color: var(--accent-emerald); }
+
+    /* Architecture Grid */
+    .arch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .arch-card { background: #ffffff; border: 1px solid var(--border); border-radius: 14px; padding: 26px; box-shadow: 0 4px 14px rgba(0,0,0,0.03); border-top: 4px solid var(--accent-blue); }
+    .arch-card h3 { color: var(--text-main); font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+    .arch-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="navbar">
+    <div class="brand-logo">
+      <div class="icon">N</div>
+      <span>NexaMart MERN Engine</span>
+    </div>
+    <div class="search-box">
+      <svg width="18" height="18" fill="none" stroke="#64748b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" value="Search laptops, wireless audio, 4K monitors..." />
+    </div>
+    <div class="nav-actions">
+      <span>Storefront</span>
+      <span>Categories</span>
+      <span>Deals</span>
+      <div style="position:relative">Cart <span class="badge-pill">3</span></div>
+      <div style="background:var(--bg-slate); padding:6px 14px; border-radius:20px; border:1px solid var(--border); color:var(--text-main); font-weight:700">⚡ Tayyab (Admin)</div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- VIEW 01: STOREFRONT HERO -->
+    <div id="view-01" class="view-section active">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 01 / 12 • MERN ENGINE</span>
+        <h2 class="view-title">Storefront Hero & Featured Collections</h2>
+        <p class="view-sub">Spring Tech Summit banner, deal countdown timer, and trending hardware catalog.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); border-radius:16px; padding:44px; display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center; color:#ffffff; margin-bottom:32px; box-shadow:0 12px 32px rgba(49,46,129,0.25)">
+        <div>
+          <div style="background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); padding:4px 14px; border-radius:20px; font-size:12px; font-weight:700; width:fit-content; margin-bottom:16px">🚀 SPRING TECH SUMMIT 2026</div>
+          <h1 style="font-size:38px; font-weight:800; line-height:1.2; margin-bottom:14px; letter-spacing:-1px">Next-Gen MERN <span style="color:#a5f3fc">E-Commerce Engine</span></h1>
+          <p style="opacity:0.9; font-size:15px; line-height:1.7; margin-bottom:24px">Powered by Node.js, Express REST APIs, MongoDB Atlas, Redux Toolkit, and Stripe Elements. Experience sub-50ms query speeds with Redis caching.</p>
+          <div style="display:flex; gap:14px">
+            <button class="btn-emerald">Explore Catalog &rarr;</button>
+            <button class="btn-secondary" style="background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.3); color:#fff">System Architecture</button>
+          </div>
+        </div>
+        <div style="background:#ffffff; border-radius:14px; padding:26px; color:var(--text-main); box-shadow:0 10px 30px rgba(0,0,0,0.2)">
+          <div style="font-size:12px; color:var(--accent-emerald); font-weight:800; text-transform:uppercase; margin-bottom:8px">🔥 FEATURED DEAL OF THE DAY</div>
+          <h3 style="font-size:20px; font-weight:800; margin-bottom:8px">Pro-Book M3 Max Ultra (32GB / 1TB SSD)</h3>
+          <div style="font-size:26px; font-weight:800; color:var(--text-main); margin-bottom:14px">$2,499.00 <span style="font-size:14px; color:var(--text-dim); text-decoration:line-through">$2,899.00</span></div>
+          <button class="btn-primary" style="width:100%; justify-content:center; padding:14px">Add to Cart & Checkout</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">🎧</div>
+          <div class="product-cat">AUDIO / WIRELESS</div>
+          <div class="product-name">CyberSound Pro ANC Headphones</div>
+          <div class="rating-star">★ 4.9 (128 reviews)</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px">
+            <span class="price-val">$299.00</span>
+            <button class="btn-primary" style="padding:6px 14px; font-size:12px">+ Add</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🖥️</div>
+          <div class="product-cat">MONITORS</div>
+          <div class="product-name">Quantum 34" Curved OLED 240Hz</div>
+          <div class="rating-star">★ 5.0 (84 reviews)</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px">
+            <span class="price-val">$899.00</span>
+            <button class="btn-primary" style="padding:6px 14px; font-size:12px">+ Add</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">⌨️</div>
+          <div class="product-cat">PERIPHERALS</div>
+          <div class="product-name">Mechanical RGB Custom Keyboard</div>
+          <div class="rating-star">★ 4.8 (210 reviews)</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px">
+            <span class="price-val">$179.00</span>
+            <button class="btn-primary" style="padding:6px 14px; font-size:12px">+ Add</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">⌚</div>
+          <div class="product-cat">WEARABLES</div>
+          <div class="product-name">Apex Pro Health & GPS Tracker</div>
+          <div class="rating-star">★ 4.7 (95 reviews)</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px">
+            <span class="price-val">$249.00</span>
+            <button class="btn-primary" style="padding:6px 14px; font-size:12px">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 02: PRODUCT CATALOG & FILTER SEARCH -->
+    <div id="view-02" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 02 / 12 • CATALOG & FILTERS</span>
+        <h2 class="view-title">Product Catalog & Multi-Filter Search</h2>
+        <p class="view-sub">Category filters, price sliders, brand selectors, and sorting algorithms.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:260px 1fr; gap:28px">
+        <div style="background:#ffffff; border:1px solid var(--border); border-radius:14px; padding:22px; box-shadow:0 4px 14px rgba(0,0,0,0.03)">
+          <h4 style="font-size:13px; font-weight:800; text-transform:uppercase; color:var(--text-muted); margin-bottom:16px; letter-spacing:0.8px">Category Filter</h4>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:14px; margin-bottom:24px">
+            <label style="display:flex; align-items:center; gap:8px"><input type="checkbox" checked /> Laptops & Computers (24)</label>
+            <label style="display:flex; align-items:center; gap:8px"><input type="checkbox" checked /> Audio & Headphones (18)</label>
+            <label style="display:flex; align-items:center; gap:8px"><input type="checkbox" /> Monitors & Displays (12)</label>
+            <label style="display:flex; align-items:center; gap:8px"><input type="checkbox" /> Peripherals & Accessories (15)</label>
+          </div>
+          <h4 style="font-size:13px; font-weight:800; text-transform:uppercase; color:var(--text-muted); margin-bottom:16px; letter-spacing:0.8px">Price Range ($)</h4>
+          <input type="range" min="50" max="3000" value="1500" style="width:100%; accent-color:var(--accent-blue); margin-bottom:12px" />
+          <button class="btn-primary" style="width:100%; justify-content:center">Apply Filters</button>
+        </div>
+
+        <div class="product-grid" style="grid-template-columns:repeat(3,1fr)">
+          <div class="product-card">
+            <div class="product-img">🎧</div>
+            <div class="product-cat">AUDIO</div>
+            <div class="product-name">CyberSound ANC Wireless Headphones</div>
+            <div class="rating-star">★ 4.9 (128)</div>
+            <div style="display:flex; justify-content:space-between; align-items:center"><span class="price-val">$299.00</span><button class="btn-primary" style="padding:6px 12px">+ Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">💻</div>
+            <div class="product-cat">LAPTOPS</div>
+            <div class="product-name">Pro-Book M3 Max Ultra 16-inch</div>
+            <div class="rating-star">★ 4.95 (45)</div>
+            <div style="display:flex; justify-content:space-between; align-items:center"><span class="price-val">$2,499.00</span><button class="btn-primary" style="padding:6px 12px">+ Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🖥️</div>
+            <div class="product-cat">MONITORS</div>
+            <div class="product-name">Quantum 34" Curved OLED 240Hz</div>
+            <div class="rating-star">★ 5.0 (56)</div>
+            <div style="display:flex; justify-content:space-between; align-items:center"><span class="price-val">$899.00</span><button class="btn-primary" style="padding:6px 12px">+ Cart</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 03: PRODUCT DETAIL PAGE & REVIEWS -->
+    <div id="view-03" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 03 / 12 • PRODUCT DETAIL</span>
+        <h2 class="view-title">Product Detail Page & Interactive Gallery</h2>
+        <p class="view-sub">High-res image zoom, color variants, stock indicator, and customer reviews.</p>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:36px; display:grid; grid-template-columns:1fr 1.1fr; gap:40px; box-shadow:0 4px 16px rgba(0,0,0,0.03)">
+        <div>
+          <div style="background:var(--bg-slate); border-radius:14px; height:340px; display:grid; place-items:center; font-size:110px; border:1px solid var(--border)">🎧</div>
+          <div style="display:flex; gap:14px; margin-top:16px">
+            <div style="background:var(--bg-slate); border:2px solid var(--accent-blue); border-radius:10px; width:75px; height:75px; display:grid; place-items:center; font-size:32px">🎧</div>
+            <div style="background:var(--bg-slate); border:1px solid var(--border); border-radius:10px; width:75px; height:75px; display:grid; place-items:center; font-size:32px">📦</div>
+            <div style="background:var(--bg-slate); border:1px solid var(--border); border-radius:10px; width:75px; height:75px; display:grid; place-items:center; font-size:32px">⚡</div>
+          </div>
+        </div>
+        <div>
+          <span class="status status-success" style="margin-bottom:12px">✓ IN STOCK · READY TO SHIP</span>
+          <h1 style="font-size:30px; font-weight:800; margin-bottom:10px; color:var(--text-main)">CyberSound Pro ANC Wireless Headphones</h1>
+          <div class="rating-star" style="font-size:15px; margin-bottom:16px">★★★★★ 4.95 (128 customer reviews)</div>
+          <div style="font-size:34px; font-weight:800; color:var(--text-main); margin-bottom:18px">$299.00 <span style="font-size:16px; color:var(--text-dim); text-decoration:line-through">$349.00</span></div>
+          <p style="color:var(--text-muted); line-height:1.7; font-size:15px; margin-bottom:24px">Active Noise Cancellation (ANC) with 40mm Titanium drivers, 45-hour battery life, spatial audio processing, and dual-device Bluetooth 5.3 connection.</p>
+          <div style="display:flex; gap:16px">
+            <button class="btn-primary" style="flex:1; justify-content:center; padding:16px; font-size:16px">🛒 Add to Cart ($299.00)</button>
+            <button class="btn-secondary" style="padding:16px; font-size:16px">❤️ Wishlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 04: SHOPPING CART DRAWER -->
+    <div id="view-04" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 04 / 12 • SHOPPING CART</span>
+        <h2 class="view-title">Shopping Cart Drawer & Promo Estimator</h2>
+        <p class="view-sub">Cart item manager, quantity controls, coupon promo code input, and subtotal calculation.</p>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Item Details</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Price ($)</th>
+            <th>Subtotal ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CyberSound Pro ANC Headphones</strong><br/><span style="font-size:12px; color:var(--text-muted)">Color: Space Black</span></td>
+            <td><span class="status status-info">Audio</span></td>
+            <td>1 Unit</td>
+            <td>$299.00</td>
+            <td><strong>$299.00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Mechanical RGB Custom Keyboard</strong><br/><span style="font-size:12px; color:var(--text-muted)">Switch: Tactile Brown</span></td>
+            <td><span class="status status-info">Peripherals</span></td>
+            <td>2 Units</td>
+            <td>$179.00</td>
+            <td><strong>$358.00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Standard FedEx Express Delivery</strong></td>
+            <td>Shipping</td>
+            <td>1 Shipment</td>
+            <td><span style="color:var(--accent-emerald); font-weight:700">FREE</span></td>
+            <td><strong>$0.00</strong></td>
+          </tr>
+          <tr style="background:#f8fafc">
+            <td colspan="4" style="text-align:right"><strong>Total Cart Amount:</strong></td>
+            <td><strong style="font-size:18px; color:var(--accent-blue)">$709.56 USD</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VIEW 05: MULTI-STEP CHECKOUT & STRIPE GATEWAY -->
+    <div id="view-05" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 05 / 12 • STRIPE CHECKOUT</span>
+        <h2 class="view-title">Multi-Step Checkout & Stripe Gateway</h2>
+        <p class="view-sub">Shipping address form, shipping method, and 256-bit SSL encrypted Stripe payment fields.</p>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:36px; max-width:850px; margin:auto; box-shadow:0 4px 16px rgba(0,0,0,0.03)">
+        <div style="display:flex; justify-content:space-between; margin-bottom:28px; border-bottom:1px solid var(--border); padding-bottom:18px; font-size:14px; font-weight:700">
+          <span style="color:var(--accent-emerald)">✓ 1. Shipping Address</span>
+          <span style="color:var(--accent-blue)">● 2. Stripe Gateway</span>
+          <span style="color:var(--text-dim)">3. Confirmation</span>
+        </div>
+        <h3 style="font-size:20px; font-weight:800; margin-bottom:20px; color:var(--text-main)">Secure Stripe Card Payment</h3>
+        <div style="background:var(--bg-slate); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:24px">
+          <label style="display:block; font-size:13px; font-weight:700; color:var(--text-muted); margin-bottom:8px">Card Number</label>
+          <input type="text" value="4242 •••• •••• 4242" style="width:100%; background:#ffffff; border:1px solid var(--border); padding:12px; border-radius:8px; font-size:15px; margin-bottom:16px" />
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px">
+            <div>
+              <label style="display:block; font-size:13px; font-weight:700; color:var(--text-muted); margin-bottom:8px">Expiration</label>
+              <input type="text" value="12 / 28" style="width:100%; background:#ffffff; border:1px solid var(--border); padding:12px; border-radius:8px; font-size:15px" />
+            </div>
+            <div>
+              <label style="display:block; font-size:13px; font-weight:700; color:var(--text-muted); margin-bottom:8px">CVC</label>
+              <input type="text" value="123" style="width:100%; background:#ffffff; border:1px solid var(--border); padding:12px; border-radius:8px; font-size:15px" />
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary" style="width:100%; justify-content:center; padding:16px; font-size:16px">🔒 Complete Payment ($709.56 USD)</button>
+      </div>
+    </div>
+
+    <!-- VIEW 06: ADMIN ANALYTICS & REVENUE DASHBOARD -->
+    <div id="view-06" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 06 / 12 • ADMIN TELEMETRY</span>
+        <h2 class="view-title">Admin Analytics & Revenue Dashboard</h2>
+        <p class="view-sub">Real-time sales velocity graphs, monthly revenue KPIs, and Redis cache telemetry.</p>
+      </div>
+
+      <div class="admin-stats">
+        <div class="stat-card">
+          <div style="font-size:13px; color:var(--text-muted); font-weight:700">Monthly Revenue</div>
+          <div class="stat-val">$128,450.00</div>
+          <div class="stat-change">▲ +18.4% vs last month</div>
+        </div>
+        <div class="stat-card">
+          <div style="font-size:13px; color:var(--text-muted); font-weight:700">Completed Orders</div>
+          <div class="stat-val">1,420</div>
+          <div class="stat-change">▲ +12.1% this week</div>
+        </div>
+        <div class="stat-card">
+          <div style="font-size:13px; color:var(--text-muted); font-weight:700">Active Customers</div>
+          <div class="stat-val">8,940</div>
+          <div class="stat-change">▲ +24.5% total users</div>
+        </div>
+        <div class="stat-card">
+          <div style="font-size:13px; color:var(--text-muted); font-weight:700">Redis Cache Hit Rate</div>
+          <div class="stat-val">99.4%</div>
+          <div class="stat-change" style="color:var(--accent-blue)">⚡ Sub-25ms response</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 07: INVENTORY MANAGEMENT GRID -->
+    <div id="view-07" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 07 / 12 • INVENTORY CONTROL</span>
+        <h2 class="view-title">Inventory Management & Stock Controls</h2>
+        <p class="view-sub">CRUD product grid, low stock alert badges, SKU tracking, and price updates.</p>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Product Title</th>
+            <th>Category</th>
+            <th>SKU Code</th>
+            <th>Stock Level</th>
+            <th>Price ($)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CyberSound Pro ANC Headphones</strong></td>
+            <td>Audio</td>
+            <td>SKU-8841-BLK</td>
+            <td>142 Units</td>
+            <td>$299.00</td>
+            <td><span class="status status-success">In Stock</span></td>
+          </tr>
+          <tr>
+            <td><strong>Pro-Book M3 Max Ultra 16"</strong></td>
+            <td>Laptops</td>
+            <td>SKU-9920-MAC</td>
+            <td>8 Units</td>
+            <td>$2,499.00</td>
+            <td><span class="status status-warning">Low Stock</span></td>
+          </tr>
+          <tr>
+            <td><strong>Quantum 34" Curved OLED 240Hz</strong></td>
+            <td>Monitors</td>
+            <td>SKU-3321-DISP</td>
+            <td>56 Units</td>
+            <td>$899.00</td>
+            <td><span class="status status-success">In Stock</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VIEW 08: ORDER MANAGEMENT & FULFILLMENT -->
+    <div id="view-08" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 08 / 12 • ORDER FULFILLMENT</span>
+        <h2 class="view-title">Order Management & Fulfillment Pipeline</h2>
+        <p class="view-sub">Live order pipeline tracking, shipment updates, and invoice printing.</p>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer Email</th>
+            <th>Date & Time</th>
+            <th>Payment Status</th>
+            <th>Fulfillment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#ORD-2026-9901</td>
+            <td>Sarah Jenkins (sarah.j@gmail.com)</td>
+            <td>Sep 21, 2026 - 02:14 AM</td>
+            <td><span class="status status-success">Paid via Stripe</span></td>
+            <td><span class="status status-info">Shipped (FedEx)</span></td>
+          </tr>
+          <tr>
+            <td>#ORD-2026-9902</td>
+            <td>Michael Chen (m.chen@tech.org)</td>
+            <td>Sep 21, 2026 - 01:50 AM</td>
+            <td><span class="status status-success">Paid via Stripe</span></td>
+            <td><span class="status status-warning">Processing</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VIEW 09: CUSTOMER WISHLIST & ACCOUNT -->
+    <div id="view-09" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 09 / 12 • CUSTOMER ACCOUNT</span>
+        <h2 class="view-title">Customer Account & Saved Wishlist</h2>
+        <p class="view-sub">Saved addresses, order history re-ordering, and bookmarked wishlist items.</p>
+      </div>
+
+      <div class="product-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="product-card">
+          <div class="product-img">⌨️</div>
+          <div class="product-name">Mechanical RGB Custom Keyboard</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px"><span class="price-val">$179.00</span><button class="btn-primary">Move to Cart</button></div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🖥️</div>
+          <div class="product-name">Quantum 34" Curved OLED</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px"><span class="price-val">$899.00</span><button class="btn-primary">Move to Cart</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 10: FLASH SALES & DEALS COUNTDOWN -->
+    <div id="view-10" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 10 / 12 • FLASH DEALS</span>
+        <h2 class="view-title">Flash Sales & Promotional Deals</h2>
+        <p class="view-sub">Countdown deal banners, discount badges, and limited-time offer carousels.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg, #2563eb, #1d4ed8); border-radius:16px; padding:48px; text-align:center; color:#ffffff; box-shadow:0 10px 30px rgba(37,99,235,0.25)">
+        <h1 style="font-size:34px; font-weight:800; margin-bottom:12px">⚡ Spring Cyber Weekend Flash Deals</h1>
+        <p style="font-size:16px; opacity:0.9; margin-bottom:24px">Up to 50% Off Top Hardware & Accessories · Offer Ends Midnight</p>
+        <button class="btn-emerald" style="padding:14px 32px; font-size:16px">Shop All Flash Deals &rarr;</button>
+      </div>
+    </div>
+
+    <!-- VIEW 11: REVIEWS & REPUTATION ENGINE -->
+    <div id="view-11" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 11 / 12 • CUSTOMER REVIEWS</span>
+        <h2 class="view-title">Verified Customer Reviews & Feedback</h2>
+        <p class="view-sub">Rating distribution bar, verified buyer badges, and product feedback engine.</p>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:28px; box-shadow:0 4px 14px rgba(0,0,0,0.03)">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
+          <strong style="font-size:16px">Alex Rivera</strong>
+          <span class="status status-success">✓ Verified Buyer</span>
+        </div>
+        <div class="rating-star" style="margin-bottom:10px">★★★★★ Exceptional Sound Quality & Battery Life</div>
+        <p style="color:var(--text-muted); font-size:14px; line-height:1.7">The ANC on these CyberSound headphones is incredible. Fast delivery with real-time tracking!</p>
+      </div>
+    </div>
+
+    <!-- VIEW 12: MERN SYSTEM ARCHITECTURE BLUEPRINT -->
+    <div id="view-12" class="view-section">
+      <div class="view-banner">
+        <span class="view-pill">VIEW 12 / 12 • SYSTEM BLUEPRINT</span>
+        <h2 class="view-title">MERN System Architecture & Infrastructure</h2>
+        <p class="view-sub">Distributed microservices model with Express API gateway, MongoDB cluster, and Redis cache.</p>
+      </div>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <h3>1. Frontend (React 19 + Redux)</h3>
+          <p>Single Page Application with dynamic state management, Redux Toolkit, Tailwind CSS, and Stripe Elements integration.</p>
+        </div>
+        <div class="arch-card">
+          <h3>2. Backend (Express + Node.js)</h3>
+          <p>RESTful API Gateway, JWT authentication, rate limiting, and Stripe Webhook event listeners.</p>
+        </div>
+        <div class="arch-card">
+          <h3>3. Database (MongoDB + Redis)</h3>
+          <p>MongoDB Atlas cluster with time-series indexing for product catalogs and Redis cache layer for high throughput.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

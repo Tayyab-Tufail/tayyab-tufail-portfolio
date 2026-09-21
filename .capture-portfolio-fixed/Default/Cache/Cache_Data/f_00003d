@@ -1,0 +1,793 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/app/page.tsx");const _jsxDEV = __vite__cjsImport3_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport3_react_jsxDevRuntime["Fragment"];"use client";
+import { ArrowDown, ArrowUpRight, Code2, Cpu, Mail, MessageCircle, Smartphone, Bot, Layers3 } from "/node_modules/.vite/deps/lucide-react.js?v=e207aa87";
+import { projects } from "/lib/projects.ts?t=1789594354619";
+import { ProjectCard } from "/components/project-card.tsx";
+var _jsxFileName = "C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/app/page.tsx";
+import __vite__cjsImport3_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=e207aa87";
+export default function Home() {
+	return /* @__PURE__ */ _jsxDEV(_Fragment, { children: [
+		/* @__PURE__ */ _jsxDEV("a", {
+			className: "skip-link",
+			href: "#work",
+			children: "Skip to projects"
+		}, void 0, false, {
+			fileName: _jsxFileName,
+			lineNumber: 8,
+			columnNumber: 5
+		}, this),
+		/* @__PURE__ */ _jsxDEV("div", {
+			className: "hero-shell",
+			children: [
+				/* @__PURE__ */ _jsxDEV("header", {
+					className: "site-header wrap",
+					children: [
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "brand",
+							href: "#",
+							children: [/* @__PURE__ */ _jsxDEV("span", {
+								className: "monogram",
+								children: "tt."
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 11,
+								columnNumber: 39
+							}, this), /* @__PURE__ */ _jsxDEV("span", { children: ["Tayyab Tufail", /* @__PURE__ */ _jsxDEV("span", {
+								className: "brand-sub",
+								children: "DEVELOPER & AI BUILDER"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 11,
+								columnNumber: 95
+							}, this)] }, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 11,
+								columnNumber: 76
+							}, this)]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 11,
+							columnNumber: 9
+						}, this),
+						/* @__PURE__ */ _jsxDEV("nav", {
+							"aria-label": "Main navigation",
+							children: [
+								/* @__PURE__ */ _jsxDEV("a", {
+									href: "#work",
+									children: "My work"
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 12,
+									columnNumber: 43
+								}, this),
+								/* @__PURE__ */ _jsxDEV("a", {
+									href: "#expertise",
+									children: "Expertise"
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 12,
+									columnNumber: 70
+								}, this),
+								/* @__PURE__ */ _jsxDEV("a", {
+									href: "#about",
+									children: "About"
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 12,
+									columnNumber: 104
+								}, this)
+							]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 12,
+							columnNumber: 9
+						}, this),
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "header-contact",
+							href: "#contact",
+							children: ["Let’s talk ", /* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 17 }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 13,
+								columnNumber: 66
+							}, this)]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 13,
+							columnNumber: 9
+						}, this)
+					]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 10,
+					columnNumber: 7
+				}, this),
+				/* @__PURE__ */ _jsxDEV("section", {
+					className: "hero wrap",
+					"aria-labelledby": "hero-title",
+					children: [/* @__PURE__ */ _jsxDEV("div", {
+						className: "hero-copy",
+						children: [
+							/* @__PURE__ */ _jsxDEV("p", {
+								className: "eyebrow",
+								children: [/* @__PURE__ */ _jsxDEV("span", { className: "status-dot" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 16,
+									columnNumber: 59
+								}, this), " SOFTWARE DEVELOPMENT & INTELLIGENT SYSTEMS"]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 16,
+								columnNumber: 36
+							}, this),
+							/* @__PURE__ */ _jsxDEV("h1", {
+								id: "hero-title",
+								children: [
+									"Ideas into",
+									/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 16,
+										columnNumber: 166
+									}, this),
+									"working",
+									/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 16,
+										columnNumber: 178
+									}, this),
+									/* @__PURE__ */ _jsxDEV("span", { children: "technology." }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 16,
+										columnNumber: 183
+									}, this)
+								]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 16,
+								columnNumber: 136
+							}, this),
+							/* @__PURE__ */ _jsxDEV("p", {
+								className: "hero-description",
+								children: "I’m Tayyab Tufail. I build apps, websites, AI models, and robotics systems — connecting thoughtful software with practical problem-solving."
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 16,
+								columnNumber: 212
+							}, this),
+							/* @__PURE__ */ _jsxDEV("div", {
+								className: "hero-actions",
+								children: [/* @__PURE__ */ _jsxDEV("a", {
+									href: "#work",
+									className: "button button-lime",
+									children: ["Explore my work ", /* @__PURE__ */ _jsxDEV(ArrowDown, { size: 18 }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 16,
+										columnNumber: 480
+									}, this)]
+								}, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 16,
+									columnNumber: 417
+								}, this), /* @__PURE__ */ _jsxDEV("a", {
+									className: "text-link",
+									href: "mailto:tayyabmalik1655@gmail.com",
+									children: ["Get in touch ", /* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 17 }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 16,
+										columnNumber: 584
+									}, this)]
+								}, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 16,
+									columnNumber: 506
+								}, this)]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 16,
+								columnNumber: 387
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 16,
+						columnNumber: 9
+					}, this), /* @__PURE__ */ _jsxDEV("div", {
+						className: "hero-showcase",
+						children: [
+							/* @__PURE__ */ _jsxDEV("div", {
+								className: "showcase-top",
+								children: [/* @__PURE__ */ _jsxDEV("span", { children: [/* @__PURE__ */ _jsxDEV("i", {}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 17,
+									columnNumber: 76
+								}, this), " PROJECT SPOTLIGHT"] }, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 17,
+									columnNumber: 70
+								}, this), /* @__PURE__ */ _jsxDEV("span", { children: "01 / ROBOTICS" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 17,
+									columnNumber: 105
+								}, this)]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 17,
+								columnNumber: 40
+							}, this),
+							/* @__PURE__ */ _jsxDEV("div", {
+								className: "showcase-image",
+								children: /* @__PURE__ */ _jsxDEV("img", {
+									src: "/images/medbot-hospital-overview.png",
+									alt: "MedBot simulated hospital with pharmacy, patient rooms, and charging base"
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 17,
+									columnNumber: 169
+								}, this)
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 17,
+								columnNumber: 137
+							}, this),
+							/* @__PURE__ */ _jsxDEV("div", {
+								className: "showcase-caption",
+								children: [/* @__PURE__ */ _jsxDEV("div", { children: [
+									/* @__PURE__ */ _jsxDEV("span", {
+										className: "eyebrow",
+										children: "LANGUAGE → PLANNING → ACTION"
+									}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 343
+									}, this),
+									/* @__PURE__ */ _jsxDEV("h2", { children: "Meet MedBot." }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 404
+									}, this),
+									/* @__PURE__ */ _jsxDEV("p", { children: "Natural language. Autonomous navigation." }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 425
+									}, this)
+								] }, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 17,
+									columnNumber: 338
+								}, this), /* @__PURE__ */ _jsxDEV("a", {
+									href: "#project-medbot",
+									className: "circle-link",
+									"aria-label": "Explore MedBot and other projects",
+									children: /* @__PURE__ */ _jsxDEV(ArrowUpRight, {}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 575
+									}, this)
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 17,
+									columnNumber: 478
+								}, this)]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 17,
+								columnNumber: 304
+							}, this),
+							/* @__PURE__ */ _jsxDEV("div", {
+								className: "showcase-footer",
+								children: [
+									/* @__PURE__ */ _jsxDEV("span", { children: "PYTHON" }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 633
+									}, this),
+									/* @__PURE__ */ _jsxDEV("span", { children: "TRANSFORMERS" }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 652
+									}, this),
+									/* @__PURE__ */ _jsxDEV("span", { children: "WEBOTS" }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 17,
+										columnNumber: 677
+									}, this)
+								]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 17,
+								columnNumber: 600
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 17,
+						columnNumber: 9
+					}, this)]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 15,
+					columnNumber: 7
+				}, this),
+				/* @__PURE__ */ _jsxDEV("div", {
+					className: "discipline-strip",
+					children: /* @__PURE__ */ _jsxDEV("div", {
+						className: "wrap",
+						children: [
+							/* @__PURE__ */ _jsxDEV("span", { children: "Web development" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 63
+							}, this),
+							/* @__PURE__ */ _jsxDEV("i", { children: "✳" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 91
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "Mobile apps" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 99
+							}, this),
+							/* @__PURE__ */ _jsxDEV("i", { children: "✳" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 123
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "AI & machine learning" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 131
+							}, this),
+							/* @__PURE__ */ _jsxDEV("i", { children: "✳" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 165
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "Robotics" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 173
+							}, this),
+							/* @__PURE__ */ _jsxDEV("i", { children: "✳" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 194
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "IT solutions" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 19,
+								columnNumber: 202
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 19,
+						columnNumber: 41
+					}, this)
+				}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 19,
+					columnNumber: 7
+				}, this)
+			]
+		}, void 0, true, {
+			fileName: _jsxFileName,
+			lineNumber: 9,
+			columnNumber: 5
+		}, this),
+		/* @__PURE__ */ _jsxDEV("main", { children: [
+			/* @__PURE__ */ _jsxDEV("section", {
+				id: "work",
+				className: "work-section wrap",
+				children: [
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "section-heading",
+						children: [/* @__PURE__ */ _jsxDEV("div", { children: [/* @__PURE__ */ _jsxDEV("p", {
+							className: "eyebrow",
+							children: "01 / THE PORTFOLIO"
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 92
+						}, this), /* @__PURE__ */ _jsxDEV("h2", { children: [
+							"Built to solve.",
+							/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 22,
+								columnNumber: 156
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "Made to work." }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 22,
+								columnNumber: 161
+							}, this)
+						] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 137
+						}, this)] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 87
+						}, this), /* @__PURE__ */ _jsxDEV("p", { children: "Applications, experiments, and intelligent systems. A closer look at the work, the thinking, and the results." }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 198
+						}, this)]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 22,
+						columnNumber: 54
+					}, this),
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "collection-label",
+						children: [/* @__PURE__ */ _jsxDEV("span", { children: "PROJECT COLLECTION" }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 354
+						}, this), /* @__PURE__ */ _jsxDEV("span", { children: "15 projects · Apps, web, AI & robotics" }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 385
+						}, this)]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 22,
+						columnNumber: 320
+					}, this),
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "project-grid",
+						children: projects.map((p, i) => /* @__PURE__ */ _jsxDEV(ProjectCard, {
+							project: p,
+							index: i
+						}, p.id, false, {
+							fileName: _jsxFileName,
+							lineNumber: 22,
+							columnNumber: 493
+						}, this))
+					}, void 0, false, {
+						fileName: _jsxFileName,
+						lineNumber: 22,
+						columnNumber: 442
+					}, this)
+				]
+			}, void 0, true, {
+				fileName: _jsxFileName,
+				lineNumber: 22,
+				columnNumber: 5
+			}, this),
+			/* @__PURE__ */ _jsxDEV("section", {
+				id: "expertise",
+				className: "expertise-section",
+				children: /* @__PURE__ */ _jsxDEV("div", {
+					className: "wrap",
+					children: [/* @__PURE__ */ _jsxDEV("div", {
+						className: "section-heading",
+						children: [/* @__PURE__ */ _jsxDEV("div", { children: [/* @__PURE__ */ _jsxDEV("p", {
+							className: "eyebrow",
+							children: "02 / WHAT I DO"
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 119
+						}, this), /* @__PURE__ */ _jsxDEV("h2", { children: [
+							"One builder.",
+							/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 176
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "Multiple disciplines." }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 181
+							}, this)
+						] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 160
+						}, this)] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 114
+						}, this), /* @__PURE__ */ _jsxDEV("p", { children: "From the interface people use to the intelligence behind it." }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 226
+						}, this)]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 23,
+						columnNumber: 81
+					}, this), /* @__PURE__ */ _jsxDEV("div", {
+						className: "services",
+						children: [
+							{
+								icon: Code2,
+								title: "Web development",
+								text: "Responsive websites, dashboards, APIs, and connected web applications."
+							},
+							{
+								icon: Smartphone,
+								title: "Mobile applications",
+								text: "Cross-platform mobile experiences built with React Native and Expo."
+							},
+							{
+								icon: Cpu,
+								title: "AI & machine learning",
+								text: "Computer vision, NLP, predictive models, and meaningful evaluation."
+							},
+							{
+								icon: Bot,
+								title: "Robotics & automation",
+								text: "Perception, command understanding, navigation, and simulated autonomous systems."
+							},
+							{
+								icon: Layers3,
+								title: "Data & IT solutions",
+								text: "Data pipelines, API testing, analytics, and tools that make workflows easier."
+							}
+						].map((s) => /* @__PURE__ */ _jsxDEV("article", { children: [
+							/* @__PURE__ */ _jsxDEV(s.icon, {
+								size: 27,
+								strokeWidth: 1.5
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 967
+							}, this),
+							/* @__PURE__ */ _jsxDEV("h3", { children: s.title }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 1004
+							}, this),
+							/* @__PURE__ */ _jsxDEV("p", { children: s.text }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 1022
+							}, this)
+						] }, s.title, true, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 944
+						}, this))
+					}, void 0, false, {
+						fileName: _jsxFileName,
+						lineNumber: 23,
+						columnNumber: 299
+					}, this)]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 23,
+					columnNumber: 59
+				}, this)
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 23,
+				columnNumber: 5
+			}, this),
+			/* @__PURE__ */ _jsxDEV("section", {
+				id: "about",
+				className: "about-section wrap",
+				children: [/* @__PURE__ */ _jsxDEV("p", {
+					className: "eyebrow",
+					children: "03 / A LITTLE ABOUT ME"
+				}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 24,
+					columnNumber: 56
+				}, this), /* @__PURE__ */ _jsxDEV("div", { children: [
+					/* @__PURE__ */ _jsxDEV("h2", { children: [
+						"Curiosity across disciplines.",
+						/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 24,
+							columnNumber: 143
+						}, this),
+						/* @__PURE__ */ _jsxDEV("span", { children: "Care in the details." }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 24,
+							columnNumber: 148
+						}, this)
+					] }, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 24,
+						columnNumber: 110
+					}, this),
+					/* @__PURE__ */ _jsxDEV("p", { children: "I’m Tayyab Tufail, a developer working across apps, websites, artificial intelligence, machine learning, and robotics. I enjoy turning complex ideas into software people can understand and use." }, void 0, false, {
+						fileName: _jsxFileName,
+						lineNumber: 24,
+						columnNumber: 186
+					}, this),
+					/* @__PURE__ */ _jsxDEV("p", { children: "My projects bring together interface development, data preparation, model evaluation, and system integration — with practical outputs you can explore." }, void 0, false, {
+						fileName: _jsxFileName,
+						lineNumber: 24,
+						columnNumber: 386
+					}, this)
+				] }, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 24,
+					columnNumber: 105
+				}, this)]
+			}, void 0, true, {
+				fileName: _jsxFileName,
+				lineNumber: 24,
+				columnNumber: 5
+			}, this),
+			/* @__PURE__ */ _jsxDEV("section", {
+				id: "contact",
+				className: "contact-section",
+				children: /* @__PURE__ */ _jsxDEV("div", {
+					className: "wrap",
+					children: [
+						/* @__PURE__ */ _jsxDEV("p", {
+							className: "eyebrow",
+							children: "04 / LET’S BUILD SOMETHING"
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 25,
+							columnNumber: 77
+						}, this),
+						/* @__PURE__ */ _jsxDEV("h2", { children: [
+							"Have an idea?",
+							/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 147
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "Let’s make it work." }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 152
+							}, this)
+						] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 25,
+							columnNumber: 130
+						}, this),
+						/* @__PURE__ */ _jsxDEV("div", {
+							className: "contact-links",
+							children: [/* @__PURE__ */ _jsxDEV("a", {
+								href: "mailto:tayyabmalik1655@gmail.com",
+								children: [
+									/* @__PURE__ */ _jsxDEV(Mail, { size: 22 }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 263
+									}, this),
+									/* @__PURE__ */ _jsxDEV("span", { children: [/* @__PURE__ */ _jsxDEV("small", { children: "EMAIL ME" }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 286
+									}, this), "tayyabmalik1655@gmail.com"] }, void 0, true, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 280
+									}, this),
+									/* @__PURE__ */ _jsxDEV(ArrowUpRight, {}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 341
+									}, this)
+								]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 220
+							}, this), /* @__PURE__ */ _jsxDEV("a", {
+								href: "https://wa.me/923455788896",
+								target: "_blank",
+								rel: "noreferrer",
+								children: [
+									/* @__PURE__ */ _jsxDEV(MessageCircle, { size: 22 }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 430
+									}, this),
+									/* @__PURE__ */ _jsxDEV("span", { children: [/* @__PURE__ */ _jsxDEV("small", { children: "CHAT ON WHATSAPP" }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 462
+									}, this), "+92 345 5788896"] }, void 0, true, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 456
+									}, this),
+									/* @__PURE__ */ _jsxDEV(ArrowUpRight, {}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 515
+									}, this)
+								]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 360
+							}, this)]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 25,
+							columnNumber: 189
+						}, this),
+						/* @__PURE__ */ _jsxDEV("footer", { children: [
+							/* @__PURE__ */ _jsxDEV("a", {
+								className: "brand",
+								href: "#",
+								children: [/* @__PURE__ */ _jsxDEV("span", {
+									className: "monogram",
+									children: "tt."
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 25,
+									columnNumber: 578
+								}, this), "Tayyab Tufail"]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 548
+							}, this),
+							/* @__PURE__ */ _jsxDEV("span", { children: "Apps. Web. AI. Robotics." }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 632
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#",
+								children: "Back to top ↑"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 25,
+								columnNumber: 669
+							}, this)
+						] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 25,
+							columnNumber: 540
+						}, this)
+					]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 25,
+					columnNumber: 55
+				}, this)
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 25,
+				columnNumber: 5
+			}, this)
+		] }, void 0, true, {
+			fileName: _jsxFileName,
+			lineNumber: 21,
+			columnNumber: 5
+		}, this)
+	] }, void 0, true, {
+		fileName: _jsxFileName,
+		lineNumber: 7,
+		columnNumber: 10
+	}, this);
+}
+_c = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+import * as __vite_react_currentExports from "/app/page.tsx?t=1789595001965";
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+
+  const currentExports = __vite_react_currentExports;
+  queueMicrotask(() => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/app/page.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/app/page.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/Laptop/Desktop/Porfolio/tayyab-tufail-portfolio/website/app/page.tsx" + ' ' + id); }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,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O2tCQUExQixDQUE4Qix3QkFBQyxRQUFEO1NBQU0sV0FBVTttQkFBVztRQUFTOzs7O2tCQUFDLGVBQWdCOzs7Ozs7T0FBQyx3QkFBQyxRQUFELFlBQU0sMkJBQThCOzs7OztPQUFDLHdCQUFDLEtBQUQ7UUFBRyxNQUFLO2tCQUFJO09BQWdCOzs7OztNQUFTOzs7OztLQUFNOzs7Ozs7R0FBVTs7Ozs7RUFDdnNCOzs7OztDQUNOOzs7OztBQUNKIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbInBhZ2UudHN4Il0sInZlcnNpb24iOjMsInNvdXJjZXNDb250ZW50IjpbIu+7vyd1c2UgY2xpZW50JztcblxuaW1wb3J0IHsgQXJyb3dEb3duLCBBcnJvd1VwUmlnaHQsIENvZGUyLCBDcHUsIE1haWwsIE1lc3NhZ2VDaXJjbGUsIFNtYXJ0cGhvbmUsIEJvdCwgTGF5ZXJzMyB9IGZyb20gJ2x1Y2lkZS1yZWFjdCc7XG5pbXBvcnQgeyBwcm9qZWN0cyB9IGZyb20gJ0AvbGliL3Byb2plY3RzJztcbmltcG9ydCB7IFByb2plY3RDYXJkIH0gZnJvbSAnQC9jb21wb25lbnRzL3Byb2plY3QtY2FyZC50c3gnO1xuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZSgpIHtcbiAgcmV0dXJuIDw+XG4gICAgPGEgY2xhc3NOYW1lPVwic2tpcC1saW5rXCIgaHJlZj1cIiN3b3JrXCI+U2tpcCB0byBwcm9qZWN0czwvYT5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImhlcm8tc2hlbGxcIj5cbiAgICAgIDxoZWFkZXIgY2xhc3NOYW1lPVwic2l0ZS1oZWFkZXIgd3JhcFwiPlxuICAgICAgICA8YSBjbGFzc05hbWU9XCJicmFuZFwiIGhyZWY9XCIjXCI+PHNwYW4gY2xhc3NOYW1lPVwibW9ub2dyYW1cIj50dC48L3NwYW4+PHNwYW4+VGF5eWFiIFR1ZmFpbDxzcGFuIGNsYXNzTmFtZT1cImJyYW5kLXN1YlwiPkRFVkVMT1BFUiAmIEFJIEJVSUxERVI8L3NwYW4+PC9zcGFuPjwvYT5cbiAgICAgICAgPG5hdiBhcmlhLWxhYmVsPVwiTWFpbiBuYXZpZ2F0aW9uXCI+PGEgaHJlZj1cIiN3b3JrXCI+TXkgd29yazwvYT48YSBocmVmPVwiI2V4cGVydGlzZVwiPkV4cGVydGlzZTwvYT48YSBocmVmPVwiI2Fib3V0XCI+QWJvdXQ8L2E+PC9uYXY+XG4gICAgICAgIDxhIGNsYXNzTmFtZT1cImhlYWRlci1jb250YWN0XCIgaHJlZj1cIiNjb250YWN0XCI+TGV04oCZcyB0YWxrIDxBcnJvd1VwUmlnaHQgc2l6ZT17MTd9Lz48L2E+XG4gICAgICA8L2hlYWRlcj5cbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImhlcm8gd3JhcFwiIGFyaWEtbGFiZWxsZWRieT1cImhlcm8tdGl0bGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoZXJvLWNvcHlcIj48cCBjbGFzc05hbWU9XCJleWVicm93XCI+PHNwYW4gY2xhc3NOYW1lPVwic3RhdHVzLWRvdFwiLz4gU09GVFdBUkUgREVWRUxPUE1FTlQgJiBJTlRFTExJR0VOVCBTWVNURU1TPC9wPjxoMSBpZD1cImhlcm8tdGl0bGVcIj5JZGVhcyBpbnRvPGJyLz53b3JraW5nPGJyLz48c3Bhbj50ZWNobm9sb2d5Ljwvc3Bhbj48L2gxPjxwIGNsYXNzTmFtZT1cImhlcm8tZGVzY3JpcHRpb25cIj5J4oCZbSBUYXl5YWIgVHVmYWlsLiBJIGJ1aWxkIGFwcHMsIHdlYnNpdGVzLCBBSSBtb2RlbHMsIGFuZCByb2JvdGljcyBzeXN0ZW1zIOKAlCBjb25uZWN0aW5nIHRob3VnaHRmdWwgc29mdHdhcmUgd2l0aCBwcmFjdGljYWwgcHJvYmxlbS1zb2x2aW5nLjwvcD48ZGl2IGNsYXNzTmFtZT1cImhlcm8tYWN0aW9uc1wiPjxhIGhyZWY9XCIjd29ya1wiIGNsYXNzTmFtZT1cImJ1dHRvbiBidXR0b24tbGltZVwiPkV4cGxvcmUgbXkgd29yayA8QXJyb3dEb3duIHNpemU9ezE4fS8+PC9hPjxhIGNsYXNzTmFtZT1cInRleHQtbGlua1wiIGhyZWY9XCJtYWlsdG86dGF5eWFibWFsaWsxNjU1QGdtYWlsLmNvbVwiPkdldCBpbiB0b3VjaCA8QXJyb3dVcFJpZ2h0IHNpemU9ezE3fS8+PC9hPjwvZGl2PjwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhlcm8tc2hvd2Nhc2VcIj48ZGl2IGNsYXNzTmFtZT1cInNob3djYXNlLXRvcFwiPjxzcGFuPjxpLz4gUFJPSkVDVCBTUE9UTElHSFQ8L3NwYW4+PHNwYW4+MDEgLyBST0JPVElDUzwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cInNob3djYXNlLWltYWdlXCI+PGltZyBzcmM9XCIvaW1hZ2VzL21lZGJvdC1ob3NwaXRhbC1vdmVydmlldy5wbmdcIiBhbHQ9XCJNZWRCb3Qgc2ltdWxhdGVkIGhvc3BpdGFsIHdpdGggcGhhcm1hY3ksIHBhdGllbnQgcm9vbXMsIGFuZCBjaGFyZ2luZyBiYXNlXCIvPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwic2hvd2Nhc2UtY2FwdGlvblwiPjxkaXY+PHNwYW4gY2xhc3NOYW1lPVwiZXllYnJvd1wiPkxBTkdVQUdFIOKGkiBQTEFOTklORyDihpIgQUNUSU9OPC9zcGFuPjxoMj5NZWV0IE1lZEJvdC48L2gyPjxwPk5hdHVyYWwgbGFuZ3VhZ2UuIEF1dG9ub21vdXMgbmF2aWdhdGlvbi48L3A+PC9kaXY+PGEgaHJlZj1cIiNwcm9qZWN0LW1lZGJvdFwiIGNsYXNzTmFtZT1cImNpcmNsZS1saW5rXCIgYXJpYS1sYWJlbD1cIkV4cGxvcmUgTWVkQm90IGFuZCBvdGhlciBwcm9qZWN0c1wiPjxBcnJvd1VwUmlnaHQvPjwvYT48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cInNob3djYXNlLWZvb3RlclwiPjxzcGFuPlBZVEhPTjwvc3Bhbj48c3Bhbj5UUkFOU0ZPUk1FUlM8L3NwYW4+PHNwYW4+V0VCT1RTPC9zcGFuPjwvZGl2PjwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJkaXNjaXBsaW5lLXN0cmlwXCI+PGRpdiBjbGFzc05hbWU9XCJ3cmFwXCI+PHNwYW4+V2ViIGRldmVsb3BtZW50PC9zcGFuPjxpPuKcszwvaT48c3Bhbj5Nb2JpbGUgYXBwczwvc3Bhbj48aT7inLM8L2k+PHNwYW4+QUkgJiBtYWNoaW5lIGxlYXJuaW5nPC9zcGFuPjxpPuKcszwvaT48c3Bhbj5Sb2JvdGljczwvc3Bhbj48aT7inLM8L2k+PHNwYW4+SVQgc29sdXRpb25zPC9zcGFuPjwvZGl2PjwvZGl2PlxuICAgIDwvZGl2PlxuICAgIDxtYWluPlxuICAgIDxzZWN0aW9uIGlkPVwid29ya1wiIGNsYXNzTmFtZT1cIndvcmstc2VjdGlvbiB3cmFwXCI+PGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uLWhlYWRpbmdcIj48ZGl2PjxwIGNsYXNzTmFtZT1cImV5ZWJyb3dcIj4wMSAvIFRIRSBQT1JURk9MSU88L3A+PGgyPkJ1aWx0IHRvIHNvbHZlLjxici8+PHNwYW4+TWFkZSB0byB3b3JrLjwvc3Bhbj48L2gyPjwvZGl2PjxwPkFwcGxpY2F0aW9ucywgZXhwZXJpbWVudHMsIGFuZCBpbnRlbGxpZ2VudCBzeXN0ZW1zLiBBIGNsb3NlciBsb29rIGF0IHRoZSB3b3JrLCB0aGUgdGhpbmtpbmcsIGFuZCB0aGUgcmVzdWx0cy48L3A+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJjb2xsZWN0aW9uLWxhYmVsXCI+PHNwYW4+UFJPSkVDVCBDT0xMRUNUSU9OPC9zcGFuPjxzcGFuPjE1IHByb2plY3RzIMK3IEFwcHMsIHdlYiwgQUkgJiByb2JvdGljczwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cInByb2plY3QtZ3JpZFwiPntwcm9qZWN0cy5tYXAoKHAsaSk9PjxQcm9qZWN0Q2FyZCBrZXk9e3AuaWR9IHByb2plY3Q9e3B9IGluZGV4PXtpfS8+KX08L2Rpdj48L3NlY3Rpb24+XG4gICAgPHNlY3Rpb24gaWQ9XCJleHBlcnRpc2VcIiBjbGFzc05hbWU9XCJleHBlcnRpc2Utc2VjdGlvblwiPjxkaXYgY2xhc3NOYW1lPVwid3JhcFwiPjxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi1oZWFkaW5nXCI+PGRpdj48cCBjbGFzc05hbWU9XCJleWVicm93XCI+MDIgLyBXSEFUIEkgRE88L3A+PGgyPk9uZSBidWlsZGVyLjxici8+PHNwYW4+TXVsdGlwbGUgZGlzY2lwbGluZXMuPC9zcGFuPjwvaDI+PC9kaXY+PHA+RnJvbSB0aGUgaW50ZXJmYWNlIHBlb3BsZSB1c2UgdG8gdGhlIGludGVsbGlnZW5jZSBiZWhpbmQgaXQuPC9wPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwic2VydmljZXNcIj57W3tpY29uOkNvZGUyLHRpdGxlOidXZWIgZGV2ZWxvcG1lbnQnLHRleHQ6J1Jlc3BvbnNpdmUgd2Vic2l0ZXMsIGRhc2hib2FyZHMsIEFQSXMsIGFuZCBjb25uZWN0ZWQgd2ViIGFwcGxpY2F0aW9ucy4nfSx7aWNvbjpTbWFydHBob25lLHRpdGxlOidNb2JpbGUgYXBwbGljYXRpb25zJyx0ZXh0OidDcm9zcy1wbGF0Zm9ybSBtb2JpbGUgZXhwZXJpZW5jZXMgYnVpbHQgd2l0aCBSZWFjdCBOYXRpdmUgYW5kIEV4cG8uJ30se2ljb246Q3B1LHRpdGxlOidBSSAmIG1hY2hpbmUgbGVhcm5pbmcnLHRleHQ6J0NvbXB1dGVyIHZpc2lvbiwgTkxQLCBwcmVkaWN0aXZlIG1vZGVscywgYW5kIG1lYW5pbmdmdWwgZXZhbHVhdGlvbi4nfSx7aWNvbjpCb3QsdGl0bGU6J1JvYm90aWNzICYgYXV0b21hdGlvbicsdGV4dDonUGVyY2VwdGlvbiwgY29tbWFuZCB1bmRlcnN0YW5kaW5nLCBuYXZpZ2F0aW9uLCBhbmQgc2ltdWxhdGVkIGF1dG9ub21vdXMgc3lzdGVtcy4nfSx7aWNvbjpMYXllcnMzLHRpdGxlOidEYXRhICYgSVQgc29sdXRpb25zJyx0ZXh0OidEYXRhIHBpcGVsaW5lcywgQVBJIHRlc3RpbmcsIGFuYWx5dGljcywgYW5kIHRvb2xzIHRoYXQgbWFrZSB3b3JrZmxvd3MgZWFzaWVyLid9XS5tYXAocz0+PGFydGljbGUga2V5PXtzLnRpdGxlfT48cy5pY29uIHNpemU9ezI3fSBzdHJva2VXaWR0aD17MS41fS8+PGgzPntzLnRpdGxlfTwvaDM+PHA+e3MudGV4dH08L3A+PC9hcnRpY2xlPil9PC9kaXY+PC9kaXY+PC9zZWN0aW9uPlxuICAgIDxzZWN0aW9uIGlkPVwiYWJvdXRcIiBjbGFzc05hbWU9XCJhYm91dC1zZWN0aW9uIHdyYXBcIj48cCBjbGFzc05hbWU9XCJleWVicm93XCI+MDMgLyBBIExJVFRMRSBBQk9VVCBNRTwvcD48ZGl2PjxoMj5DdXJpb3NpdHkgYWNyb3NzIGRpc2NpcGxpbmVzLjxici8+PHNwYW4+Q2FyZSBpbiB0aGUgZGV0YWlscy48L3NwYW4+PC9oMj48cD5J4oCZbSBUYXl5YWIgVHVmYWlsLCBhIGRldmVsb3BlciB3b3JraW5nIGFjcm9zcyBhcHBzLCB3ZWJzaXRlcywgYXJ0aWZpY2lhbCBpbnRlbGxpZ2VuY2UsIG1hY2hpbmUgbGVhcm5pbmcsIGFuZCByb2JvdGljcy4gSSBlbmpveSB0dXJuaW5nIGNvbXBsZXggaWRlYXMgaW50byBzb2Z0d2FyZSBwZW9wbGUgY2FuIHVuZGVyc3RhbmQgYW5kIHVzZS48L3A+PHA+TXkgcHJvamVjdHMgYnJpbmcgdG9nZXRoZXIgaW50ZXJmYWNlIGRldmVsb3BtZW50LCBkYXRhIHByZXBhcmF0aW9uLCBtb2RlbCBldmFsdWF0aW9uLCBhbmQgc3lzdGVtIGludGVncmF0aW9uIOKAlCB3aXRoIHByYWN0aWNhbCBvdXRwdXRzIHlvdSBjYW4gZXhwbG9yZS48L3A+PC9kaXY+PC9zZWN0aW9uPlxuICAgIDxzZWN0aW9uIGlkPVwiY29udGFjdFwiIGNsYXNzTmFtZT1cImNvbnRhY3Qtc2VjdGlvblwiPjxkaXYgY2xhc3NOYW1lPVwid3JhcFwiPjxwIGNsYXNzTmFtZT1cImV5ZWJyb3dcIj4wNCAvIExFVOKAmVMgQlVJTEQgU09NRVRISU5HPC9wPjxoMj5IYXZlIGFuIGlkZWE/PGJyLz48c3Bhbj5MZXTigJlzIG1ha2UgaXQgd29yay48L3NwYW4+PC9oMj48ZGl2IGNsYXNzTmFtZT1cImNvbnRhY3QtbGlua3NcIj48YSBocmVmPVwibWFpbHRvOnRheXlhYm1hbGlrMTY1NUBnbWFpbC5jb21cIj48TWFpbCBzaXplPXsyMn0vPjxzcGFuPjxzbWFsbD5FTUFJTCBNRTwvc21hbGw+dGF5eWFibWFsaWsxNjU1QGdtYWlsLmNvbTwvc3Bhbj48QXJyb3dVcFJpZ2h0Lz48L2E+PGEgaHJlZj1cImh0dHBzOi8vd2EubWUvOTIzNDU1Nzg4ODk2XCIgdGFyZ2V0PVwiX2JsYW5rXCIgcmVsPVwibm9yZWZlcnJlclwiPjxNZXNzYWdlQ2lyY2xlIHNpemU9ezIyfS8+PHNwYW4+PHNtYWxsPkNIQVQgT04gV0hBVFNBUFA8L3NtYWxsPis5MiAzNDUgNTc4ODg5Njwvc3Bhbj48QXJyb3dVcFJpZ2h0Lz48L2E+PC9kaXY+PGZvb3Rlcj48YSBjbGFzc05hbWU9XCJicmFuZFwiIGhyZWY9XCIjXCI+PHNwYW4gY2xhc3NOYW1lPVwibW9ub2dyYW1cIj50dC48L3NwYW4+VGF5eWFiIFR1ZmFpbDwvYT48c3Bhbj5BcHBzLiBXZWIuIEFJLiBSb2JvdGljcy48L3NwYW4+PGEgaHJlZj1cIiNcIj5CYWNrIHRvIHRvcCDihpE8L2E+PC9mb290ZXI+PC9kaXY+PC9zZWN0aW9uPlxuICAgIDwvbWFpbj5cbiAgPC8+O1xufVxuXHJcbiJdfQ==

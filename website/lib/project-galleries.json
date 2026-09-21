@@ -1,0 +1,668 @@
+{
+  "nexamart": [
+    {
+      "file": "nexamart-ui-01.png",
+      "caption": "01 · Storefront Hero & Featured Collections: Spring Tech Summit banner, deal countdown timer, and trending hardware catalog."
+    },
+    {
+      "file": "nexamart-ui-02.png",
+      "caption": "02 · Product Catalog & Multi-Filter Search: Category filters, price sliders, brand selectors, and sorting algorithms."
+    },
+    {
+      "file": "nexamart-ui-03.png",
+      "caption": "03 · Product Detail Page & Interactive Gallery: High-res image zoom, color variants, stock indicator, and customer reviews."
+    },
+    {
+      "file": "nexamart-ui-04.png",
+      "caption": "04 · Shopping Cart Drawer & Promo Estimator: Cart item manager, quantity controls, coupon promo code input, and subtotal calculation."
+    },
+    {
+      "file": "nexamart-ui-05.png",
+      "caption": "05 · Multi-Step Checkout & Stripe Gateway: Shipping address form, shipping method, and 256-bit SSL encrypted Stripe payment fields."
+    },
+    {
+      "file": "nexamart-ui-06.png",
+      "caption": "06 · Admin Analytics & Revenue Dashboard: Real-time sales velocity graphs, monthly revenue KPIs, and Redis cache telemetry."
+    },
+    {
+      "file": "nexamart-ui-07.png",
+      "caption": "07 · Inventory Management & Stock Controls: CRUD product grid, low stock alert badges, SKU tracking, and price updates."
+    },
+    {
+      "file": "nexamart-ui-08.png",
+      "caption": "08 · Order Management & Fulfillment Pipeline: Live order pipeline tracking, shipment updates, and invoice printing."
+    },
+    {
+      "file": "nexamart-ui-09.png",
+      "caption": "09 · Customer Account & Saved Wishlist: Saved addresses, order history re-ordering, and bookmarked wishlist items."
+    },
+    {
+      "file": "nexamart-ui-10.png",
+      "caption": "10 · Flash Sales & Promotional Deals: Countdown deal banners, discount badges, and limited-time offer carousels."
+    },
+    {
+      "file": "nexamart-ui-11.png",
+      "caption": "11 · Verified Customer Reviews & Feedback: Rating distribution bar, verified buyer badges, and product feedback engine."
+    }
+  ],
+  "asaan-mazdoor": [
+    {
+      "file": "asaan-mazdoor-ui-01.png",
+      "caption": "01 · Welcome & Role Selection: app splash screen and Customer / Professional role selection."
+    },
+    {
+      "file": "asaan-mazdoor-ui-02.png",
+      "caption": "02 · Customer Onboarding: buyer sign-up form and login screen with phone verification."
+    },
+    {
+      "file": "asaan-mazdoor-ui-03.png",
+      "caption": "03 · Professional Onboarding: worker sign-up form and service provider sign-in."
+    },
+    {
+      "file": "asaan-mazdoor-ui-04.png",
+      "caption": "04 · Password Recovery: forgot password OTP request and reset password modal."
+    },
+    {
+      "file": "asaan-mazdoor-ui-05.png",
+      "caption": "05 · Home Dashboard & Navigation: doorstep services overview and main drawer menu."
+    },
+    {
+      "file": "asaan-mazdoor-ui-06.png",
+      "caption": "06 · User Profile & Personal Info: account settings menu and profile update form."
+    },
+    {
+      "file": "asaan-mazdoor-ui-07.png",
+      "caption": "07 · Security & Media Management: password update and work images gallery manager."
+    },
+    {
+      "file": "asaan-mazdoor-ui-08.png",
+      "caption": "08 · Service Categories & Notifications: trade selection (AC, fridge, plumbing) and alert feed."
+    },
+    {
+      "file": "asaan-mazdoor-ui-09.png",
+      "caption": "09 · Job Posting & Service Listings: post service request with photos and active job details."
+    },
+    {
+      "file": "asaan-mazdoor-ui-10.png",
+      "caption": "10 · Applications & Order Tracking: review applicant proposals and pending order status."
+    },
+    {
+      "file": "asaan-mazdoor-ui-11.png",
+      "caption": "11 · Payment & Ratings: secure checkout form and 5-star experience rating modal."
+    }
+  ],
+  "cybershield": [
+    {
+      "file": "cybershield-ui-01.png",
+      "caption": "01 · Welcome: onboarding welcome screen with CyberShield brand identity."
+    },
+    {
+      "file": "cybershield-ui-02.png",
+      "caption": "02 · Sign in: credential entry screen with email/password and form validation."
+    },
+    {
+      "file": "cybershield-login.png",
+      "caption": "03 · Original login: the original CyberShield sign-in interface as captured."
+    },
+    {
+      "file": "cybershield-ui-03.png",
+      "caption": "04 · Registration: new user account creation form with all required fields."
+    },
+    {
+      "file": "cybershield-ui-04.png",
+      "caption": "05 · Password recovery: account recovery flow via registered email address."
+    },
+    {
+      "file": "cybershield-feed.png",
+      "caption": "06 · Social feed: posts, reactions, and content discovery in the main feed."
+    },
+    {
+      "file": "cybershield-ui-05.png",
+      "caption": "07 · Chat list: all conversations and messaging threads overview."
+    },
+    {
+      "file": "cybershield-ui-06.png",
+      "caption": "08 · Notifications: activity alerts and social interaction updates."
+    },
+    {
+      "file": "cybershield-ui-07.png",
+      "caption": "09 · Friends: friend list management and connection discovery."
+    },
+    {
+      "file": "cybershield-ui-09.png",
+      "caption": "10 · User profile: profile overview with activity timeline and connections."
+    },
+    {
+      "file": "cybershield-ui-09.png",
+      "caption": "11 · Comment section: nested comment threads with reaction and reply system."
+    }
+  ],
+  "food-app": [
+    {
+      "file": "food-app-welcome.png",
+      "caption": "01 · Welcome screen: Food Hunt brand splash with tagline and get-started call to action."
+    },
+    {
+      "file": "food-app-ui-01.png",
+      "caption": "02 · Home screen: featured food items, category strips, and quick order access."
+    },
+    {
+      "file": "food-app-ui-02.png",
+      "caption": "03 · Menu and search: browse all food items with category filters and live search."
+    },
+    {
+      "file": "food-app-menu.png",
+      "caption": "04 · Full menu listing: complete food item catalogue with images and pricing."
+    },
+    {
+      "file": "food-app-ui-03.png",
+      "caption": "05 · Shopping cart: selected items, quantities, subtotals, and checkout flow."
+    },
+    {
+      "file": "food-app-ui-06.png",
+      "caption": "06 · Sign up: new user registration form with full field validation."
+    },
+    {
+      "file": "food-app-ui-07.png",
+      "caption": "07 · Sign in: returning user login with credential entry and forgot password."
+    },
+    {
+      "file": "food-app-ui-04.png",
+      "caption": "08 · Settings: user preferences, notification toggles, and account configuration."
+    },
+    {
+      "file": "food-app-ui-05.png",
+      "caption": "09 · Invitation: referral and share feature with promotional reward content."
+    }
+  ],
+  "weapon-detection": [
+    {
+      "file": "weapon-detection-ui-01.png",
+      "caption": "Detection console: main interface with image upload and inference controls."
+    },
+    {
+      "file": "weapon-detection-ui-02.png",
+      "caption": "Detection results: annotated image with bounding boxes and confidence scores."
+    },
+    {
+      "file": "weapon-detection-ui-03.png",
+      "caption": "Analytics dashboard: detection summary, latency charts, and model metrics."
+    },
+    {
+      "file": "weapon-detection-ui-04.png",
+      "caption": "Dataset viewer: labelled training data samples and class distribution."
+    },
+    {
+      "file": "weapon-detection-ui-05.png",
+      "caption": "Model evaluation: precision, recall, and mAP metrics panel."
+    },
+    {
+      "file": "weapon-detection-ui-06.png",
+      "caption": "Video inference: frame-by-frame detection with confidence overlays."
+    },
+    {
+      "file": "weapon-detection-ui-07.png",
+      "caption": "Pistol detection results: saved validation predictions with bounding boxes."
+    },
+    {
+      "file": "weapon-detection-ui-08.png",
+      "caption": "Knife detection: Granada dataset detection results with class labels."
+    },
+    {
+      "file": "weapon-detection-predictions.jpg",
+      "caption": "Saved validation predictions: pistol and knife detections from the model."
+    },
+    {
+      "file": "weapon-detection-knife-predictions.jpg",
+      "caption": "Knife detection batch: saved Granada validation results with confidence scores."
+    },
+    {
+      "file": "weapon-detection-confusion-matrix.png",
+      "caption": "Confusion matrix: normalized results from the saved YOLOv8n training run."
+    }
+  ],
+  "fire-smoke": [
+    {
+      "file": "fire-smoke-ui-01.png",
+      "caption": "Gradio inference app: upload interface with confidence and size controls."
+    },
+    {
+      "file": "fire-smoke-ui-02.png",
+      "caption": "Detection output panel: annotated result with class labels and thresholds."
+    },
+    {
+      "file": "fire-smoke-inference-output.jpg",
+      "caption": "Smoke detection output: annotated inference image saved by the Gradio app."
+    },
+    {
+      "file": "fire-smoke-test-predictions.jpg",
+      "caption": "Held-out test batch: YOLOv8s predictions across multiple test images."
+    },
+    {
+      "file": "fire-smoke-class-performance.png",
+      "caption": "Per-class results: saved test precision, recall, and F1 for fire and smoke."
+    },
+    {
+      "file": "fire-smoke-results_test_error_distribution.png",
+      "caption": "Error distribution: analysis of test-set detection errors and misses."
+    },
+    {
+      "file": "fire-smoke-results_validation_metric_comparison.png",
+      "caption": "Validation metrics: model comparison across YOLOv8n and YOLOv8s configurations."
+    },
+    {
+      "file": "fire-smoke-results_yolov8s_training_losses.png",
+      "caption": "Training curves: YOLOv8s box, class, and DFL loss over training epochs."
+    }
+  ],
+  "medbot": [
+    {
+      "file": "medbot-hospital-overview.png",
+      "caption": "Simulated hospital: pharmacy, patient rooms, reception, and charging base in Webots."
+    },
+    {
+      "file": "medbot-multitask-preview.png",
+      "caption": "Multi-task mission: a frame from the recorded multi-delivery Webots demonstration."
+    },
+    {
+      "file": "medbot-navigation-verification.png",
+      "caption": "Navigation and verification: the project's mission planning and A* path workflow."
+    },
+    {
+      "file": "medbot-recording-04.jpg",
+      "caption": "Mission execution: recorded robot navigation frame from the hospital simulation."
+    },
+    {
+      "file": "medbot-recording-05.jpg",
+      "caption": "Delivery in progress: robot navigating the corridor to a target room."
+    },
+    {
+      "file": "medbot-recording-06.jpg",
+      "caption": "Task completion: robot arriving at the delivery destination in simulation."
+    },
+    {
+      "file": "medbot-recording-07.jpg",
+      "caption": "System overview: interface showing intent classification and plan validation state."
+    },
+    {
+      "file": "medbot-recording-08.jpg",
+      "caption": "Multi-stop mission: the robot's recorded path across multiple waypoints."
+    }
+  ],
+  "finbias": [
+    {
+      "file": "finbias-ui-01.png",
+      "caption": "Taipy analysis interface: sentence entry and real-time sentiment prediction."
+    },
+    {
+      "file": "finbias-ui-02.png",
+      "caption": "Prediction result: sentiment class, confidence probabilities, and session history."
+    },
+    {
+      "file": "finbias-ui-03.png",
+      "caption": "Token attribution view: word-level importance and explanation output."
+    },
+    {
+      "file": "finbias-test-confusion-matrix.png",
+      "caption": "Held-out confusion matrix: FinBERT sentiment classification on 518 test rows."
+    },
+    {
+      "file": "finbias-training-history.png",
+      "caption": "Training history: loss curves over three fine-tuning epochs."
+    },
+    {
+      "file": "finbias-archive-03.png",
+      "caption": "Validation results: per-class precision, recall, and F1 on the validation set."
+    },
+    {
+      "file": "finbias-archive-04.png",
+      "caption": "Model comparison: FinBERT vs TF-IDF baseline accuracy and F1 metrics."
+    },
+    {
+      "file": "finbias-archive-05.png",
+      "caption": "Dataset distribution: class balance across positive, negative, and neutral labels."
+    },
+    {
+      "file": "finbias-archive-06.png",
+      "caption": "Token probability scores: sentence-level confidence breakdown by class."
+    },
+    {
+      "file": "finbias-archive-07.png",
+      "caption": "Evaluation curves: accuracy and loss progression during training."
+    },
+    {
+      "file": "finbias-archive-08.png",
+      "caption": "Classification report: detailed per-class metrics on the held-out test set."
+    }
+  ],
+  "brain-mri": [
+    {
+      "file": "brain-mri-dataset-samples.png",
+      "caption": "Dataset samples: MRI images across glioma, meningioma, no-tumor, and pituitary classes."
+    },
+    {
+      "file": "brain-mri-confusion-matrix.png",
+      "caption": "TumorDetNet confusion matrix: test classification results across four classes."
+    },
+    {
+      "file": "brain-mri-model-comparison.png",
+      "caption": "Accuracy comparison: TumorDetNet vs baseline CNN on the saved test evaluation."
+    },
+    {
+      "file": "brain-mri-archive-04.png",
+      "caption": "Training curves: loss and accuracy progression for the custom TumorDetNet model."
+    },
+    {
+      "file": "brain-mri-archive-05.png",
+      "caption": "Per-class precision and recall: detailed classification metrics by tumor type."
+    },
+    {
+      "file": "brain-mri-archive-06.png",
+      "caption": "Baseline CNN results: performance reference for the comparison study."
+    },
+    {
+      "file": "brain-mri-archive-07.png",
+      "caption": "Secondary dataset evaluation: model tested on an external MRI collection."
+    },
+    {
+      "file": "brain-mri-archive-08.png",
+      "caption": "Seed repeatability: results across three random seeds for robustness verification."
+    }
+  ],
+  "grocery": [
+    {
+      "file": "grocery-ui-01.png",
+      "caption": "Gradio interface: model selector, image upload, and top-five prediction display."
+    },
+    {
+      "file": "grocery-ui-02.png",
+      "caption": "Produce detection: EfficientNet-B0 top-five predictions on a fresh vegetable sample."
+    },
+    {
+      "file": "grocery-ui-03.png",
+      "caption": "Packaged goods: model predictions on a packaged grocery product image."
+    },
+    {
+      "file": "grocery-ui-04.png",
+      "caption": "Confidence scores: probability breakdown for each of the five predicted categories."
+    },
+    {
+      "file": "grocery-ui-05.png",
+      "caption": "Model comparison panel: EfficientNet-B0, MobileNetV3, and ResNet18 metrics."
+    },
+    {
+      "file": "grocery-ui-06.png",
+      "caption": "Dataset overview: class distribution across 43 grocery categories."
+    },
+    {
+      "file": "grocery-ui-07.png",
+      "caption": "Batch inference: multiple item predictions shown in the interface grid."
+    },
+    {
+      "file": "grocery-training-results.png",
+      "caption": "Training results: EfficientNet-B0 loss curve and validation macro F1 over epochs."
+    },
+    {
+      "file": "grocery-prediction-error-analysis.png",
+      "caption": "Error analysis: misclassified examples with true (T) and predicted (P) labels."
+    },
+    {
+      "file": "grocery-dataset-samples.png",
+      "caption": "Dataset samples: produce and packaged-product images from the 43-class collection."
+    }
+  ],
+  "phishing": [
+    {
+      "file": "phishing-final-holdout.png",
+      "caption": "Final holdout results: XGBoost confusion matrix on 4,500 held-out rows."
+    },
+    {
+      "file": "phishing-shap-analysis.png",
+      "caption": "SHAP analysis: global feature importance for the full-feature Random Forest."
+    },
+    {
+      "file": "phishing-archive-03.png",
+      "caption": "Model comparison: accuracy and F1 across five classifiers on the validation set."
+    },
+    {
+      "file": "phishing-archive-04.png",
+      "caption": "Feature engineering: URL, domain, and webpage features used in the study."
+    },
+    {
+      "file": "phishing-archive-05.png",
+      "caption": "Threshold tuning: precision-recall tradeoff on the validation split."
+    },
+    {
+      "file": "phishing-archive-06.png",
+      "caption": "Domain overlap audit: analysis of shared domains between train and test sets."
+    },
+    {
+      "file": "phishing-archive-07.png",
+      "caption": "LIME explanations: local feature importance for individual prediction instances."
+    },
+    {
+      "file": "phishing-archive-08.png",
+      "caption": "Error analysis: false negatives and false positives with feature inspection."
+    }
+  ],
+  "gesture-robot": [
+    {
+      "file": "gesture-robot-navigation.jpg",
+      "caption": "Waypoint navigation: recorded e-puck following a confirmed gesture-selected route."
+    },
+    {
+      "file": "gesture-robot-voice-stop.jpg",
+      "caption": "Voice stop scenario: saved simulation evidence of the spoken stop command."
+    },
+    {
+      "file": "gesture-robot-archive-03.jpg",
+      "caption": "Head-gesture detection: MediaPipe head-pose tracking for destination confirmation."
+    },
+    {
+      "file": "gesture-robot-archive-04.jpg",
+      "caption": "Route selection: the dashboard showing alternative path options after nod."
+    },
+    {
+      "file": "gesture-robot-archive-05.jpg",
+      "caption": "Telemetry dashboard: live state machine, speed, heading, and waypoint status."
+    },
+    {
+      "file": "gesture-robot-archive-06.jpg",
+      "caption": "Offline speech recognition: Vosk processing a destination command locally."
+    },
+    {
+      "file": "gesture-robot-archive-07.jpg",
+      "caption": "Head-shake stop: recorded simulation frame for the head-shake abort scenario."
+    },
+    {
+      "file": "gesture-robot-archive-08.jpg",
+      "caption": "Destination change: mid-route redirection triggered by a follow-up voice command."
+    }
+  ],
+  "autonomous-robot": [
+    {
+      "file": "autonomous-robot-navigation.jpg",
+      "caption": "Completed lap: evidence from the retained proposal validation world in Webots."
+    },
+    {
+      "file": "autonomous-robot-results.png",
+      "caption": "Formal experiment results: 150 vision trials and 30 obstacle trials without collisions."
+    },
+    {
+      "file": "autonomous-robot-archive-03.jpg",
+      "caption": "Lane perception: camera feed with detected lane boundaries and steering input."
+    },
+    {
+      "file": "autonomous-robot-archive-04.png",
+      "caption": "Multi-obstacle scenario: robot navigating around stationary obstacles in the arena."
+    },
+    {
+      "file": "autonomous-robot-archive-05.png",
+      "caption": "Object tracking: multi-frame tracking of moving objects ahead of the robot."
+    },
+    {
+      "file": "autonomous-robot-archive-06.jpg",
+      "caption": "Telemetry log: speed, heading, and sensor readings during a recorded trial."
+    },
+    {
+      "file": "autonomous-robot-archive-07.jpg",
+      "caption": "Proximity sensor fusion: eight-sensor safety layer active during navigation."
+    },
+    {
+      "file": "autonomous-robot-archive-08.png",
+      "caption": "PID steering output: control signal visualization for lane-following correction."
+    }
+  ],
+  "toxicity": [
+    {
+      "file": "toxicity-dataset-categories.png",
+      "caption": "Dataset categories: distribution of the ten label classes across 9,996 records."
+    },
+    {
+      "file": "toxicity-validation-comparison.png",
+      "caption": "Model comparison: actual logged validation macro F1 for DistilBERT, BERT, and DeBERTa."
+    },
+    {
+      "file": "toxicity-archive-03.png",
+      "caption": "Class distribution: label balance analysis after cleaning and merging sources."
+    },
+    {
+      "file": "toxicity-archive-04.png",
+      "caption": "DistilBERT results: validation loss and F1 from the first transformer experiment."
+    },
+    {
+      "file": "toxicity-archive-05.png",
+      "caption": "BERT results: performance metrics from the second transformer fine-tuning run."
+    },
+    {
+      "file": "toxicity-archive-06.png",
+      "caption": "DeBERTa results: metrics from the third and most capable transformer experiment."
+    },
+    {
+      "file": "toxicity-archive-07.png",
+      "caption": "Source analysis: Jigsaw and cyberbullying dataset composition before merging."
+    },
+    {
+      "file": "toxicity-archive-08.png",
+      "caption": "Text length distribution: token count analysis of the cleaned combined dataset."
+    }
+  ],
+  "water-potability": [
+    {
+      "file": "water-potability-test-results.png",
+      "caption": "Test evaluation: random forest results at threshold 0.46 on the held-out test set."
+    },
+    {
+      "file": "water-potability-feature-importance.png",
+      "caption": "Feature importance: top predictors for potability from the selected model."
+    },
+    {
+      "file": "water-potability-archive-03.png",
+      "caption": "Model comparison: accuracy and ROC-AUC across logistic regression, RF, and boosting."
+    },
+    {
+      "file": "water-potability-archive-04.png",
+      "caption": "Preprocessing pipeline: missing-value imputation and feature scaling steps."
+    },
+    {
+      "file": "water-potability-archive-05.png",
+      "caption": "Dataset audit: feature distributions and missing-value patterns in the raw data."
+    },
+    {
+      "file": "water-potability-archive-06.png",
+      "caption": "Threshold selection: precision-recall curve and F1 optimization on validation."
+    },
+    {
+      "file": "water-potability-archive-07.png",
+      "caption": "Extra Trees comparison: validation metrics alongside the selected random forest."
+    },
+    {
+      "file": "water-potability-archive-08.png",
+      "caption": "ROC curve: area under the curve for the selected model on the test split."
+    }
+  ],
+  "api-test-lab": [
+    {
+      "file": "api-test-lab-workspace.png",
+      "caption": "Main workspace: the full API Test Evidence Lab interface with imported specification."
+    },
+    {
+      "file": "api-test-lab-ui-01.png",
+      "caption": "Specification import: OpenAPI/Swagger JSON and YAML contract loading screen."
+    },
+    {
+      "file": "api-test-lab-ui-02.png",
+      "caption": "Operation selector: list of API endpoints extracted from the imported contract."
+    },
+    {
+      "file": "api-test-lab-ui-03.png",
+      "caption": "AI test generation: Claude-assisted test case creation from the selected operation."
+    },
+    {
+      "file": "api-test-lab-ui-04.png",
+      "caption": "Request validation: contract compliance check before execution."
+    },
+    {
+      "file": "api-test-lab-ui-05.png",
+      "caption": "Execution panel: Mockoon-controlled request execution with status display."
+    },
+    {
+      "file": "api-test-lab-ui-06.png",
+      "caption": "Evidence report: structured execution results saved as a downloadable JSON record."
+    },
+    {
+      "file": "api-test-lab-ui-07.png",
+      "caption": "Full workflow view: specification, generation, execution, and evidence in one workspace."
+    }
+  ],
+  "rideflow": [
+    {
+      "file": "rideflow-ui-01.png",
+      "caption": "01 · Passenger Splash & Role Selection: App onboarding, multi-role switch (Passenger, Driver, Fleet Admin), and biometric login."
+    },
+    {
+      "file": "rideflow-ui-02.png",
+      "caption": "02 · Passenger Ride Booking & Fare Estimator: Interactive pickup location map, vehicle category selection (Economy, Comfort, Executive), and fare bidding."
+    },
+    {
+      "file": "rideflow-ui-03.png",
+      "caption": "03 · Driver Matching Radar & ETA Tracker: Real-time driver assignment, driver 4.95★ rating profile, license plate verification, and arrival ETA radar."
+    },
+    {
+      "file": "rideflow-ui-04.png",
+      "caption": "04 · Live Trip Telemetry & Emergency Safety SOS: Turn-by-turn route telemetry, real-time speed monitoring, trip progress bar, and 1-tap Emergency SOS trigger."
+    },
+    {
+      "file": "rideflow-ui-05.png",
+      "caption": "05 · Real-Time In-App Driver & Passenger Chat: Socket.IO instant messaging, quick reply chips, delivery updates, and read receipts."
+    },
+    {
+      "file": "rideflow-ui-06.png",
+      "caption": "06 · Stripe Online Payment & Driver 5-Star Rating: Itemized fare breakdown, digital wallet deduction, driver tip selector ($2, $5, $10), and review submission."
+    },
+    {
+      "file": "rideflow-ui-07.png",
+      "caption": "07 · Driver Partner Dispatch Pop-Up & Fare Acceptance: Incoming ride request popup, distance to passenger, estimated payout, and accept/decline controls."
+    },
+    {
+      "file": "rideflow-ui-08.png",
+      "caption": "08 · Driver Active Route Navigation & Turn Guidance: Turn-by-turn navigation overlay, passenger pickup address, call passenger button, and trip start slider."
+    },
+    {
+      "file": "rideflow-ui-09.png",
+      "caption": "09 · Driver Daily Earnings & Weekly Payout Ledger: Today's income summary ($184.50), completed trips list, commission breakdown, and instant cashout button."
+    },
+    {
+      "file": "rideflow-ui-10.png",
+      "caption": "10 · Driver Partner Registration & License Audit: KYC verification form, driving license upload, vehicle registration documents, and approval status."
+    },
+    {
+      "file": "rideflow-ui-11.png",
+      "caption": "11 · Fleet Operations & Live Dispatch Telemetry: Real-time active ride map monitoring, daily revenue KPIs ($48,920), total active drivers, and system telemetry."
+    },
+    {
+      "file": "rideflow-ui-12.png",
+      "caption": "12 · Dispute Resolution & Driver Approval Queue: KYC verification queue, fare dispute investigation, and emergency safety alert monitoring."
+    }
+  ]
+}

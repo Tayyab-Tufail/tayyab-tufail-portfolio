@@ -1,0 +1,62 @@
+{
+   "checksum": "c51c80f1dd748a0b6d8eb04d520e49f5",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13410310392542634",
+            "date_last_used": "0",
+            "guid": "e05dc9a8-7bd5-40e7-83d5-909751e40a36",
+            "id": "7",
+            "name": "refrences",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "file:///C:/Users/Laptop/Desktop/nawaz%20thesis/DOC-20250419-WA0056..pdf",
+            "visit_count": 1
+         } ],
+         "date_added": "13434068606373037",
+         "date_last_used": "0",
+         "date_modified": "13410310392542634",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13434068606373037",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13434068606373037",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "workspaces_v2": {
+         "children": [  ],
+         "date_added": "13434068606373037",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "75aa6670-344f-549d-b742-660f029506ab",
+         "id": "5",
+         "name": "Workspaces",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCOO5LKygAQAAEgAqGCszakE5Kzk0cHE3TXZrNEc2Qi82eVE9PUgDoAYHEo4BCAUSiQEKHHdSQnJaTCs2UEE5YXZLZ2pOUDdKWERMY2Z2cz0SJDAzZDA4YTk4LTU0ZTUtNWI2NC04ZWJiLWIzZWQ5MzczM2EyMhgAIAAoADCqsdmYuTM46bPZmLkzQOmz2Zi5M0ocbm14NjVzUUR2eEk4VGdFZXYrQStudHRvU240PVoAZQAAAADCPgJgABKsAQgHEqcBChxHaFRvMlZFL2ZscFMrUDhSRW5ReGlaVDdReWs9EiRlMDVkYzlhOC03YmQ1LTQwZTctODNkNS05MDk3NTFlNDBhMzYYACAAKAAwtorNoLIzOKTyzKCyM0Ck8sygsjNKHDZpRE5nZlBPdGxUVDlnaXAxbm1qNW4wcWQ3bz1aHiIcSWxzNnoxcXFZaldYQzBEUjZjSjUrVnh1VjBJPWV3cGyjwj4CYAUSjgEIAhKJAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkNWM5MWE4NGUtNjVkOS01NzQzLTk1ZmYtMjViNDM2OGQ1NjFhGAAgACgAMKPWy6OwMTiC3sujsDFAgt7Lo7AxShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAAMI+AmAAEo4BCAESiQEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0SJGVlZThmZTZmLWIwMjUtNTAzYy05Y2ZhLTAxNGRmODFhYmRlYhgAIAAoADCi1sujsDE4693Lo7AxQOvdy6OwMUocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAADCPgJgABKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQzZjkyYWJjNC1iM2FjLTVkYTktODQyMC1hZDYwZDA3MzgxOTcYACAAKAAwqNbLo7AxOMfey6OwMUDH3sujsDFKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAAwADgA",
+   "version": 1
+}
