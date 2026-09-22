@@ -1,0 +1,26 @@
+[
+  {
+    "file": "api-test-lab-workspace.png",
+    "source": "api-test-evidence-lab-clean-repo/api-test-evidence-lab-frontend",
+    "kind": "local application interface",
+    "note": "Frontend workspace screenshot; not evidence of a completed backend test execution."
+  },
+  {
+    "file": "food-app-welcome.png",
+    "source": "Food/Food/WelcomeScreen.js",
+    "kind": "local application interface",
+    "note": "Original welcome screen rendered through the Expo web preview."
+  },
+  {
+    "file": "cybershield-login.png",
+    "source": "CyberSecurity/CyberSecurity/src/screen/LoginScreen.js",
+    "kind": "isolated component preview",
+    "note": "Original login interface rendered from a temporary source copy with the initial navigation route set to Login. Original source was not changed."
+  },
+  {
+    "file": "asaan-mazdoor-original-presentation.png",
+    "source": "asaan mazdoor app (1)/frontend code/src/Images/1..png",
+    "kind": "original presentation artwork",
+    "note": "Existing project presentation featuring its welcome interface; not a fresh application screenshot."
+  }
+]

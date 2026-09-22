@@ -1,0 +1,274 @@
+{
+  "finbias": [
+    {
+      "file": "finbias-test-confusion-matrix.png",
+      "caption": "FinBERT held-out sentiment classification results."
+    },
+    {
+      "file": "finbias-training-history.png",
+      "caption": "Training and validation loss over three epochs."
+    },
+    {
+      "file": "finbias-archive-03.png",
+      "caption": "Financial sentiment dataset class distribution (Saved original project output.)"
+    },
+    {
+      "file": "finbias-archive-04.png",
+      "caption": "Sentence length by sentiment class (Saved original project output.)"
+    },
+    {
+      "file": "finbias-archive-05.png",
+      "caption": "Most informative baseline terms by class (Saved original project output.)"
+    },
+    {
+      "file": "finbias-archive-06.png",
+      "caption": "Baseline and FinBERT validation comparison (Saved original project output.)"
+    },
+    {
+      "file": "finbias-archive-07.png",
+      "caption": "Token-level attribution for an example financial sentence (Saved original project output.)"
+    },
+    {
+      "file": "finbias-archive-08.png",
+      "caption": "Token-level attribution for a second financial sentence (Saved original project output.)"
+    }
+  ],
+  "brain-mri": [
+    {
+      "file": "brain-mri-dataset-samples.png",
+      "caption": "MRI dataset samples across the four classification categories."
+    },
+    {
+      "file": "brain-mri-confusion-matrix.png",
+      "caption": "TumorDetNet test confusion matrix."
+    },
+    {
+      "file": "brain-mri-model-comparison.png",
+      "caption": "Saved test-accuracy comparison between the baseline CNN and TumorDetNet."
+    },
+    {
+      "file": "brain-mri-archive-04.png",
+      "caption": "TumorDetNet training and validation curves (Saved original project output.)"
+    },
+    {
+      "file": "brain-mri-archive-05.png",
+      "caption": "MRI class distribution across dataset splits (Saved original project output.)"
+    },
+    {
+      "file": "brain-mri-archive-06.png",
+      "caption": "Secondary-dataset evaluation confusion matrix (Saved original project output.)"
+    },
+    {
+      "file": "brain-mri-archive-07.png",
+      "caption": "Test F1 comparison across the two architectures (Saved original project output.)"
+    },
+    {
+      "file": "brain-mri-archive-08.png",
+      "caption": "Secondary-dataset performance drift analysis (Saved original project output.)"
+    }
+  ],
+  "water-potability": [
+    {
+      "file": "water-potability-test-results.png",
+      "caption": "Random forest test results at the selected threshold of 0.46."
+    },
+    {
+      "file": "water-potability-feature-importance.png",
+      "caption": "Feature importance for the selected model."
+    },
+    {
+      "file": "water-potability-archive-03.png",
+      "caption": "Potability class distribution (Saved original project output.)"
+    },
+    {
+      "file": "water-potability-archive-04.png",
+      "caption": "Missing measurement audit (Saved original project output.)"
+    },
+    {
+      "file": "water-potability-archive-05.png",
+      "caption": "Correlation between measured water properties (Saved original project output.)"
+    },
+    {
+      "file": "water-potability-archive-06.png",
+      "caption": "Validation comparison of the classification pipelines (Saved original project output.)"
+    },
+    {
+      "file": "water-potability-archive-07.png",
+      "caption": "Selected random forest test ROC curve (Saved original project output.)"
+    },
+    {
+      "file": "water-potability-archive-08.png",
+      "caption": "Selected random forest test precision–recall curve (Saved original project output.)"
+    }
+  ],
+  "phishing": [
+    {
+      "file": "phishing-final-holdout.png",
+      "caption": "Final reduced-feature XGBoost holdout confusion matrix."
+    },
+    {
+      "file": "phishing-shap-analysis.png",
+      "caption": "SHAP analysis of the full-feature Random Forest benchmark."
+    },
+    {
+      "file": "phishing-archive-03.png",
+      "caption": "Five-classifier validation comparison (Saved original project output.)"
+    },
+    {
+      "file": "phishing-archive-04.png",
+      "caption": "Validation ROC comparison (Saved original project output.)"
+    },
+    {
+      "file": "phishing-archive-05.png",
+      "caption": "Validation comparison after suspicious-feature removal (Saved original project output.)"
+    },
+    {
+      "file": "phishing-archive-06.png",
+      "caption": "Validation risk-threshold analysis (Saved original project output.)"
+    },
+    {
+      "file": "phishing-archive-07.png",
+      "caption": "Model computation cost comparison (Saved original project output.)"
+    },
+    {
+      "file": "phishing-archive-08.png",
+      "caption": "Repeated cross-validation metric distributions (Saved original project output.)"
+    }
+  ],
+  "gesture-robot": [
+    {
+      "file": "gesture-robot-navigation.jpg",
+      "caption": "Recorded e-puck waypoint-navigation simulation."
+    },
+    {
+      "file": "gesture-robot-voice-stop.jpg",
+      "caption": "Saved simulation evidence of the voice-stop scenario."
+    },
+    {
+      "file": "gesture-robot-archive-03.jpg",
+      "caption": "Shortest route selected between waypoints A and C (Saved original project output.)"
+    },
+    {
+      "file": "gesture-robot-archive-04.jpg",
+      "caption": "Alternative route selected between waypoints C and B (Saved original project output.)"
+    },
+    {
+      "file": "gesture-robot-archive-05.jpg",
+      "caption": "Pickup waypoint reached during the recorded scenario (Saved original project output.)"
+    },
+    {
+      "file": "gesture-robot-archive-06.jpg",
+      "caption": "Destination reached in the gesture-control scenario (Saved original project output.)"
+    },
+    {
+      "file": "gesture-robot-archive-07.jpg",
+      "caption": "Head-shake safety stop scenario (Saved original project output.)"
+    },
+    {
+      "file": "gesture-robot-archive-08.jpg",
+      "caption": "Obstacle stop in a blocked-corridor scenario (Saved original project output.)"
+    }
+  ],
+  "autonomous-robot": [
+    {
+      "file": "autonomous-robot-navigation.jpg",
+      "caption": "Completed-lap evidence from the retained proposal validation world."
+    },
+    {
+      "file": "autonomous-robot-results.png",
+      "caption": "Saved formal experiment results dashboard."
+    },
+    {
+      "file": "autonomous-robot-archive-03.jpg",
+      "caption": "Preview of the interactive simulation world (Saved original project output.)"
+    },
+    {
+      "file": "autonomous-robot-archive-04.png",
+      "caption": "Five-obstacle interactive simulation layout (Saved original project output.)"
+    },
+    {
+      "file": "autonomous-robot-archive-05.png",
+      "caption": "Controller camera view for visual perception (Saved original project output.)"
+    },
+    {
+      "file": "autonomous-robot-archive-06.jpg",
+      "caption": "Controller recovery recording at 40 seconds (Saved original project output.)"
+    },
+    {
+      "file": "autonomous-robot-archive-07.jpg",
+      "caption": "Controller recovery recording at 70 seconds (Saved original project output.)"
+    },
+    {
+      "file": "autonomous-robot-archive-08.png",
+      "caption": "Scenario summary from the recorded experiment workbook (Saved original project output.)"
+    }
+  ],
+  "toxicity": [
+    {
+      "file": "toxicity-dataset-categories.png",
+      "caption": "Distribution of the ten dataset categories."
+    },
+    {
+      "file": "toxicity-validation-comparison.png",
+      "caption": "Actual logged validation comparison across the three transformers."
+    },
+    {
+      "file": "toxicity-archive-03.png",
+      "caption": "Toxic and non-toxic coarse-label distribution (Saved notebook output.)"
+    },
+    {
+      "file": "toxicity-archive-04.png",
+      "caption": "Contribution of the source datasets (Saved notebook output.)"
+    },
+    {
+      "file": "toxicity-archive-05.png",
+      "caption": "Composition of human and model-assisted label sources (Saved notebook output.)"
+    },
+    {
+      "file": "toxicity-archive-06.png",
+      "caption": "Word-count distribution in the prepared dataset (Saved notebook output.)"
+    },
+    {
+      "file": "toxicity-archive-07.png",
+      "caption": "Label counts by dataset source and category (Saved notebook output.)"
+    },
+    {
+      "file": "toxicity-archive-08.png",
+      "caption": "Text-length, label-source, and toxicity correlations (Saved notebook output.)"
+    }
+  ],
+  "medbot": [
+    {
+      "file": "medbot-hospital-overview.png",
+      "caption": "The simulated hospital: pharmacy, patient rooms, reception, and charging base."
+    },
+    {
+      "file": "medbot-multitask-preview.png",
+      "caption": "A frame from the recorded multi-task Webots demonstration."
+    },
+    {
+      "file": "medbot-navigation-verification.png",
+      "caption": "The project’s navigation and verification workflow."
+    },
+    {
+      "file": "medbot-recording-04.jpg",
+      "caption": "Multi-task hospital mission at 11.4s — frame from the original Webots recording."
+    },
+    {
+      "file": "medbot-recording-05.jpg",
+      "caption": "Multi-task hospital mission at 28.4s — frame from the original Webots recording."
+    },
+    {
+      "file": "medbot-recording-06.jpg",
+      "caption": "Multi-task hospital mission at 45.6s — frame from the original Webots recording."
+    },
+    {
+      "file": "medbot-recording-07.jpg",
+      "caption": "Multi-task hospital mission at 62.7s — frame from the original Webots recording."
+    },
+    {
+      "file": "medbot-recording-08.jpg",
+      "caption": "Multi-task hospital mission at 79.9s — frame from the original Webots recording."
+    }
+  ]
+}

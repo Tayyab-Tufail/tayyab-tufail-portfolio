@@ -1,0 +1,20 @@
+[
+  {
+    "file": "finbias-ui-01.png",
+    "caption": "Running original FinBias Sentiment Studio, using local CPU inference.",
+    "kind": "live-ui-capture",
+    "project": "finbias"
+  },
+  {
+    "file": "finbias-ui-02.png",
+    "caption": "Live FinBERT result for the original positive example, computed locally on CPU.",
+    "kind": "live-ui-capture",
+    "project": "finbias"
+  },
+  {
+    "file": "finbias-ui-03.png",
+    "caption": "Live class probabilities and session history after analyzing the positive example.",
+    "kind": "live-ui-capture",
+    "project": "finbias"
+  }
+]

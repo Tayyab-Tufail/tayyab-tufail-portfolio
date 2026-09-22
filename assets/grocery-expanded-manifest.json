@@ -1,0 +1,51 @@
+[
+  {
+    "file": "grocery-ui-01.png",
+    "caption": "Original Grocery Item Recognition interface, running locally with the retained EfficientNet checkpoint.",
+    "source": "original Gradio application",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  },
+  {
+    "file": "grocery-ui-02.png",
+    "caption": "Live inference on the supplied apple example. Top prediction: Apple (100.00%) on CPU",
+    "source": "grocery_items_client_delivery\\client_delivery\\example_images\\apple.jpg",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  },
+  {
+    "file": "grocery-ui-03.png",
+    "caption": "Live inference on the supplied apple 2 example. Top prediction: Apple (100.00%) on CPU",
+    "source": "grocery_items_client_delivery\\client_delivery\\example_images\\apple_2.jpg",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  },
+  {
+    "file": "grocery-ui-04.png",
+    "caption": "Live inference on the supplied apple juice example. Top prediction: Juice (99.44%) on CPU",
+    "source": "grocery_items_client_delivery\\client_delivery\\example_images\\apple_juice.jpg",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  },
+  {
+    "file": "grocery-ui-05.png",
+    "caption": "Live inference on the supplied asparagus example. Top prediction: Asparagus (99.98%) on CPU",
+    "source": "grocery_items_client_delivery\\client_delivery\\example_images\\asparagus.jpg",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  },
+  {
+    "file": "grocery-ui-06.png",
+    "caption": "Live inference on the supplied milk example. Top prediction: Milk (99.99%) on CPU",
+    "source": "grocery_items_client_delivery\\client_delivery\\example_images\\milk.jpg",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  },
+  {
+    "file": "grocery-ui-07.png",
+    "caption": "Live inference on the supplied yoghurt example. Top prediction: Yoghurt (98.99%) on CPU",
+    "source": "grocery_items_client_delivery\\client_delivery\\example_images\\yoghurt.jpg",
+    "kind": "live-ui-capture",
+    "project": "grocery"
+  }
+]

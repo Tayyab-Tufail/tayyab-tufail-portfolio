@@ -1,0 +1,44 @@
+[
+  {
+    "file": "api-test-lab-ui-01.png",
+    "caption": "Workspace dashboard — captured from the running API Test Evidence Lab application.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  },
+  {
+    "file": "api-test-lab-ui-02.png",
+    "caption": "Local service settings — captured from the running API Test Evidence Lab application.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  },
+  {
+    "file": "api-test-lab-ui-03.png",
+    "caption": "Report collection — captured from the running API Test Evidence Lab application.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  },
+  {
+    "file": "api-test-lab-ui-04.png",
+    "caption": "Specification import — captured from the running API Test Evidence Lab application.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  },
+  {
+    "file": "api-test-lab-ui-05.png",
+    "caption": "Operations workspace — captured from the running API Test Evidence Lab application.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  },
+  {
+    "file": "api-test-lab-ui-06.png",
+    "caption": "Test-generation workspace — captured from the running API Test Evidence Lab application.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  },
+  {
+    "file": "api-test-lab-ui-07.png",
+    "caption": "Live validation of the local FastAPI backend’s actual OpenAPI specification.",
+    "kind": "live-ui-capture",
+    "project": "api-test-lab"
+  }
+]

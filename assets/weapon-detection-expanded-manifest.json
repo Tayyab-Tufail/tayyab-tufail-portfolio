@@ -1,0 +1,50 @@
+[
+  {
+    "file": "weapon-detection-ui-01.png",
+    "caption": "Live image-inference console connected to the original FastAPI backend and retained YOLO model.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-02.png",
+    "caption": "Live video-inference interface with confidence, IoU, and input-size controls.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-03.png",
+    "caption": "Performance dashboard displaying the project’s saved test metrics.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-04.png",
+    "caption": "Interactive threshold-sweep charts populated from the saved evaluation artifacts.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-05.png",
+    "caption": "Latency and threshold tables in the running detection console.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-06.png",
+    "caption": "Dataset and system overview from the running backend.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-07.png",
+    "caption": "Class-distribution view populated from the project dataset summary.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  },
+  {
+    "file": "weapon-detection-ui-08.png",
+    "caption": "Source-distribution and system detail views in the running application.",
+    "kind": "live-ui-capture",
+    "project": "weapon-detection"
+  }
+]

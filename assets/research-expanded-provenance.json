@@ -1,0 +1,335 @@
+[
+  {
+    "file": "finbias-archive-03.png",
+    "caption": "Financial sentiment dataset class distribution (Saved original project output.)",
+    "project": "finbias",
+    "source": "FinBias_Delivery\\FinBias_Delivery\\graphs\\eda\\class_distribution.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "finbias-archive-04.png",
+    "caption": "Sentence length by sentiment class (Saved original project output.)",
+    "project": "finbias",
+    "source": "FinBias_Delivery\\FinBias_Delivery\\graphs\\eda\\sentence_length_by_class.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "finbias-archive-05.png",
+    "caption": "Most informative baseline terms by class (Saved original project output.)",
+    "project": "finbias",
+    "source": "FinBias_Delivery\\FinBias_Delivery\\graphs\\eda\\top_tfidf_terms_by_class.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "finbias-archive-06.png",
+    "caption": "Baseline and FinBERT validation comparison (Saved original project output.)",
+    "project": "finbias",
+    "source": "FinBias_Delivery\\FinBias_Delivery\\graphs\\evaluation\\validation_model_comparison.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "finbias-archive-07.png",
+    "caption": "Token-level attribution for an example financial sentence (Saved original project output.)",
+    "project": "finbias",
+    "source": "FinBias_Delivery\\FinBias_Delivery\\graphs\\explainability\\finbert_attribution_0.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "finbias-archive-08.png",
+    "caption": "Token-level attribution for a second financial sentence (Saved original project output.)",
+    "project": "finbias",
+    "source": "FinBias_Delivery\\FinBias_Delivery\\graphs\\explainability\\finbert_attribution_1.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "brain-mri-archive-04.png",
+    "caption": "TumorDetNet training and validation curves (Saved original project output.)",
+    "project": "brain-mri",
+    "source": "brain tumor detection\\outputs\\figures\\tumordetnet_training_curves.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "brain-mri-archive-05.png",
+    "caption": "MRI class distribution across dataset splits (Saved original project output.)",
+    "project": "brain-mri",
+    "source": "brain tumor detection\\outputs\\figures\\split_class_distribution.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "brain-mri-archive-06.png",
+    "caption": "Secondary-dataset evaluation confusion matrix (Saved original project output.)",
+    "project": "brain-mri",
+    "source": "brain tumor detection\\outputs\\figures\\tumordetnet_secondary_confusion_matrix.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "brain-mri-archive-07.png",
+    "caption": "Test F1 comparison across the two architectures (Saved original project output.)",
+    "project": "brain-mri",
+    "source": "brain tumor detection\\outputs\\figures\\test_f1_score_comparison.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "brain-mri-archive-08.png",
+    "caption": "Secondary-dataset performance drift analysis (Saved original project output.)",
+    "project": "brain-mri",
+    "source": "brain tumor detection\\outputs\\figures\\tumordetnet_secondary_drift.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "water-potability-archive-03.png",
+    "caption": "Potability class distribution (Saved original project output.)",
+    "project": "water-potability",
+    "source": "water_quality_study_bundle (1)\\graphs\\class_distribution.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "water-potability-archive-04.png",
+    "caption": "Missing measurement audit (Saved original project output.)",
+    "project": "water-potability",
+    "source": "water_quality_study_bundle (1)\\graphs\\missing_values.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "water-potability-archive-05.png",
+    "caption": "Correlation between measured water properties (Saved original project output.)",
+    "project": "water-potability",
+    "source": "water_quality_study_bundle (1)\\graphs\\correlation_heatmap.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "water-potability-archive-06.png",
+    "caption": "Validation comparison of the classification pipelines (Saved original project output.)",
+    "project": "water-potability",
+    "source": "water_quality_study_bundle (1)\\graphs\\validation_metric_comparison.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "water-potability-archive-07.png",
+    "caption": "Selected random forest test ROC curve (Saved original project output.)",
+    "project": "water-potability",
+    "source": "water_quality_study_bundle (1)\\graphs\\random_forest_test_roc_curve.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "water-potability-archive-08.png",
+    "caption": "Selected random forest test precision–recall curve (Saved original project output.)",
+    "project": "water-potability",
+    "source": "water_quality_study_bundle (1)\\graphs\\random_forest_test_pr_curve.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "phishing-archive-03.png",
+    "caption": "Five-classifier validation comparison (Saved original project output.)",
+    "project": "phishing",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09\\graphs\\13_metric_comparison_validation.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "phishing-archive-04.png",
+    "caption": "Validation ROC comparison (Saved original project output.)",
+    "project": "phishing",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09\\graphs\\15_roc_comparison_validation.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "phishing-archive-05.png",
+    "caption": "Validation comparison after suspicious-feature removal (Saved original project output.)",
+    "project": "phishing",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09\\graphs\\20_reduced_feature_comparison_validation.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "phishing-archive-06.png",
+    "caption": "Validation risk-threshold analysis (Saved original project output.)",
+    "project": "phishing",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09\\graphs\\18_validation_risk_threshold_analysis.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "phishing-archive-07.png",
+    "caption": "Model computation cost comparison (Saved original project output.)",
+    "project": "phishing",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09\\graphs\\30_computational_cost_comparison.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "phishing-archive-08.png",
+    "caption": "Repeated cross-validation metric distributions (Saved original project output.)",
+    "project": "phishing",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09\\graphs\\31_repeated_cv_metric_distributions.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "gesture-robot-archive-03.jpg",
+    "caption": "Shortest route selected between waypoints A and C (Saved original project output.)",
+    "project": "gesture-robot",
+    "source": "Head_Gesture_Epuck_Submission_20260808_FINAL\\evidence\\runs\\gesture_video_control\\screenshots\\route_selected_graph_a_c_shortest.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "gesture-robot-archive-04.jpg",
+    "caption": "Alternative route selected between waypoints C and B (Saved original project output.)",
+    "project": "gesture-robot",
+    "source": "Head_Gesture_Epuck_Submission_20260808_FINAL\\evidence\\runs\\gesture_video_control\\screenshots\\route_selected_graph_c_b_alternative.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "gesture-robot-archive-05.jpg",
+    "caption": "Pickup waypoint reached during the recorded scenario (Saved original project output.)",
+    "project": "gesture-robot",
+    "source": "Head_Gesture_Epuck_Submission_20260808_FINAL\\evidence\\runs\\gesture_video_control\\screenshots\\waypoint_pickup_waypoint_reached.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "gesture-robot-archive-06.jpg",
+    "caption": "Destination reached in the gesture-control scenario (Saved original project output.)",
+    "project": "gesture-robot",
+    "source": "Head_Gesture_Epuck_Submission_20260808_FINAL\\evidence\\runs\\gesture_video_control\\screenshots\\destination_reached.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "gesture-robot-archive-07.jpg",
+    "caption": "Head-shake safety stop scenario (Saved original project output.)",
+    "project": "gesture-robot",
+    "source": "Head_Gesture_Epuck_Submission_20260808_FINAL\\evidence\\runs\\head_shake\\screenshots\\safety_stop_head_shake.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "gesture-robot-archive-08.jpg",
+    "caption": "Obstacle stop in a blocked-corridor scenario (Saved original project output.)",
+    "project": "gesture-robot",
+    "source": "Head_Gesture_Epuck_Submission_20260808_FINAL\\evidence\\runs\\blocked_corridor\\screenshots\\safety_stop_obstacle.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "autonomous-robot-archive-03.jpg",
+    "caption": "Preview of the interactive simulation world (Saved original project output.)",
+    "project": "autonomous-robot",
+    "source": "Vision_Based_Autonomous_Epuck_Final_Submission (3)\\Vision_Based_Autonomous_Epuck_Final_Submission\\worlds\\autonomous_epuck_interactive_preview.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "autonomous-robot-archive-04.png",
+    "caption": "Five-obstacle interactive simulation layout (Saved original project output.)",
+    "project": "autonomous-robot",
+    "source": "Vision_Based_Autonomous_Epuck_Final_Submission (3)\\Vision_Based_Autonomous_Epuck_Final_Submission\\evidence\\interactive_five_obstacle_layout_final.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "autonomous-robot-archive-05.png",
+    "caption": "Controller camera view for visual perception (Saved original project output.)",
+    "project": "autonomous-robot",
+    "source": "Vision_Based_Autonomous_Epuck_Final_Submission (3)\\Vision_Based_Autonomous_Epuck_Final_Submission\\evidence\\phase2_camera_frame.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "autonomous-robot-archive-06.jpg",
+    "caption": "Controller recovery recording at 40 seconds (Saved original project output.)",
+    "project": "autonomous-robot",
+    "source": "Vision_Based_Autonomous_Epuck_Final_Submission (3)\\Vision_Based_Autonomous_Epuck_Final_Submission\\evidence\\controller_recovery_040s.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "autonomous-robot-archive-07.jpg",
+    "caption": "Controller recovery recording at 70 seconds (Saved original project output.)",
+    "project": "autonomous-robot",
+    "source": "Vision_Based_Autonomous_Epuck_Final_Submission (3)\\Vision_Based_Autonomous_Epuck_Final_Submission\\evidence\\controller_recovery_070s.jpg",
+    "kind": "archived-output"
+  },
+  {
+    "file": "autonomous-robot-archive-08.png",
+    "caption": "Scenario summary from the recorded experiment workbook (Saved original project output.)",
+    "project": "autonomous-robot",
+    "source": "Vision_Based_Autonomous_Epuck_Final_Submission (3)\\Vision_Based_Autonomous_Epuck_Final_Submission\\evidence\\workbook_scenario_summary.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "toxicity-archive-03.png",
+    "caption": "Toxic and non-toxic coarse-label distribution (Saved notebook output.)",
+    "project": "toxicity",
+    "source": "toxic_behaviour_classify\\toxic_behaviour_classify\\Visualizations.ipynb",
+    "cell": 4,
+    "kind": "archived-notebook-output"
+  },
+  {
+    "file": "toxicity-archive-04.png",
+    "caption": "Contribution of the source datasets (Saved notebook output.)",
+    "project": "toxicity",
+    "source": "toxic_behaviour_classify\\toxic_behaviour_classify\\Visualizations.ipynb",
+    "cell": 6,
+    "kind": "archived-notebook-output"
+  },
+  {
+    "file": "toxicity-archive-05.png",
+    "caption": "Composition of human and model-assisted label sources (Saved notebook output.)",
+    "project": "toxicity",
+    "source": "toxic_behaviour_classify\\toxic_behaviour_classify\\Visualizations.ipynb",
+    "cell": 8,
+    "kind": "archived-notebook-output"
+  },
+  {
+    "file": "toxicity-archive-06.png",
+    "caption": "Word-count distribution in the prepared dataset (Saved notebook output.)",
+    "project": "toxicity",
+    "source": "toxic_behaviour_classify\\toxic_behaviour_classify\\Visualizations.ipynb",
+    "cell": 10,
+    "kind": "archived-notebook-output"
+  },
+  {
+    "file": "toxicity-archive-07.png",
+    "caption": "Label counts by dataset source and category (Saved notebook output.)",
+    "project": "toxicity",
+    "source": "toxic_behaviour_classify\\toxic_behaviour_classify\\Visualizations.ipynb",
+    "cell": 16,
+    "kind": "archived-notebook-output"
+  },
+  {
+    "file": "toxicity-archive-08.png",
+    "caption": "Text-length, label-source, and toxicity correlations (Saved notebook output.)",
+    "project": "toxicity",
+    "source": "toxic_behaviour_classify\\toxic_behaviour_classify\\Visualizations.ipynb",
+    "cell": 21,
+    "kind": "archived-notebook-output"
+  },
+  {
+    "file": "medbot-recording-04.jpg",
+    "caption": "Multi-task hospital mission at 11.4s — frame from the original Webots recording.",
+    "project": "medbot",
+    "source": "MedBot_Delivery_Complete_2026-08-15\\MedBot\\docs\\webots_multitask_demo.mp4",
+    "timestamp": 11.392,
+    "kind": "recorded-simulation-frame"
+  },
+  {
+    "file": "medbot-recording-05.jpg",
+    "caption": "Multi-task hospital mission at 28.4s — frame from the original Webots recording.",
+    "project": "medbot",
+    "source": "MedBot_Delivery_Complete_2026-08-15\\MedBot\\docs\\webots_multitask_demo.mp4",
+    "timestamp": 28.416,
+    "kind": "recorded-simulation-frame"
+  },
+  {
+    "file": "medbot-recording-06.jpg",
+    "caption": "Multi-task hospital mission at 45.6s — frame from the original Webots recording.",
+    "project": "medbot",
+    "source": "MedBot_Delivery_Complete_2026-08-15\\MedBot\\docs\\webots_multitask_demo.mp4",
+    "timestamp": 45.568,
+    "kind": "recorded-simulation-frame"
+  },
+  {
+    "file": "medbot-recording-07.jpg",
+    "caption": "Multi-task hospital mission at 62.7s — frame from the original Webots recording.",
+    "project": "medbot",
+    "source": "MedBot_Delivery_Complete_2026-08-15\\MedBot\\docs\\webots_multitask_demo.mp4",
+    "timestamp": 62.72,
+    "kind": "recorded-simulation-frame"
+  },
+  {
+    "file": "medbot-recording-08.jpg",
+    "caption": "Multi-task hospital mission at 79.9s — frame from the original Webots recording.",
+    "project": "medbot",
+    "source": "MedBot_Delivery_Complete_2026-08-15\\MedBot\\docs\\webots_multitask_demo.mp4",
+    "timestamp": 79.872,
+    "kind": "recorded-simulation-frame"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "file": "fire-smoke-ui-01.png",
+    "caption": "Running original Gradio image-detection interface with confidence and inference-size controls.",
+    "kind": "live-ui-capture",
+    "project": "fire-smoke"
+  },
+  {
+    "file": "fire-smoke-ui-02.png",
+    "caption": "Running original video-detection interface with input, annotated output, and download components.",
+    "kind": "live-ui-capture",
+    "project": "fire-smoke"
+  },
+  {
+    "file": "fire-smoke-inference-output.jpg",
+    "caption": "Annotated smoke prediction saved by the Gradio inference application."
+  },
+  {
+    "file": "fire-smoke-test-predictions.jpg",
+    "caption": "YOLOv8s predictions from a held-out test image batch."
+  },
+  {
+    "file": "fire-smoke-class-performance.png",
+    "caption": "Saved test precision, recall, and F1 for fire and smoke."
+  },
+  {
+    "file": "fire-smoke-results_yolov8s_training_losses.png",
+    "caption": "Selected YOLOv8s training losses (Saved original experiment output.)",
+    "source": "fire_smoke_detection_gui_delivery\\delivery\\graphs\\results_yolov8s_training_losses.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "fire-smoke-results_validation_metric_comparison.png",
+    "caption": "Validation comparison between YOLOv8n and YOLOv8s (Saved original experiment output.)",
+    "source": "fire_smoke_detection_gui_delivery\\delivery\\graphs\\results_validation_metric_comparison.png",
+    "kind": "archived-output"
+  },
+  {
+    "file": "fire-smoke-results_test_error_distribution.png",
+    "caption": "Held-out test error distribution (Saved original experiment output.)",
+    "source": "fire_smoke_detection_gui_delivery\\delivery\\graphs\\results_test_error_distribution.png",
+    "kind": "archived-output"
+  }
+]

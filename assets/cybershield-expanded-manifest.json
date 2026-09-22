@@ -1,0 +1,65 @@
+[
+  {
+    "file": "cybershield-ui-01.png",
+    "caption": "Welcome — original screen rendered in a local web preview.",
+    "route": "Welcome",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "Get Rid of Cyber Bullying Today\n\"Welcome. This platform ensures a safe environment by preventing the upload of abusive or inappropriate content.\"\nLogin\nRegister"
+  },
+  {
+    "file": "cybershield-ui-02.png",
+    "caption": "Sign in — original screen rendered in a local web preview.",
+    "route": "Login",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "Login here\nWelcome back you've been missed!\n\n\n\nForgot your password?\nSign in\nCreate new account ? \nClick here\nOr continue with"
+  },
+  {
+    "file": "cybershield-ui-03.png",
+    "caption": "Registration — original screen rendered in a local web preview.",
+    "route": "Register",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "Create Account\nCreate an account so you can explore all the existing jobs\n\n\n\n\n\n\nSelect Gender\nMale\nFemale\nOther\nSign up\nAlready have an account? \nSign in\nOr continue with"
+  },
+  {
+    "file": "cybershield-ui-04.png",
+    "caption": "Password recovery — original screen rendered in a local web preview.",
+    "route": "ForgotPassword",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "Fill your email address and we will send you an OTP to change your password\n\nSend\nForgot Password"
+  },
+  {
+    "file": "cybershield-ui-05.png",
+    "caption": "Chat list — original screen rendered in a local web preview.",
+    "route": "Chat",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "\nTayyab Tufail\nHamza Ali\nMuhummad Saad\nKinza Khatoon\nMahnoor Aftab\nChat"
+  },
+  {
+    "file": "cybershield-ui-06.png",
+    "caption": "Notifications — original screen rendered in a local web preview.",
+    "route": "Notifications",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "Notifications\nShow Unread\nMark All as Read\nAlice liked your post\n2 minutes ago\n\nBob commented on your photo\n10 minutes ago\n\nCarolyn sent you a friend request\n1 hour ago\n\nNotifications"
+  },
+  {
+    "file": "cybershield-ui-07.png",
+    "caption": "Friends — original screen rendered in a local web preview.",
+    "route": "Friends",
+    "kind": "original-component-preview",
+    "project": "cybershield",
+    "body": "Friend Requests\nHammas Rashid\nAccept\nDecline\nHamza Ali\nAccept\nDecline\nJawad Khan\nAccept\nDecline\nFriends"
+  },
+  {
+    "file": "cybershield-ui-09.png",
+    "caption": "Original profile screen with the sample name supplied in the app source. Local web preview.",
+    "route": "MyProfileScreen",
+    "project": "cybershield",
+    "kind": "original-component-preview"
+  }
+]

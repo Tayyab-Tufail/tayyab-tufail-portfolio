@@ -1,0 +1,136 @@
+[
+  {
+    "file": "asaan-mazdoor-ui-01.png",
+    "caption": "Welcome and introduction — original screen rendered in a local web preview.",
+    "route": "Welcome",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Welcome (خوش آمدید)\nاپنا ہر کام کروائیں \n☑️ فوراً ☑️ انتہائی مناسب قیمت پر\n☑️ باحفاظت ☑️ اعلی معیار کے ساتھ\nNext"
+  },
+  {
+    "file": "asaan-mazdoor-ui-02.png",
+    "caption": "Customer / professional role selection — original screen rendered in a local web preview.",
+    "route": "Select",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "I want to Signup as a?\nCustomer\nProfessional\nSelect"
+  },
+  {
+    "file": "asaan-mazdoor-ui-03.png",
+    "caption": "Customer sign-in — original screen rendered in a local web preview.",
+    "route": "CustomerLogin",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Welcome to Asan Mazdoor\n+92\nForgot Password? Click here\nLOGIN\nCustomer Login"
+  },
+  {
+    "file": "asaan-mazdoor-ui-04.png",
+    "caption": "Professional sign-in — original screen rendered in a local web preview.",
+    "route": "ProfessionalLogin",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Welcome to Asan Mazdoor\n+92\nForgot Password? Click here\nLOGIN\nProfessional Login"
+  },
+  {
+    "file": "asaan-mazdoor-ui-05.png",
+    "caption": "Customer registration — original screen rendered in a local web preview.",
+    "route": "CustomerSignup",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Sign Up As A Buyer\n+92\nSelect Gender\nMale\nFemale\nOther\nSIGN UP\nAlready have an account? \nLogin\nCustomer Signup"
+  },
+  {
+    "file": "asaan-mazdoor-ui-06.png",
+    "caption": "Professional registration — original screen rendered in a local web preview.",
+    "route": "ProfessionalSignup",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Sign Up As A Professional\n+92\nPlease choose your experience \nSelect Gender\nMale\nFemale\nOther\nSIGN UP\nAlready have an account? \nLogin\nProfessional Signup"
+  },
+  {
+    "file": "asaan-mazdoor-ui-07.png",
+    "caption": "General sign-in — original screen rendered in a local web preview.",
+    "route": "Login",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Welcome to Asan Mazdoor\nRemember Me\nForgot Password? Click here\nLOGIN\nLogin"
+  },
+  {
+    "file": "asaan-mazdoor-ui-08.png",
+    "caption": "General registration — original screen rendered in a local web preview.",
+    "route": "Signup",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Sign Up As A Buyer\nSelect Gender\nMale\nFemale\nOther\nRemember Password\nSIGN UP\nAlready have an account? \nLogin\nSignup"
+  },
+  {
+    "file": "asaan-mazdoor-ui-09.png",
+    "caption": "Password recovery — original screen rendered in a local web preview.",
+    "route": "ForgotPassword",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Enter your mobile number, and we’ll send an OTP to change your password.\n+92\nSend OTP\nForgot Password"
+  },
+  {
+    "file": "asaan-mazdoor-ui-10.png",
+    "caption": "Change password form — original screen rendered in a local web preview.",
+    "route": "ChangePassword",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "CHANGE PASSWORD\nChange Password"
+  },
+  {
+    "file": "asaan-mazdoor-ui-11.png",
+    "caption": "Service category selection — original screen rendered in a local web preview.",
+    "route": "NewServiceScreen",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Or Select from the list below\nAC Services at Home\nAdd\nRefrigerator Repair\nAdd\nBeauty Parlour\nAdd\nMechanic Services\nAdd\nCarpenter Services\nAdd\nElectrician Services\nAdd\nTailoring Services\nAdd\nHome Paint Services\nAdd\nHome Repair and Maintenance\nAdd\nHome Plumbing Services\nAdd\nHome Cleaning Services\nAdd\nSolar Panel Services\nAdd\nWelding Services\nAdd\nGlass Aluminium Services\nAdd\nNew Service"
+  },
+  {
+    "file": "asaan-mazdoor-ui-12.png",
+    "caption": "AC service options — original screen rendered in a local web preview.",
+    "route": "SubService",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "AC Services at Home\nAC Dismounting/Removal\nAC Installation Service\nAdd\nSub Service"
+  },
+  {
+    "file": "asaan-mazdoor-ui-13.png",
+    "caption": "Personal information form — original screen rendered in a local web preview.",
+    "route": "PersonalInformation",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Full Name *\nMobile Number *\n+92\nGender *\nSelect Gender\nExperience *\nUpdate\nPersonal Information"
+  },
+  {
+    "file": "asaan-mazdoor-ui-14.png",
+    "caption": "Create a job form — original screen rendered in a local web preview.",
+    "route": "PostJobScreen",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Post a Job\nJob Title\nJob Description\nJob Category\nSelect a job category\nAppliance Repair\nCarpentry\nCatering Services\nCleaning\nComputer Repair\nDaily Worker\nDoctor\nDriving\nElectrical\nEngineer\nEvent Planning\nFitness Trainer\nFlooring\nGardening\nHair Stylist\nHome Inspection\nHouse Shifting\nIT Support\nInterior Design\nLandscaping\nMasonry\nMobile Mechanic\nNurse\nPainting\nPest Control\nPet Care\nPlumbing\nRoofing\nSecurity Systems\nStudent\nTeacher\nWindows & Doors\nLocation\nImages\nUpload image of your work (Optional)\nChoose a payment method\nCash on Delivery\nEasyPaisa\nPost Job\nPost Job"
+  },
+  {
+    "file": "asaan-mazdoor-ui-15.png",
+    "caption": "Terms and conditions — original screen rendered in a local web preview.",
+    "route": "TermsAndConditions",
+    "kind": "original-component-preview",
+    "project": "asaan-mazdoor",
+    "body": "Terms and Conditions\nWelcome to the Asan Mazdoor App. By accessing or using our mobile application, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, you should discontinue use of our application immediately.\n\n**User Account and Responsibilities**\n1. Account Creation: Users must provide accurate and complete information when creating their account. You are responsible for maintaining the confidentiality of your account and password and for restricting access to your mobile device.\n2. Account Use: You are solely responsible for all activities that occur under your account. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.\n\n**Prohibited Conduct**\nYou agree not to use the app in any way that:\n- Violates any national, regional, or international law or regulation.\n- Is fraudulent, unlawful, or deceptive.\n- Harms or exploits minors in any way.\n- Transmits or procures the sending of any advertising or promotional material without our prior written consent.\n- Attempts to disrupt the operation of our service through any form of cyber attack or harmful code.\n\n**Intellectual Property Rights**\nThe content, arrangement, and layout of this app, including texts, graphics, images, logos, and software, are the property of the Asan Mazdoor App team and are protected by copyright and intellectual property rights laws. You may not reproduce, distribute, modify, or create derivative works without express written permission from us.\n\n**User Content**\n1. Righ"
+  },
+  {
+    "file": "asaan-mazdoor-ui-16.png",
+    "caption": "Service-category search for plumbing, using the original screen’s local filtering.",
+    "route": "NewServiceScreen:search",
+    "project": "asaan-mazdoor",
+    "kind": "original-component-preview"
+  },
+  {
+    "file": "asaan-mazdoor-ui-17.png",
+    "caption": "AC service selection state in the original component. No booking or payment is submitted.",
+    "route": "SubService:selection",
+    "project": "asaan-mazdoor",
+    "kind": "original-component-preview"
+  }
+]

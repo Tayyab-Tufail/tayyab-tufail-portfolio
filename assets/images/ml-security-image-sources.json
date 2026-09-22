@@ -1,0 +1,58 @@
+[
+  {
+    "file": "finbias-test-confusion-matrix.png",
+    "width": 900,
+    "height": 720,
+    "caption": "FinBERT test confusion matrix across negative, neutral, and positive financial sentiment.",
+    "source": "FinBias_Delivery/FinBias_Delivery/graphs/evaluation/confusion_matrix_finbert_test.png"
+  },
+  {
+    "file": "finbias-training-history.png",
+    "width": 1260,
+    "height": 720,
+    "caption": "Saved FinBERT training and validation loss across three training epochs.",
+    "source": "FinBias_Delivery/FinBias_Delivery/graphs/training/finbert_learning_curves.png"
+  },
+  {
+    "file": "phishing-final-holdout.png",
+    "width": 1039,
+    "height": 871,
+    "caption": "Final held-out XGBoost confusion matrix after removing ten suspicious features: 2,249 phishing detections, one missed phishing example, and 18 false positives.",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09/graphs/36_final_leakage_robust_holdout_confusion_matrix.png"
+  },
+  {
+    "file": "phishing-shap-analysis.png",
+    "width": 1399,
+    "height": 1681,
+    "caption": "SHAP feature-attribution analysis for the full-feature Random Forest benchmark; this is separate from the final reduced-feature XGBoost result.",
+    "source": "Phishing_detection_dissertation_final_delivery_2026-08-09/graphs/24_shap_summary.png"
+  },
+  {
+    "file": "water-potability-test-results.png",
+    "width": 1655,
+    "height": 1397,
+    "caption": "Saved random forest test confusion matrix at threshold 0.46; 0 denotes non-potable and 1 denotes potable.",
+    "source": "water_quality_study_bundle (1)/graphs/random_forest_test_confusion_matrix.png"
+  },
+  {
+    "file": "water-potability-feature-importance.png",
+    "width": 2890,
+    "height": 1697,
+    "caption": "Feature-importance plot for the selected random forest water potability model.",
+    "source": "water_quality_study_bundle (1)/graphs/final_model_feature_importance.png"
+  },
+  {
+    "file": "toxicity-dataset-categories.png",
+    "width": 983,
+    "height": 701,
+    "caption": "Saved distribution of the ten text-classification categories in the prepared dataset.",
+    "source": "toxic_behaviour_classify/toxic_behaviour_classify/Visualizations.ipynb (zero-based cell 3, output 0, image/png)"
+  },
+  {
+    "file": "toxicity-validation-comparison.png",
+    "width": 790,
+    "height": 590,
+    "caption": "Saved validation accuracy and macro-F1 comparison for DistilBERT, BERT, and DeBERTa, consistent with the experiment notebook logs; these are validation scores.",
+    "source": "toxic_behaviour_classify/toxic_behaviour_classify/Visualizations.ipynb (zero-based cell 28, output 0, image/png)"
+  }
+]

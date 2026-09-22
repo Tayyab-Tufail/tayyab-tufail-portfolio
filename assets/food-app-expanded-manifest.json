@@ -1,0 +1,58 @@
+[
+  {
+    "file": "food-app-ui-01.png",
+    "caption": "Welcome — original screen rendered in a local web preview.",
+    "route": "Welcome",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "Tap! Tap!"
+  },
+  {
+    "file": "food-app-ui-02.png",
+    "caption": "Menu and search — original screen rendered in a local web preview.",
+    "route": "Menu",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "\nYour Location\n\nBurger\nPrice: $5.99\n-\n0\n+\nPizza\nPrice: $8.99\n-\n0\n+\nSalad\nPrice: $4.49\n-\n0\n+\nNihari\nPrice: $12.99\n-\n0\n+\nHaleem\nPrice: $10.99\n-\n0\n+\nKarahi\nPrice: $15.99\n-\n0\n+\nBiryani\nPrice: $11.99\n-\n0\n+\nDrinks\nPrice: $9.99\n-\n0\n+\nChat\nPrice: $7.99\n-\n0\n+\nButter Paneer\nPrice: $8.99\n-\n0\n+\nDaal\nPrice: $6.99\n-\n0\n+\nGreen Chicken\nPrice: $10.99\n-\n0\n+\nMenu"
+  },
+  {
+    "file": "food-app-ui-03.png",
+    "caption": "Shopping cart — original screen rendered in a local web preview.",
+    "route": "Cart",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "Total Amount: $0.00\nCheckout\nCart"
+  },
+  {
+    "file": "food-app-ui-04.png",
+    "caption": "Settings — original screen rendered in a local web preview.",
+    "route": "Settings",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "Settings\nChoose Language:\nEnglish\nEspañol\nUrdu\nSpanish\nFrench\nKorean\nSave\nSettings"
+  },
+  {
+    "file": "food-app-ui-05.png",
+    "caption": "Invitation — original screen rendered in a local web preview.",
+    "route": "Invitation",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "x\nInvite Friends, Get $5\n1. Your friend gets $10\n2. Then you get $5\nInvite Friends"
+  },
+  {
+    "file": "food-app-ui-06.png",
+    "caption": "Sign up — original screen rendered in a local web preview.",
+    "route": "Signup",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "Signup\nSignup\nAlready have an account? Login"
+  },
+  {
+    "file": "food-app-ui-07.png",
+    "caption": "Sign in — original screen rendered in a local web preview.",
+    "route": "Login",
+    "kind": "original-component-preview",
+    "project": "food-app",
+    "body": "Login\nDon't have an account?\nCreate one\nLogin"
+  }
+]

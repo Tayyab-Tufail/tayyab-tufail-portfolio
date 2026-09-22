@@ -14,23 +14,4 @@ website/out/
 .DS_Store
 Thumbs.db
 
-# Large project asset folders (too big for GitHub, host separately)
-autonomous-lane-following-robot/
-brain-mri-tumor-detection/
-finbias-sentiment-analysis/
-fire-smoke-detection/
-gesture-controlled-robot/
-grocery-classification/
-medbot-robotics-ai/
-multilingual-toxicity-analysis/
-phishing-detection/
-rideflow-ride-hailing-app/
-water-potability-classifier/
-weapon-detection-console/
-assets/
-
-# Large media files in website/public
-website/public/videos/
-
-
 .vercel
