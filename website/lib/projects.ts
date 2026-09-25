@@ -619,6 +619,22 @@ const projectCatalog: Project[] = [
       {
         "file": "cogniflow-sandbox.png",
         "caption": "Prompt Sandbox to test and simulate LLM responses before deployment."
+      },
+      {
+        "file": "cogniflow-node-library.png",
+        "caption": "Expanding the Node Library in the builder to select new AI and logic blocks."
+      },
+      {
+        "file": "cogniflow-api-modal.png",
+        "caption": "Secure modal interface in the Integrations Hub for adding new API Keys."
+      },
+      {
+        "file": "cogniflow-pipeline.png",
+        "caption": "Live real-time status of an AI pipeline running its data flow."
+      },
+      {
+        "file": "cogniflow-sandbox-output.png",
+        "caption": "Detailed results and simulation logs displayed after running the Sandbox."
       }
     ],
     "sourceFolders": [
