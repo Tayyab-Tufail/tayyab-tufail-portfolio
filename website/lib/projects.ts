@@ -584,6 +584,46 @@ const projectCatalog: Project[] = [
     "sourceFolders": [
       "CyberSecurity"
     ]
+  },
+  {
+    "id": "cogniflow",
+    "githubUrl": "https://github.com/Tayyab-Tufail/cogniflow",
+    "title": "CogniFlow AI",
+    "category": "Web / AI Workflow Automation",
+    "tags": [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "FastAPI"
+    ],
+    "description": "Visual drag-and-drop AI agent workflow builder with beautiful glassmorphism design.",
+    "summary": "CogniFlow is an enterprise-grade AI workflow automation platform that connects intelligent AI agents, custom pipelines, and real-time data processing. It features a completely visual Node-based builder, allowing users to drag and drop LLMs, logic nodes, and API connectors without writing code.",
+    "features": [
+      "Interactive Node Graph Builder (Drag & Drop AI Nodes)",
+      "Prompt Engineering Sandbox with LLM Output Simulator",
+      "Integrations Hub for API Keys & Webhook Management",
+      "Stunning Dark Glassmorphism Design with Neon Accents"
+    ],
+    "result": "A complete UI/UX engineered frontend that perfectly simulates a highly complex, multi-agent AI automation software with robust state management.",
+    "context": "Frontend Architecture Prototype. Showcases advanced modern web design, state management (Zustand), and React 19 capabilities. Uses mocked data for executions.",
+    "images": [
+      {
+        "file": "cogniflow-landing.png",
+        "caption": "The main landing page with glowing neon UI and futuristic web design."
+      },
+      {
+        "file": "cogniflow-builder.png",
+        "caption": "The visual workflow canvas where users can drag and connect AI tasks."
+      },
+      {
+        "file": "cogniflow-sandbox.png",
+        "caption": "Prompt Sandbox to test and simulate LLM responses before deployment."
+      }
+    ],
+    "sourceFolders": [
+      "cogniflow"
+    ]
   }
 ];
 export const projects: Project[] = projectCatalog.map(project => ({
