@@ -4,19 +4,19 @@ import { useEffect, useRef, useState } from 'react';
 type Theme = 'light' | 'dark' | 'system';
 
 const SunIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
   </svg>
 );
 
 const MoonIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
   </svg>
 );
 
 const SystemIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
   </svg>
 );
@@ -40,23 +40,30 @@ export function ThemeToggle() {
   const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const stored = (localStorage.getItem('theme') as Theme) || 'dark';
+    const stored = (localStorage.getItem('portfolio-theme') as Theme) || 'dark';
     setTheme(stored);
     applyTheme(stored);
   }, []);
 
-  // Close on outside click — using mousedown so it fires before blur
+  // Close dropdown when clicking outside
   useEffect(() => {
     if (!open) return;
-    const handler = (e: MouseEvent) => {
+    const handleOutside = (e: MouseEvent) => {
       if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
         setOpen(false);
       }
     };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
+    // Use a small delay so the current click doesn't immediately close it
+    const timer = setTimeout(() => {
+      document.addEventListener('click', handleOutside);
+    }, 10);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('click', handleOutside);
+    };
   }, [open]);
 
+  // Listen for system preference changes
   useEffect(() => {
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
     const handler = () => { if (theme === 'system') applyTheme('system'); };
@@ -64,9 +71,9 @@ export function ThemeToggle() {
     return () => mq.removeEventListener('change', handler);
   }, [theme]);
 
-  const setAndStore = (t: Theme) => {
+  const select = (t: Theme) => {
     setTheme(t);
-    localStorage.setItem('theme', t);
+    localStorage.setItem('portfolio-theme', t);
     applyTheme(t);
     setOpen(false);
   };
@@ -77,40 +84,35 @@ export function ThemeToggle() {
     system: <SystemIcon />,
   };
 
-  const labels: Record<Theme, string> = {
-    light: 'Light',
-    dark: 'Dark',
-    system: 'System',
-  };
-
   return (
-    <div className="theme-toggle-wrap" ref={wrapRef}>
+    <div className="tt-theme-wrap" ref={wrapRef}>
       <button
-        className="theme-toggle-btn"
-        aria-label={`Theme: ${labels[theme]}. Click to change.`}
+        className="tt-theme-btn"
+        aria-label={`Theme: ${theme}`}
         aria-expanded={open}
         aria-haspopup="menu"
+        type="button"
         onClick={() => setOpen(o => !o)}
       >
         {icons[theme]}
       </button>
+
       {open && (
-        <div className="theme-dropdown" role="menu" aria-label="Choose theme">
+        <div className="tt-theme-menu" role="menu">
           {(['light', 'dark', 'system'] as Theme[]).map(t => (
             <button
               key={t}
               role="menuitem"
-              className={`theme-option${theme === t ? ' active' : ''}`}
-              onMouseDown={(e) => {
-                // Prevent blur from firing before click is processed
-                e.preventDefault();
-              }}
-              onClick={() => setAndStore(t)}
+              type="button"
+              className={`tt-theme-item${theme === t ? ' is-active' : ''}`}
+              onClick={() => select(t)}
             >
-              <span className="theme-option-icon">{icons[t]}</span>
-              <span>{labels[t]}</span>
+              <span className="tt-theme-icon">{icons[t]}</span>
+              <span className="tt-theme-label">
+                {t === 'light' ? 'Light' : t === 'dark' ? 'Dark' : 'System'}
+              </span>
               {theme === t && (
-                <svg className="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="tt-theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 6L9 17l-5-5"/>
                 </svg>
               )}
