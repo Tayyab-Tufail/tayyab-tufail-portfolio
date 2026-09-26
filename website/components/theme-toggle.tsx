@@ -92,7 +92,8 @@ export function ThemeToggle() {
         aria-expanded={open}
         aria-haspopup="menu"
         type="button"
-        onClick={() => setOpen(o => !o)}
+        onPointerDown={(e) => { e.preventDefault(); setOpen(o => !o); }}
+        onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(o => !o); } }}
       >
         {icons[theme]}
       </button>
@@ -105,7 +106,8 @@ export function ThemeToggle() {
               role="menuitem"
               type="button"
               className={`tt-theme-item${theme === t ? ' is-active' : ''}`}
-              onClick={() => select(t)}
+              onPointerDown={(e) => { e.preventDefault(); select(t); }}
+              onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(t); } }}
             >
               <span className="tt-theme-icon">{icons[t]}</span>
               <span className="tt-theme-label">
