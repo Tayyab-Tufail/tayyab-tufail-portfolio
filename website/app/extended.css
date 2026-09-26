@@ -147,8 +147,8 @@ body { font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif; }
 .dark main { background:#0a0a16; }
 .dark .hero-shell { background:linear-gradient(135deg,#06030f 0%,#0c0820 50%,#080618 100%); }
 .dark .site-header { border-bottom-color:rgba(124,95,249,.12); }
-.dark .nav-link { color:#9090c0; }
-.dark .nav-link:hover { color:#c4b5fd; background:rgba(124,95,249,.1); }
+.dark .nav-link { color:#ffffff !important; font-weight:600; }
+.dark .nav-link:hover { color:#e8e4ff !important; background:rgba(124,95,249,.2); }
 
 .dark .brand-text { color:#d8d8ff; }
 .dark .skills-section { background:#080812; border-top-color:rgba(124,95,249,.12); }
