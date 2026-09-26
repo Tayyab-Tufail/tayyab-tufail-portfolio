@@ -640,6 +640,56 @@ const projectCatalog: Project[] = [
     "sourceFolders": [
       "cogniflow"
     ]
+  },
+  {
+    "id": "aegis-ai-interviewer",
+    "githubUrl": "https://github.com/Tayyab-Tufail/aegis-ai-interviewer",
+    "title": "Aegis AI Interviewer",
+    "category": "Web / AI Engineering",
+    "tags": [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Socket.IO",
+      "Node.js",
+      "OpenAI API",
+      "Web Speech API"
+    ],
+    "description": "Real-time AI interviewing platform with live code execution, vocal feedback, and dynamic prompt engineering.",
+    "summary": "Aegis is an intelligent full-stack mock interview application. It simulates a technical coding interview with an AI agent that listens, evaluates live code execution, and responds verbally with a real human-like voice. Featuring a dark glowing aesthetic, websockets for instant dual-way communication, and robust sandboxed code compilation.",
+    "features": [
+      "Real-time Socket.IO communication with an AI Evaluator",
+      "Live Monaco Code Editor with Python and JS compilation",
+      "Web Speech API integration for real voice AI responses",
+      "Stunning dark glassmorphism design with animated visualizers"
+    ],
+    "result": "A complete end-to-end fullstack platform that conducts technical interviews autonomously with less than 200ms latency.",
+    "context": "Full-stack application utilizing Socket.IO and Web Speech API to provide an immersive interview experience.",
+    "images": [
+      {
+        "file": "aegis-ai-interviewer-landing.png",
+        "caption": "The beautiful landing page introducing the Aegis AI Interviewer."
+      },
+      {
+        "file": "aegis-ai-interviewer-configure.png",
+        "caption": "Configuring the interview scenario, role, and strictness level."
+      },
+      {
+        "file": "aegis-ai-interviewer-room.png",
+        "caption": "The dark-themed live interview room environment."
+      },
+      {
+        "file": "aegis-ai-interviewer-editor.png",
+        "caption": "Writing Python code live in the embedded Monaco editor."
+      },
+      {
+        "file": "aegis-ai-interviewer-evaluation.png",
+        "caption": "The AI evaluating the submitted code and providing vocal feedback."
+      }
+    ],
+    "sourceFolders": [
+      "aegis-ai-interviewer"
+    ]
   }
 ];
 export const projects: Project[] = projectCatalog.map(project => ({
