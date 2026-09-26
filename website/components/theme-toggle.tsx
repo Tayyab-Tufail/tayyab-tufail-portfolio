@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -28,7 +28,6 @@ function applyTheme(theme: Theme) {
   } else if (theme === 'light') {
     root.classList.remove('dark');
   } else {
-    // system
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) root.classList.add('dark');
     else root.classList.remove('dark');
@@ -38,12 +37,25 @@ function applyTheme(theme: Theme) {
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>('dark');
   const [open, setOpen] = useState(false);
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const stored = (localStorage.getItem('theme') as Theme) || 'dark';
     setTheme(stored);
     applyTheme(stored);
   }, []);
+
+  // Close on outside click — using mousedown so it fires before blur
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [open]);
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
@@ -65,29 +77,40 @@ export function ThemeToggle() {
     system: <SystemIcon />,
   };
 
+  const labels: Record<Theme, string> = {
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System',
+  };
+
   return (
-    <div className="theme-toggle-wrap" onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false); }}>
+    <div className="theme-toggle-wrap" ref={wrapRef}>
       <button
         className="theme-toggle-btn"
-        aria-label="Change theme"
+        aria-label={`Theme: ${labels[theme]}. Click to change.`}
         aria-expanded={open}
+        aria-haspopup="menu"
         onClick={() => setOpen(o => !o)}
       >
         {icons[theme]}
       </button>
       {open && (
-        <div className="theme-dropdown" role="menu">
+        <div className="theme-dropdown" role="menu" aria-label="Choose theme">
           {(['light', 'dark', 'system'] as Theme[]).map(t => (
             <button
               key={t}
               role="menuitem"
               className={`theme-option${theme === t ? ' active' : ''}`}
+              onMouseDown={(e) => {
+                // Prevent blur from firing before click is processed
+                e.preventDefault();
+              }}
               onClick={() => setAndStore(t)}
             >
-              {icons[t]}
-              <span>{t.charAt(0).toUpperCase() + t.slice(1)}</span>
+              <span className="theme-option-icon">{icons[t]}</span>
+              <span>{labels[t]}</span>
               {theme === t && (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginLeft:'auto'}}>
+                <svg className="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 6L9 17l-5-5"/>
                 </svg>
               )}
