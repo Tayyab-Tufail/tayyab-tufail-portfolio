@@ -291,3 +291,19 @@ body { font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif; }
   .logo-mark svg { width:36px; height:36px; }
   .brand-text { font-size:15px; }
 }
+
+/* ===== LIGHT MODE SPOTLIGHT OVERRIDES ===== */
+:root:not(.dark) .hero-showcase { background:#ffffff; border-color:#e0ddf5; box-shadow:15px 23px 0 -7px rgba(108,79,248,.08),15px 23px 0 -6px rgba(108,79,248,.15); }
+:root:not(.dark) .showcase-top { color:#5050a0; }
+:root:not(.dark) .showcase-caption .eyebrow { color:#6c4ff8; }
+:root:not(.dark) .showcase-caption h2 { color:#0f0f1a; }
+:root:not(.dark) .showcase-caption p { color:#404080; }
+:root:not(.dark) .circle-link { border-color:#d0ccf8; color:#6c4ff8; }
+:root:not(.dark) .circle-link:hover { background:#f4f2ff; }
+:root:not(.dark) .showcase-footer { border-top-color:rgba(108,79,248,.1); color:#5050a0; }
+:root:not(.dark) .spotlight-controls { background:#f8f7ff; border-top-color:rgba(108,79,248,.1); }
+:root:not(.dark) .spotlight-controls > span { color:#5050a0; }
+:root:not(.dark) .spotlight-controls button { border-color:#d0ccf8; color:#6c4ff8; }
+:root:not(.dark) .spotlight-controls button:hover { background:#6c4ff8; color:#ffffff; }
+:root:not(.dark) .spotlight-pagination span { background:#d0ccf8; }
+:root:not(.dark) .spotlight-pagination button[aria-current] span { background:#6c4ff8; }
